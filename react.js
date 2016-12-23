@@ -30,8 +30,13 @@ class Section extends React.Component {
             backgroundImage: this.props.backgroundImage,
         };
 
+        var className = "section ";
+        if (this.props.className !== undefined) {
+            className += this.props.className;
+        }
+
         return (
-            <div className="section" style={divStyle}>
+            <div className={className} style={divStyle}>
                 I'm a section!
             </div>
         );
