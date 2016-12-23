@@ -1,4 +1,6 @@
 .section {
+    min-height: 100vh;
+    
     &.light-blue {
         background-color: $light-blue;
     }
