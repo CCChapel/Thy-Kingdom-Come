@@ -3,16 +3,16 @@
 //  */
 // class Background extends React.Component {
 //     render() {
-//         var background = '';
+//         var background = {};
 //         if (this.props.imageUrl !== undefined) {
-//             background += "background-image: " + this.props.imageUrl;
+//             background.backgroundImage = this.props.imageUrl;
 //         }
 //         if (this.props.color !== undefined) {
-//             background += "background-color: " + this.props.color;
+//             background.backgroundColor = this.props.color;
 //         }
 
 //         return (
-//             <div>Hi!</div>
+//             {background}
 //         );
 //     }
 // }
