@@ -4,6 +4,6 @@
     "babel-preset-react": "6.5.0"
   },
   "scripts": {
-    "build": "babel react.js -o react-compiled.js"
+    "build": "babel react.js -o compiled-react.js"
   }
 }
