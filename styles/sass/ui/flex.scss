@@ -28,7 +28,7 @@
         width: 25%;
     }
 
-    @include grid-media-query("portable") {
+    @include media-query("portable") {
         .portable--one-whole {
             width: 100%;
         }
@@ -50,7 +50,7 @@
         }
     }
 
-    @include grid-media-query("palm") {
+    @include media-query("palm") {
         .palm--one-whole {
             width: 100%;
         }
@@ -111,7 +111,7 @@
         // }
     }
         
-    @include grid-media-query("portable") {
+    @include media-query("portable") {
         &.palm--stack {
             @include flex-direction(column);
 

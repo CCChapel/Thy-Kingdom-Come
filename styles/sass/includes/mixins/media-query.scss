@@ -20,7 +20,7 @@ $breakpoints: (
 *
 * Enclose a block of code with a media query as named in `$breakpoints`.
 */
-@mixin grid-media-query($media-query){
+@mixin media-query($media-query){
     $breakpoint-found: false;
 
     @each $breakpoint in $breakpoints{
