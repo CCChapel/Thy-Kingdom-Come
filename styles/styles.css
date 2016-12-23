@@ -61,8 +61,121 @@ html {
   -moz-box-sizing: inherit;
   box-sizing: inherit; }
 
+/*------------------------------------*\
+Taken from CSS Wizardry Grids
+csswizardry.com
+\*------------------------------------*/
+/**
+* Define your breakpoints. The first value is the prefix that shall be used for
+* your classes (e.g. `.palm--one-half`), the second value is the media query
+* that the breakpoint fires at.
+*/
+/**
+* These mixins are for the library to use only, you should not need to modify
+* them at all.
+*
+* Enclose a block of code with a media query as named in `$breakpoints`.
+*/
 body {
   font-family: Verdana, Arial, sans-serif; }
+
+.flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -moz-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  -webkit-align-content: stretch;
+  -moz-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  height: 100%;
+  width: 100%; }
+  .flex .one-whole {
+    width: 100%; }
+  .flex .two-thirds {
+    width: 66%; }
+  .flex .one-half {
+    width: 50%; }
+  .flex .one-third {
+    width: 33%; }
+  .flex .one-quarter {
+    width: 25%; }
+  @media only screen and (max-width: 1023px) {
+    .flex .portable--one-whole {
+      width: 100%; }
+    .flex .portable--two-thirds {
+      width: 66%; }
+    .flex .portable--one-half {
+      width: 50%; }
+    .flex .portable--one-third {
+      width: 33%; }
+    .flex .portable--one-quarter {
+      width: 25%; } }
+  @media only screen and (max-width: 480px) {
+    .flex .palm--one-whole {
+      width: 100%; }
+    .flex .palm--two-thirds {
+      width: 66%; }
+    .flex .palm--one-half {
+      width: 50%; }
+    .flex .palm--one-third {
+      width: 33%; }
+    .flex .palm--one-quarter {
+      width: 25%; } }
+  .flex:not(.vertical) > * {
+    margin-right: 20px; }
+    .flex:not(.vertical) > *:last-child {
+      margin-right: 0; }
+  .flex.no-gutter > * {
+    margin-right: 0; }
+  .flex.wrap {
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+  .flex.vertical {
+    -webkit-flex-flow: column nowrap;
+    -moz-flex-flow: column nowrap;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap; }
+    .flex.vertical.center {
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      justify-content: center; }
+  @media only screen and (max-width: 1023px) {
+    .flex.palm--stack {
+      -webkit-box-direction: normal;
+      -webkit-box-orient: vertical;
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      .flex.palm--stack.reverse {
+        -webkit-box-direction: reverse;
+        -webkit-box-orient: vertical;
+        -webkit-flex-direction: column-reverse;
+        -moz-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse; }
+      .flex.palm--stack > * {
+        margin-right: 0; } }
 
 .section {
   min-height: 100vh; }

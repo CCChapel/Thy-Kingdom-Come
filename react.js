@@ -30,7 +30,7 @@ class Section extends React.Component {
             backgroundImage: this.props.backgroundImage,
         };
 
-        var className = "section ";
+        var className = "section flex ";
         if (this.props.className !== undefined) {
             className += this.props.className;
         }
