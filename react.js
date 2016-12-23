@@ -20,12 +20,14 @@
 /**
  * Defines a section on the page
  * @backgroundColor = background color
+ * @backgroundImage = image to display in the background
  */
 class Section extends React.Component {
     render() {
         // var background = <Background color="black" />;
         const divStyle = {
             backgroundColor: this.props.backgroundColor,
+            backgroundImage: this.props.backgroundImage,
         };
 
         return (
