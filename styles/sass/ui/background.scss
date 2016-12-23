@@ -1,0 +1,13 @@
+.section {
+    &.light-blue {
+        background-color: $light-blue;
+    }
+
+    &.medium-blue {
+        background-color: $medium-blue;
+    }
+
+    &.dark-blue {
+        background-color: $dark-blue;
+    }
+}
