@@ -51,10 +51,10 @@ class Page extends React.Component {
         return React.createElement(
             "div",
             null,
-            React.createElement(Section, { backgroundColor: "blue" }),
-            React.createElement(Section, { backgroundColor: "red" }),
-            React.createElement(Section, { backgroundColor: "yellow" }),
-            React.createElement(Section, { backgroundColor: "green" })
+            React.createElement(Section, { className: "clouds" }),
+            React.createElement(Section, { className: "light-blue" }),
+            React.createElement(Section, { className: "medium-blue" }),
+            React.createElement(Section, { className: "dark-blue" })
         );
     }
 }

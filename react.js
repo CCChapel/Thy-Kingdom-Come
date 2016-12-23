@@ -50,10 +50,10 @@ class Page extends React.Component {
     render() {
         return (
             <div>
-                <Section backgroundColor="blue" />
-                <Section backgroundColor="red" />
-                <Section backgroundColor="yellow" />
-                <Section backgroundColor="green" />
+                <Section className="clouds" />
+                <Section className="light-blue" />
+                <Section className="medium-blue" />
+                <Section className="dark-blue" />
             </div>
         );
     }
