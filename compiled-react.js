@@ -38,7 +38,7 @@ class Section extends React.Component {
         return React.createElement(
             "div",
             { className: className, style: divStyle },
-            "I'm a section!"
+            this.props.children
         );
     }
 }
@@ -51,7 +51,11 @@ class Page extends React.Component {
         return React.createElement(
             "div",
             null,
-            React.createElement(Section, { className: "clouds" }),
+            React.createElement(
+                Section,
+                { className: "clouds" },
+                React.createElement("img", { src: "images/logo.svg" })
+            ),
             React.createElement(Section, { className: "light-blue" }),
             React.createElement(Section, { className: "medium-blue" }),
             React.createElement(Section, { className: "dark-blue" })

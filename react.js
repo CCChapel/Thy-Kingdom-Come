@@ -37,7 +37,7 @@ class Section extends React.Component {
 
         return (
             <div className={className} style={divStyle}>
-                I'm a section!
+                {this.props.children}
             </div>
         );
     }
@@ -50,7 +50,9 @@ class Page extends React.Component {
     render() {
         return (
             <div>
-                <Section className="clouds" />
+                <Section className="clouds">
+                    <img src="images/logo.svg" />
+                </Section>
                 <Section className="light-blue" />
                 <Section className="medium-blue" />
                 <Section className="dark-blue" />
