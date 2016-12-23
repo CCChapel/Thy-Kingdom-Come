@@ -3,7 +3,9 @@
 @import "includes/box-sizing.scss";
 
 //Mix Ins
-@import "includes/mixins/box-sizing.scss";
+@import "includes/mixins/flexbox.scss";
+@import "includes/mixins/transform.scss";
+@import "includes/mixins/transition.scss";
 
 @import "ui/_vars.scss";
 
