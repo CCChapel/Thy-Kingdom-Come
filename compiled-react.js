@@ -56,9 +56,21 @@ class Page extends React.Component {
                 { className: "clouds" },
                 React.createElement("img", { src: "images/logo.svg" })
             ),
-            React.createElement(Section, { className: "light-blue" }),
-            React.createElement(Section, { className: "medium-blue" }),
-            React.createElement(Section, { className: "dark-blue" })
+            React.createElement(
+                Section,
+                { className: "light-blue" },
+                "Introduction"
+            ),
+            React.createElement(
+                Section,
+                { className: "medium-blue" },
+                "Local Spree"
+            ),
+            React.createElement(
+                Section,
+                { className: "dark-blue" },
+                "Initiatives"
+            )
         );
     }
 }

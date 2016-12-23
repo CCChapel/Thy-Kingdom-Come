@@ -53,9 +53,18 @@ class Page extends React.Component {
                 <Section className="clouds">
                     <img src="images/logo.svg" />
                 </Section>
-                <Section className="light-blue" />
-                <Section className="medium-blue" />
-                <Section className="dark-blue" />
+
+                <Section className="light-blue">
+                    Introduction
+                </Section>
+
+                <Section className="medium-blue">
+                    Local Spree
+                </Section>
+
+                <Section className="dark-blue">
+                    Initiatives
+                </Section>
             </div>
         );
     }
