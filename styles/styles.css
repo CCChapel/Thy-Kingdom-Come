@@ -86,11 +86,21 @@ body {
   stroke: #000;
   stroke-miterlimit: 10; }
 
+@keyframes test {
+  0% {
+    top: 0px; }
+  25% {
+    top: 200px; }
+  75% {
+    top: 50px; }
+  100% {
+    top: 100px; } }
 .cls-3 {
   stroke-width: 2px; }
 
 .cls-4 {
-  stroke-width: 0.5px; }
+  stroke-width: 0.5px;
+  animation: test 5s infinite; }
 
 .cls-5 {
   stroke-width: 3px; }
