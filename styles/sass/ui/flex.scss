@@ -72,6 +72,10 @@
         }
     }
 
+    &.align-content-top {
+        @include align-content(flex-start);
+    }
+
     &:not(.vertical) > * {
         margin-right: $gutter;
 

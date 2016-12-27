@@ -163,6 +163,11 @@ body {
       width: 33%; }
     .flex .palm--one-quarter {
       width: 25%; } }
+  .flex.align-content-top {
+    -webkit-align-content: flex-start;
+    -moz-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start; }
   .flex:not(.vertical) > * {
     margin-right: 20px; }
     .flex:not(.vertical) > *:last-child {
@@ -264,5 +269,8 @@ body {
 
 .hidden {
   display: none; }
+
+.auto-min-height {
+  min-height: auto; }
 
 /*# sourceMappingURL=styles.css.map */
