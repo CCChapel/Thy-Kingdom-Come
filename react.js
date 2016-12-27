@@ -39,7 +39,9 @@ class Section extends React.Component {
 
         return (
             <div className={className} style={divStyle}>
-                {this.props.children}
+                <div className="content-wrapper">
+                    {this.props.children}
+                </div>
             </div>
         );
     }
@@ -108,7 +110,7 @@ class Modal extends React.Component {
     render() {
         if (this.props.show === true) {
             return (
-                <div className="modal">
+                <div className="modal content-wrapper">
                     {this.props.children}
                 </div>
             );
