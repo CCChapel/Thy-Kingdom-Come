@@ -206,7 +206,7 @@ class Page extends React.Component {
             ),
             React.createElement(
                 Section,
-                { className: "charcoal" },
+                { className: "charcoal align-content-top auto-min-height" },
                 React.createElement(
                     "div",
                     { className: "content-wrapper" },

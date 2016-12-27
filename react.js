@@ -181,7 +181,7 @@ class Page extends React.Component {
                     </div>
                 </Section>
 
-                <Section className="charcoal">
+                <Section className="charcoal align-content-top auto-min-height">
                     <div className="content-wrapper">
                         &copy; Copyright 2017
                     </div>
