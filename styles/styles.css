@@ -259,7 +259,8 @@ body {
   .section.dark-blue {
     background-color: #467284; }
   .section.charcoal {
-    background-color: #333333; }
+    background-color: #333333;
+    color: #FFF; }
 
 .hidden {
   display: none; }
