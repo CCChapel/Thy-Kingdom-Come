@@ -1,3 +1,5 @@
+'use strict';
+
 // /**
 //  * Defines a background
 //  */
@@ -90,24 +92,54 @@ class Logo extends React.Component {
 
 /**
  * Defines the modal section of the page
+ * @show: When true, the modal is shown
  */
 class Modal extends React.Component {
     render() {
-        return (
-            <div className="modal">
-            </div>
-        );
+        if (this.props.show === true) {
+            return (
+                <div className="modal">
+                    {this.props.children}
+                </div>
+            );
+        }
+        else {
+            return null;
+        }
     }
 }
 
 /**
  * Defines the base page
+ * @showModal: When true, shows the modal
  */
 class Page extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            showModal : false
+        };
+
+        this.showModal = this.showModal.bind(this);
+        this.hideModal = this.hideModal.bind(this);
+    }
+
+    showModal(e) {
+        this.setState({showModal : true});
+    }
+
+    hideModal(e) {
+        this.setState({showModal : false});
+    }
+
     render() {
+        //Setup the CSS classes for the modal
         return (
             <div>
-                <Modal />
+                <Modal show={this.state.showModal}>
+                    <button onClick={this.hideModal}>Hide Modal</button>
+                </Modal>
 
                 <Section className="clouds">
                     <Logo />
@@ -115,6 +147,8 @@ class Page extends React.Component {
 
                 <Section className="light-blue">
                     Introduction
+
+                    <button onClick={this.showModal}>Show Modal</button>
                 </Section>
 
                 <Section className="medium-blue">

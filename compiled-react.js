@@ -1,3 +1,5 @@
+'use strict';
+
 // /**
 //  * Defines a background
 //  */
@@ -22,6 +24,7 @@
  * @backgroundColor = background color
  * @backgroundImage = image to display in the background
  */
+
 class Section extends React.Component {
     render() {
         // var background = <Background color="black" />;
@@ -94,22 +97,60 @@ class Logo extends React.Component {
 
 /**
  * Defines the modal section of the page
+ * @show: When true, the modal is shown
  */
 class Modal extends React.Component {
     render() {
-        return React.createElement("div", { className: "modal" });
+        if (this.props.show === true) {
+            return React.createElement(
+                "div",
+                { className: "modal" },
+                this.props.children
+            );
+        } else {
+            return null;
+        }
     }
 }
 
 /**
  * Defines the base page
+ * @showModal: When true, shows the modal
  */
 class Page extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            showModal: false
+        };
+
+        this.showModal = this.showModal.bind(this);
+        this.hideModal = this.hideModal.bind(this);
+    }
+
+    showModal(e) {
+        this.setState({ showModal: true });
+    }
+
+    hideModal(e) {
+        this.setState({ showModal: false });
+    }
+
     render() {
+        //Setup the CSS classes for the modal
         return React.createElement(
             "div",
             null,
-            React.createElement(Modal, null),
+            React.createElement(
+                Modal,
+                { show: this.state.showModal },
+                React.createElement(
+                    "button",
+                    { onClick: this.hideModal },
+                    "Hide Modal"
+                )
+            ),
             React.createElement(
                 Section,
                 { className: "clouds" },
@@ -118,7 +159,12 @@ class Page extends React.Component {
             React.createElement(
                 Section,
                 { className: "light-blue" },
-                "Introduction"
+                "Introduction",
+                React.createElement(
+                    "button",
+                    { onClick: this.showModal },
+                    "Show Modal"
+                )
             ),
             React.createElement(
                 Section,
