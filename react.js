@@ -89,12 +89,26 @@ class Logo extends React.Component {
 }
 
 /**
+ * Defines the modal section of the page
+ */
+class Modal extends React.Component {
+    render() {
+        return (
+            <div className="modal">
+            </div>
+        );
+    }
+}
+
+/**
  * Defines the base page
  */
 class Page extends React.Component {
     render() {
         return (
             <div>
+                <Modal />
+
                 <Section className="clouds">
                     <Logo />
                 </Section>

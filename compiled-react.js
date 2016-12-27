@@ -93,6 +93,15 @@ class Logo extends React.Component {
 }
 
 /**
+ * Defines the modal section of the page
+ */
+class Modal extends React.Component {
+    render() {
+        return React.createElement("div", { className: "modal" });
+    }
+}
+
+/**
  * Defines the base page
  */
 class Page extends React.Component {
@@ -100,6 +109,7 @@ class Page extends React.Component {
         return React.createElement(
             "div",
             null,
+            React.createElement(Modal, null),
             React.createElement(
                 Section,
                 { className: "clouds" },
