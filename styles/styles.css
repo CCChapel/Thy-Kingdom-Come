@@ -210,6 +210,45 @@ body {
   height: 100vh;
   width: 100vw; }
 
+.background-cover {
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.static-image {
+  position: absolute;
+  top: 0;
+  z-index: -1; }
+
+.object-cover {
+  object-fit: cover;
+  object-position: top center;
+  height: 100%;
+  width: 100%; }
+
+.content-wrapper {
+  padding: 4rem; }
+  @media only screen and (max-width: 480px) {
+    .content-wrapper {
+      padding: 3rem 10px;
+      max-width: 100vw;
+      overflow-x: hidden; } }
+  .content-wrapper.lock-width {
+    max-width: 60rem; }
+
+.full-height {
+  height: 100%; }
+
+.half-height {
+  height: 50%; }
+
+.add-bottom-margin {
+  margin-bottom: 2em; }
+
+.center-by-margin {
+  margin-left: auto !important;
+  margin-right: auto !important; }
+
 .section {
   min-height: 100vh; }
   .section.light-blue {
