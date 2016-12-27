@@ -39,9 +39,7 @@ class Section extends React.Component {
 
         return (
             <div className={className} style={divStyle}>
-                <div className="content-wrapper">
-                    {this.props.children}
-                </div>
+                {this.props.children}
             </div>
         );
     }
@@ -164,17 +162,23 @@ class Page extends React.Component {
                 </Section>
 
                 <Section className="light-blue">
-                    Introduction
+                    <div className="content-wrapper">
+                        Introduction
 
-                    <button onClick={() => this.showModal(testModalContent)}>Show Modal</button>
+                        <button onClick={() => this.showModal(testModalContent)}>Show Modal</button>
+                    </div>
                 </Section>
 
                 <Section className="medium-blue">
-                    Local Spree
+                    <div className="content-wrapper">
+                        Local Spree
+                    </div>
                 </Section>
 
                 <Section className="dark-blue">
-                    Initiatives
+                    <div className="content-wrapper">
+                        Initiatives
+                    </div>
                 </Section>
             </div>
         );

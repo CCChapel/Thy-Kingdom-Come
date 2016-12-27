@@ -41,11 +41,7 @@ class Section extends React.Component {
         return React.createElement(
             "div",
             { className: className, style: divStyle },
-            React.createElement(
-                "div",
-                { className: "content-wrapper" },
-                this.props.children
-            )
+            this.props.children
         );
     }
 }
@@ -179,22 +175,34 @@ class Page extends React.Component {
             React.createElement(
                 Section,
                 { className: "light-blue" },
-                "Introduction",
                 React.createElement(
-                    "button",
-                    { onClick: () => this.showModal(testModalContent) },
-                    "Show Modal"
+                    "div",
+                    { className: "content-wrapper" },
+                    "Introduction",
+                    React.createElement(
+                        "button",
+                        { onClick: () => this.showModal(testModalContent) },
+                        "Show Modal"
+                    )
                 )
             ),
             React.createElement(
                 Section,
                 { className: "medium-blue" },
-                "Local Spree"
+                React.createElement(
+                    "div",
+                    { className: "content-wrapper" },
+                    "Local Spree"
+                )
             ),
             React.createElement(
                 Section,
                 { className: "dark-blue" },
-                "Initiatives"
+                React.createElement(
+                    "div",
+                    { className: "content-wrapper" },
+                    "Initiatives"
+                )
             )
         );
     }
