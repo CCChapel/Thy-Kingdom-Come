@@ -203,6 +203,15 @@ class Page extends React.Component {
                     { className: "content-wrapper" },
                     "Initiatives"
                 )
+            ),
+            React.createElement(
+                Section,
+                { className: "charcoal" },
+                React.createElement(
+                    "div",
+                    { className: "content-wrapper" },
+                    "\xA9 Copyright 2017"
+                )
             )
         );
     }

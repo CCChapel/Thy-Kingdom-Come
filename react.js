@@ -180,6 +180,12 @@ class Page extends React.Component {
                         Initiatives
                     </div>
                 </Section>
+
+                <Section className="charcoal">
+                    <div className="content-wrapper">
+                        &copy; Copyright 2017
+                    </div>
+                </Section>
             </div>
         );
     }
