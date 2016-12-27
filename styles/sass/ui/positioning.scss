@@ -20,6 +20,7 @@
 
 .content-wrapper {
     padding: 4rem;
+    width: 100%;
 
     @include media-query("palm") {
         padding: 3rem 10px;
