@@ -90,6 +90,16 @@ class Logo extends React.Component {
     }
 }
 
+class TestModalContent extends React.Component {
+    render() {
+        return (
+            <div>
+                Test Modal Content!
+            </div>
+        );
+    }
+}
+
 /**
  * Defines the modal section of the page
  * @show: When true, the modal is shown
@@ -118,15 +128,19 @@ class Page extends React.Component {
         super(props);
 
         this.state = {
-            showModal : false
+            showModal : false,
+            modalContent : 'Initial Modal Content'
         };
 
         this.showModal = this.showModal.bind(this);
         this.hideModal = this.hideModal.bind(this);
     }
 
-    showModal(e) {
-        this.setState({showModal : true});
+    showModal(modalContent) {
+        this.setState({
+            showModal : true,
+            modalContent : modalContent
+        });
     }
 
     hideModal(e) {
@@ -134,11 +148,13 @@ class Page extends React.Component {
     }
 
     render() {
-        //Setup the CSS classes for the modal
+        const testModalContent = <TestModalContent />;
+
         return (
             <div>
                 <Modal show={this.state.showModal}>
                     <button onClick={this.hideModal}>Hide Modal</button>
+                    {this.state.modalContent}
                 </Modal>
 
                 <Section className="clouds">
@@ -148,7 +164,7 @@ class Page extends React.Component {
                 <Section className="light-blue">
                     Introduction
 
-                    <button onClick={this.showModal}>Show Modal</button>
+                    <button onClick={() => this.showModal(testModalContent)}>Show Modal</button>
                 </Section>
 
                 <Section className="medium-blue">

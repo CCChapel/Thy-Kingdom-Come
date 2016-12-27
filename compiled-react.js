@@ -95,6 +95,16 @@ class Logo extends React.Component {
     }
 }
 
+class TestModalContent extends React.Component {
+    render() {
+        return React.createElement(
+            "div",
+            null,
+            "Test Modal Content!"
+        );
+    }
+}
+
 /**
  * Defines the modal section of the page
  * @show: When true, the modal is shown
@@ -122,15 +132,19 @@ class Page extends React.Component {
         super(props);
 
         this.state = {
-            showModal: false
+            showModal: false,
+            modalContent: 'Initial Modal Content'
         };
 
         this.showModal = this.showModal.bind(this);
         this.hideModal = this.hideModal.bind(this);
     }
 
-    showModal(e) {
-        this.setState({ showModal: true });
+    showModal(modalContent) {
+        this.setState({
+            showModal: true,
+            modalContent: modalContent
+        });
     }
 
     hideModal(e) {
@@ -138,7 +152,8 @@ class Page extends React.Component {
     }
 
     render() {
-        //Setup the CSS classes for the modal
+        const testModalContent = React.createElement(TestModalContent, null);
+
         return React.createElement(
             "div",
             null,
@@ -149,7 +164,8 @@ class Page extends React.Component {
                     "button",
                     { onClick: this.hideModal },
                     "Hide Modal"
-                )
+                ),
+                this.state.modalContent
             ),
             React.createElement(
                 Section,
@@ -162,7 +178,7 @@ class Page extends React.Component {
                 "Introduction",
                 React.createElement(
                     "button",
-                    { onClick: this.showModal },
+                    { onClick: () => this.showModal(testModalContent) },
                     "Show Modal"
                 )
             ),
