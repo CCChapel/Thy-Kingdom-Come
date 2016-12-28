@@ -1,23 +1,54 @@
 'use strict';
 
-// /**
-//  * Defines a background
-//  */
-// class Background extends React.Component {
-//     render() {
-//         var background = {};
-//         if (this.props.imageUrl !== undefined) {
-//             background.backgroundImage = this.props.imageUrl;
-//         }
-//         if (this.props.color !== undefined) {
-//             background.backgroundColor = this.props.color;
-//         }
+/**
+ * Defines a row representing a ministry partner
+ * @partner = The partner to display
+ */
+class MinistryPartnerRow extends React.Component {
+    render() {
+        return (
+            <div>{this.props.partner.name}</div>
+        );
+    }
+}
 
-//         return (
-//             {background}
-//         );
-//     }
-// }
+/**
+ * Defines a Ministry Table of Ministry Partners
+ * @partners = Array of ministry partners
+ */
+class MinistryPartnersTable extends React.Component {
+    constructor(props) {
+        super(props);
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick() {
+        this.props.showModal();
+    }
+
+    render() {
+        const testModalContent = <TestModalContent />;
+        
+        //Create container for rows
+        var rows = [];
+
+        //Loop through each partner to create row
+        this.props.partners.forEach((partner, index) => {
+            // rows.push(<MinistryPartnerRow partner={partner} onClick={() => this.props.showModal(testModalContent)} />);
+            rows.push(
+                <button key={index} onClick={this.handleClick}>
+                    {partner.name}
+                </button>
+            )
+        });
+
+        return (
+            <div>
+                {rows}
+            </div>
+        )
+    }
+}
 
 /**
  * Defines a section on the page
@@ -174,6 +205,8 @@ class Page extends React.Component {
                 <Section className="medium-blue">
                     <div className="content-wrapper">
                         Local Spree
+
+                        <MinistryPartnersTable showModal={this.showModal} partners={MINISTRY_PARTNERS} />
                     </div>
                 </Section>
 

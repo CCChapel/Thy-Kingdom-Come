@@ -1,30 +1,63 @@
 'use strict';
 
-// /**
-//  * Defines a background
-//  */
-// class Background extends React.Component {
-//     render() {
-//         var background = {};
-//         if (this.props.imageUrl !== undefined) {
-//             background.backgroundImage = this.props.imageUrl;
-//         }
-//         if (this.props.color !== undefined) {
-//             background.backgroundColor = this.props.color;
-//         }
+/**
+ * Defines a row representing a ministry partner
+ * @partner = The partner to display
+ */
 
-//         return (
-//             {background}
-//         );
-//     }
-// }
+class MinistryPartnerRow extends React.Component {
+    render() {
+        return React.createElement(
+            "div",
+            null,
+            this.props.partner.name
+        );
+    }
+}
+
+/**
+ * Defines a Ministry Table of Ministry Partners
+ * @partners = Array of ministry partners
+ */
+class MinistryPartnersTable extends React.Component {
+    constructor(props) {
+        super(props);
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick() {
+        this.props.showModal();
+    }
+
+    render() {
+        const testModalContent = React.createElement(TestModalContent, null);
+
+        //Create container for rows
+        var rows = [];
+
+        //Loop through each partner to create row
+        this.props.partners.forEach((partner, index) => {
+            // rows.push(<MinistryPartnerRow partner={partner} onClick={() => this.props.showModal(testModalContent)} />);
+            rows.push(React.createElement(
+                "button",
+                { key: index, onClick: this.handleClick },
+                partner.name
+            ));
+        });
+
+        return React.createElement(
+            "div",
+            null,
+            rows
+        );
+    }
+}
 
 /**
  * Defines a section on the page
  * @backgroundColor = background color
  * @backgroundImage = image to display in the background
  */
-
 class Section extends React.Component {
     render() {
         // var background = <Background color="black" />;
@@ -192,7 +225,8 @@ class Page extends React.Component {
                 React.createElement(
                     "div",
                     { className: "content-wrapper" },
-                    "Local Spree"
+                    "Local Spree",
+                    React.createElement(MinistryPartnersTable, { showModal: this.showModal, partners: MINISTRY_PARTNERS })
                 )
             ),
             React.createElement(
