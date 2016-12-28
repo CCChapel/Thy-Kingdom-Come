@@ -3,11 +3,21 @@
 /**
  * Defines a row representing a ministry partner
  * @partner = The partner to display
+ * @handleClick = Method to handle the click event
  */
 class MinistryPartnerRow extends React.Component {
+    constructor(props) {
+        super(props);
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick() {
+        this.props.handleClick();
+    }
+
     render() {
         return (
-            <div>{this.props.partner.name}</div>
+            <div onClick={this.handleClick}>{this.props.partner.name}</div>
         );
     }
 }
@@ -34,12 +44,11 @@ class MinistryPartnersTable extends React.Component {
 
         //Loop through each partner to create row
         this.props.partners.forEach((partner, index) => {
-            // rows.push(<MinistryPartnerRow partner={partner} onClick={() => this.props.showModal(testModalContent)} />);
             rows.push(
-                <button key={index} onClick={this.handleClick}>
-                    {partner.name}
-                </button>
-            )
+                <MinistryPartnerRow
+                    partner={partner} 
+                    handleClick={this.handleClick} />
+            );
         });
 
         return (
