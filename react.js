@@ -1,6 +1,39 @@
 'use strict';
 
 /**
+ * Displays the ministry partner information
+ * @information = Partner Information to display
+ */
+class MinsitryPartnerInformation extends React.Component {
+    render() {
+        var options = [];
+
+        this.props.information.options.forEach((option, index) => {
+            options.push(
+                <div>
+                    <div>{option.name}</div>
+                    <div>{option.details}</div>
+                </div>
+            );
+        });
+
+        return (
+            <div>
+                <div>{this.props.information.name}</div>
+                <div>{this.props.information.address}</div>
+                <div>{this.props.information.city}</div>
+                <div>{this.props.information.state}</div>
+                <div>{this.props.information.zipCode}</div>
+                <div>{this.props.information.website}</div>
+                <br />
+                <div>Options</div>
+                {options}
+            </div>
+        );
+    }
+}
+
+/**
  * Defines a row representing a ministry partner
  * @partner = The partner to display
  * @handleClick = Method to handle the click event
@@ -11,13 +44,15 @@ class MinistryPartnerRow extends React.Component {
         this.handleClick = this.handleClick.bind(this);
     }
 
-    handleClick() {
-        this.props.handleClick();
+    handleClick(data) {
+        this.props.handleClick(data);
     }
 
     render() {
         return (
-            <div onClick={this.handleClick}>{this.props.partner.name}</div>
+            <div onClick={() => this.handleClick(<MinsitryPartnerInformation information={this.props.partner} />)}>
+                {this.props.partner.name}
+            </div>
         );
     }
 }
@@ -32,13 +67,11 @@ class MinistryPartnersTable extends React.Component {
         this.handleClick = this.handleClick.bind(this);
     }
 
-    handleClick() {
-        this.props.showModal();
+    handleClick(content) {
+        this.props.showModal(content);
     }
 
     render() {
-        const testModalContent = <TestModalContent />;
-        
         //Create container for rows
         var rows = [];
 
@@ -130,18 +163,6 @@ class Logo extends React.Component {
     }
 }
 
-class TestModalContent extends React.Component {
-    render() {
-        return (
-            <div>
-                Test Modal Content!
-            </div>
-        );
-    }
-}
-
-
-
 /**
  * Defines the modal section of the page
  * @show: When true, the modal is shown
@@ -190,8 +211,6 @@ class Page extends React.Component {
     }
 
     render() {
-        const testModalContent = <TestModalContent />;
-
         return (
             <div>
                 <Modal show={this.state.showModal}>
@@ -206,8 +225,6 @@ class Page extends React.Component {
                 <Section className="light-blue">
                     <div className="content-wrapper">
                         Introduction
-
-                        <button onClick={() => this.showModal(testModalContent)}>Show Modal</button>
                     </div>
                 </Section>
 

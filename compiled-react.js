@@ -1,25 +1,94 @@
 'use strict';
 
 /**
+ * Displays the ministry partner information
+ * @information = Partner Information to display
+ */
+
+class MinsitryPartnerInformation extends React.Component {
+    render() {
+        var options = [];
+
+        this.props.information.options.forEach((option, index) => {
+            options.push(React.createElement(
+                "div",
+                null,
+                React.createElement(
+                    "div",
+                    null,
+                    option.name
+                ),
+                React.createElement(
+                    "div",
+                    null,
+                    option.details
+                )
+            ));
+        });
+
+        return React.createElement(
+            "div",
+            null,
+            React.createElement(
+                "div",
+                null,
+                this.props.information.name
+            ),
+            React.createElement(
+                "div",
+                null,
+                this.props.information.address
+            ),
+            React.createElement(
+                "div",
+                null,
+                this.props.information.city
+            ),
+            React.createElement(
+                "div",
+                null,
+                this.props.information.state
+            ),
+            React.createElement(
+                "div",
+                null,
+                this.props.information.zipCode
+            ),
+            React.createElement(
+                "div",
+                null,
+                this.props.information.website
+            ),
+            React.createElement("br", null),
+            React.createElement(
+                "div",
+                null,
+                "Options"
+            ),
+            options
+        );
+    }
+}
+
+/**
  * Defines a row representing a ministry partner
  * @partner = The partner to display
  * @handleClick = Method to handle the click event
  */
-
 class MinistryPartnerRow extends React.Component {
     constructor(props) {
         super(props);
         this.handleClick = this.handleClick.bind(this);
     }
 
-    handleClick() {
-        this.props.handleClick();
+    handleClick(data) {
+        this.props.handleClick(data);
     }
 
     render() {
         return React.createElement(
             "div",
-            { onClick: this.handleClick },
+            { onClick: () => this.handleClick(React.createElement(MinsitryPartnerInformation, { information: this.props.partner })) },
             this.props.partner.name
         );
     }
@@ -35,13 +104,11 @@ class MinistryPartnersTable extends React.Component {
         this.handleClick = this.handleClick.bind(this);
     }
 
-    handleClick() {
-        this.props.showModal();
+    handleClick(content) {
+        this.props.showModal(content);
     }
 
     render() {
-        const testModalContent = React.createElement(TestModalContent, null);
-
         //Create container for rows
         var rows = [];
 
@@ -135,16 +202,6 @@ class Logo extends React.Component {
     }
 }
 
-class TestModalContent extends React.Component {
-    render() {
-        return React.createElement(
-            "div",
-            null,
-            "Test Modal Content!"
-        );
-    }
-}
-
 /**
  * Defines the modal section of the page
  * @show: When true, the modal is shown
@@ -192,8 +249,6 @@ class Page extends React.Component {
     }
 
     render() {
-        const testModalContent = React.createElement(TestModalContent, null);
-
         return React.createElement(
             "div",
             null,
@@ -218,12 +273,7 @@ class Page extends React.Component {
                 React.createElement(
                     "div",
                     { className: "content-wrapper" },
-                    "Introduction",
-                    React.createElement(
-                        "button",
-                        { onClick: () => this.showModal(testModalContent) },
-                        "Show Modal"
-                    )
+                    "Introduction"
                 )
             ),
             React.createElement(
