@@ -29,8 +29,7 @@ class Page extends React.Component {
     render() {
         return (
             <div>
-                <Modal show={this.state.showModal}>
-                    <button onClick={this.hideModal}>Hide Modal</button>
+                <Modal show={this.state.showModal} hide={this.hideModal}>
                     {this.state.modalContent}
                 </Modal>
 

@@ -162,11 +162,25 @@ class MinistryPartnersTable extends React.Component {
  * @show: When true, the modal is shown
  */
 class Modal extends React.Component {
+    constructor(props) {
+        super(props);
+        this.hide = this.hide.bind(this);
+    }
+
+    hide() {
+        this.props.hide();
+    }
+
     render() {
         if (this.props.show === true) {
             return React.createElement(
                 "div",
                 { className: "modal content-wrapper" },
+                React.createElement(
+                    "button",
+                    { onClick: this.hide },
+                    "Hide Modal"
+                ),
                 this.props.children
             );
         } else {
@@ -208,12 +222,7 @@ class Page extends React.Component {
             null,
             React.createElement(
                 Modal,
-                { show: this.state.showModal },
-                React.createElement(
-                    "button",
-                    { onClick: this.hideModal },
-                    "Hide Modal"
-                ),
+                { show: this.state.showModal, hide: this.hideModal },
                 this.state.modalContent
             ),
             React.createElement(
