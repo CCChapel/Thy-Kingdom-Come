@@ -60,7 +60,7 @@ class MinsitryPartnerInformation extends React.Component {
                 "div",
                 null,
                 React.createElement(
-                    "div",
+                    "h3",
                     null,
                     option.name
                 ),
@@ -76,38 +76,25 @@ class MinsitryPartnerInformation extends React.Component {
             "div",
             null,
             React.createElement(
-                "div",
+                "h1",
                 null,
                 this.props.information.name
             ),
             React.createElement(
                 "div",
-                null,
-                this.props.information.address
-            ),
-            React.createElement(
-                "div",
-                null,
-                this.props.information.city
-            ),
-            React.createElement(
-                "div",
-                null,
-                this.props.information.state
-            ),
-            React.createElement(
-                "div",
-                null,
-                this.props.information.zipCode
-            ),
-            React.createElement(
-                "div",
-                null,
+                { "class": "add-bottom-margin" },
+                this.props.information.address,
+                React.createElement("br", null),
+                this.props.information.city,
+                ", ",
+                this.props.information.state,
+                " ",
+                this.props.information.zipCode,
+                React.createElement("br", null),
                 this.props.information.website
             ),
-            React.createElement("br", null),
             React.createElement(
-                "div",
+                "h2",
                 null,
                 "Options"
             ),
@@ -336,7 +323,7 @@ const MINISTRY_PARTNERS = [{
     zipCode: '44236',
     website: 'http://ccchapel.com',
     options: [{
-        name: 'Visit Urbean Caf&eacute;',
+        name: 'Visit Urbean Caf\u00e9',
         details: 'Integer imperdiet ullamcorper libero, eget consequat lectus feugiat nec. Cras condimentum, nulla nec convallis interdum, dui nisl iaculis nisl, sed dignissim ligula neque eu turpis. Suspendisse potenti.'
     }, {
         name: 'Annual Walk/Bike Event',

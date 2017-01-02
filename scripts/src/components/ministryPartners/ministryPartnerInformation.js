@@ -9,7 +9,7 @@ class MinsitryPartnerInformation extends React.Component {
         this.props.information.options.forEach((option, index) => {
             options.push(
                 <div>
-                    <div>{option.name}</div>
+                    <h3>{option.name}</h3>
                     <div>{option.details}</div>
                 </div>
             );
@@ -17,14 +17,13 @@ class MinsitryPartnerInformation extends React.Component {
 
         return (
             <div>
-                <div>{this.props.information.name}</div>
-                <div>{this.props.information.address}</div>
-                <div>{this.props.information.city}</div>
-                <div>{this.props.information.state}</div>
-                <div>{this.props.information.zipCode}</div>
-                <div>{this.props.information.website}</div>
-                <br />
-                <div>Options</div>
+                <h1>{this.props.information.name}</h1>
+                <div class="add-bottom-margin">
+                    {this.props.information.address}<br />
+                    {this.props.information.city}, {this.props.information.state} {this.props.information.zipCode}<br />
+                    {this.props.information.website}
+                </div>
+                <h2>Options</h2>
                 {options}
             </div>
         );

@@ -30,7 +30,7 @@ const MINISTRY_PARTNERS = [
         website: 'http://ccchapel.com',
         options: [
             {
-                name: 'Visit Urbean Caf&eacute;',
+                name: 'Visit Urbean Caf\u00e9',
                 details: 'Integer imperdiet ullamcorper libero, eget consequat lectus feugiat nec. Cras condimentum, nulla nec convallis interdum, dui nisl iaculis nisl, sed dignissim ligula neque eu turpis. Suspendisse potenti.'
             },
             { 
