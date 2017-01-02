@@ -240,7 +240,11 @@ class Page extends React.Component {
                 React.createElement(
                     "div",
                     { className: "content-wrapper" },
-                    "Introduction"
+                    React.createElement(
+                        "h1",
+                        null,
+                        "Introduction"
+                    )
                 )
             ),
             React.createElement(
@@ -249,7 +253,11 @@ class Page extends React.Component {
                 React.createElement(
                     "div",
                     { className: "content-wrapper" },
-                    "Local Spree",
+                    React.createElement(
+                        "h1",
+                        null,
+                        "Local Spree"
+                    ),
                     React.createElement(MinistryPartnersTable, { showModal: this.showModal, partners: MINISTRY_PARTNERS })
                 )
             ),
@@ -259,7 +267,11 @@ class Page extends React.Component {
                 React.createElement(
                     "div",
                     { className: "content-wrapper" },
-                    "Initiatives"
+                    React.createElement(
+                        "h1",
+                        null,
+                        "Initiatives"
+                    )
                 )
             ),
             React.createElement(

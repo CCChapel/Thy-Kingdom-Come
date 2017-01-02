@@ -40,13 +40,13 @@ class Page extends React.Component {
 
                 <Section className="light-blue">
                     <div className="content-wrapper">
-                        Introduction
+                        <h1>Introduction</h1>
                     </div>
                 </Section>
 
                 <Section className="medium-blue">
                     <div className="content-wrapper">
-                        Local Spree
+                        <h1>Local Spree</h1>
 
                         <MinistryPartnersTable showModal={this.showModal} partners={MINISTRY_PARTNERS} />
                     </div>
@@ -54,7 +54,7 @@ class Page extends React.Component {
 
                 <Section className="dark-blue">
                     <div className="content-wrapper">
-                        Initiatives
+                        <h1>Initiatives</h1>
                     </div>
                 </Section>
 
