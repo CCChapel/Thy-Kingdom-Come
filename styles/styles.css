@@ -77,7 +77,7 @@ csswizardry.com
 * Enclose a block of code with a media query as named in `$breakpoints`.
 */
 body {
-  font-family: Verdana, Arial, sans-serif; }
+  font-family: "freight-sans-pro", Verdana, Arial, sans-serif; }
 
 .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
   fill: none; }
