@@ -79,6 +79,10 @@ csswizardry.com
 body {
   font-family: "freight-sans-pro", Verdana, Arial, sans-serif; }
 
+h1, h2, h3, h4, h5, h6,
+.header {
+  font-family: "freight-text-pro", "Franklin Gothic Book", serif; }
+
 .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
   fill: none; }
 
