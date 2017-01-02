@@ -279,7 +279,7 @@ class Page extends React.Component {
                 { className: "charcoal align-content-top auto-min-height" },
                 React.createElement(
                     "div",
-                    { className: "content-wrapper" },
+                    { className: "content-wrapper serif" },
                     "\xA9 Copyright 2017"
                 )
             )

@@ -59,7 +59,7 @@ class Page extends React.Component {
                 </Section>
 
                 <Section className="charcoal align-content-top auto-min-height">
-                    <div className="content-wrapper">
+                    <div className="content-wrapper serif">
                         &copy; Copyright 2017
                     </div>
                 </Section>
