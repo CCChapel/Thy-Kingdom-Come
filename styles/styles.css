@@ -247,7 +247,10 @@ csswizardry.com
 * Enclose a block of code with a media query as named in `$breakpoints`.
 */
 body {
-  font-family: "freight-sans-pro", Verdana, Arial, sans-serif; }
+  font-family: "freight-sans-pro", Verdana, Arial, sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5; }
 
 h1, h2, h3, h4, h5, h6,
 .header {
