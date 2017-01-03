@@ -125,7 +125,7 @@ class MinistryPartnerRow extends React.Component {
         return React.createElement(
             "div",
             {
-                className: "bg-light-blue text-bigger add-bottom-margin add-padding cursor-point",
+                className: "bg-light-blue text-bigger add-bottom-margin add-padding cursor-point one-third",
                 onClick: () => this.handleClick(React.createElement(MinsitryPartnerInformation, { information: this.props.partner })) },
             this.props.partner.name
         );
@@ -158,7 +158,7 @@ class MinistryPartnersTable extends React.Component {
 
         return React.createElement(
             "div",
-            null,
+            { className: "flex" },
             rows
         );
     }

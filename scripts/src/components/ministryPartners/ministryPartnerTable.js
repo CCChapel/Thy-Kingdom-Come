@@ -26,7 +26,7 @@ class MinistryPartnersTable extends React.Component {
         });
 
         return (
-            <div>
+            <div className="flex">
                 {rows}
             </div>
         )

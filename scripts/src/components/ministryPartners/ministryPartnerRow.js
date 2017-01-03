@@ -16,7 +16,7 @@ class MinistryPartnerRow extends React.Component {
     render() {
         return (
             <div 
-                className="bg-light-blue text-bigger add-bottom-margin add-padding cursor-point" 
+                className="bg-light-blue text-bigger add-bottom-margin add-padding cursor-point one-third" 
                 onClick={() => this.handleClick(<MinsitryPartnerInformation information={this.props.partner} />)}>
                 {this.props.partner.name}
             </div>
