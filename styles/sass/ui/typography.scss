@@ -38,8 +38,16 @@ h1, h2, h3, h4, h5, h6,
     &-black {
         color: $black;
     }
+
+    &-bigger {
+        @include typecsset-font-size(24px);
+    }
 }
 
 .center {
     text-align: center;
+}
+
+.cursor-point {
+    cursor: pointer;
 }

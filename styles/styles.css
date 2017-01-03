@@ -274,9 +274,16 @@ h1, h2, h3, h4, h5, h6,
   color: #467284; }
 .text-black {
   color: #333; }
+.text-bigger {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1; }
 
 .center {
   text-align: center; }
+
+.cursor-point {
+  cursor: pointer; }
 
 .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
   fill: none; }
@@ -452,6 +459,9 @@ h1, h2, h3, h4, h5, h6,
       overflow-x: hidden; } }
   .content-wrapper.lock-width {
     max-width: 60rem; }
+
+.add-padding {
+  padding: 1rem 20px; }
 
 .add-bottom-margin {
   margin-bottom: 2em; }
