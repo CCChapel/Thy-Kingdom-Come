@@ -39,13 +39,19 @@ class Page extends React.Component {
 
                 <Section className="bg-light-blue">
                     <div className="content-wrapper">
-                        <h1>Introduction</h1>
+                        <h1 className="center">Introduction</h1>
                     </div>
                 </Section>
 
                 <Section className="bg-medium-blue">
                     <div className="content-wrapper">
-                        <h1>Local Spree</h1>
+                        <h1 className="center">Local Spree</h1>
+
+                        <p className="center">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt 
+                            lacus lorem, eget maximus augue mattis sit amet. Aliquam finibus est in 
+                            varius sollicitudin.
+                        </p>
 
                         <MinistryPartnersTable showModal={this.showModal} partners={MINISTRY_PARTNERS} />
                     </div>
@@ -53,7 +59,13 @@ class Page extends React.Component {
 
                 <Section className="bg-dark-blue">
                     <div className="content-wrapper">
-                        <h1>Initiatives</h1>
+                        <h1 className="center">Assignments</h1>
+
+                        <h1 className="center"><i className="[ fa fa-5x fa-clock-o ]"></i></h1>
+
+                        <p className="center">
+                            Keep checking back! We&rsquo;ll have more assignments for you soon.
+                        </p>
                     </div>
                 </Section>
 

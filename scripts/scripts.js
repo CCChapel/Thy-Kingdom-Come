@@ -242,7 +242,7 @@ class Page extends React.Component {
                     { className: "content-wrapper" },
                     React.createElement(
                         "h1",
-                        null,
+                        { className: "center" },
                         "Introduction"
                     )
                 )
@@ -255,8 +255,13 @@ class Page extends React.Component {
                     { className: "content-wrapper" },
                     React.createElement(
                         "h1",
-                        null,
+                        { className: "center" },
                         "Local Spree"
+                    ),
+                    React.createElement(
+                        "p",
+                        { className: "center" },
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt lacus lorem, eget maximus augue mattis sit amet. Aliquam finibus est in varius sollicitudin."
                     ),
                     React.createElement(MinistryPartnersTable, { showModal: this.showModal, partners: MINISTRY_PARTNERS })
                 )
@@ -269,8 +274,18 @@ class Page extends React.Component {
                     { className: "content-wrapper" },
                     React.createElement(
                         "h1",
-                        null,
-                        "Initiatives"
+                        { className: "center" },
+                        "Assignments"
+                    ),
+                    React.createElement(
+                        "h1",
+                        { className: "center" },
+                        React.createElement("i", { className: "[ fa fa-5x fa-clock-o ]" })
+                    ),
+                    React.createElement(
+                        "p",
+                        { className: "center" },
+                        "Keep checking back! We\u2019ll have more assignments for you soon."
                     )
                 )
             ),

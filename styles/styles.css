@@ -275,6 +275,9 @@ h1, h2, h3, h4, h5, h6,
 .text-black {
   color: #333; }
 
+.center {
+  text-align: center; }
+
 .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
   fill: none; }
 
