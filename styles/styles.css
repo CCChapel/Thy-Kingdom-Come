@@ -468,6 +468,8 @@ h1, h2, h3, h4, h5, h6,
   background-color: #333333; }
 .bg-clouds {
   background-image: url(../images/clouds.jpg); }
+.bg-cover {
+  background-size: cover; }
 
 .hidden {
   display: none; }
