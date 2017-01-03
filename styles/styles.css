@@ -455,17 +455,19 @@ h1, h2, h3, h4, h5, h6,
   margin-left: auto !important;
   margin-right: auto !important; }
 
-.section {
+.fill-screen-height {
   min-height: 100vh; }
-  .section.light-blue {
-    background-color: #a2ccdd; }
-  .section.medium-blue {
-    background-color: #69a7c2; }
-  .section.dark-blue {
-    background-color: #467284; }
-  .section.charcoal {
-    background-color: #333333;
-    color: #FFF; }
+
+.bg-light-blue {
+  background-color: #a2ccdd; }
+.bg-medium-blue {
+  background-color: #69a7c2; }
+.bg-dark-blue {
+  background-color: #467284; }
+.bg-charcoal {
+  background-color: #333333; }
+.bg-clouds {
+  background-image: url(../images/clouds.jpg); }
 
 .hidden {
   display: none; }

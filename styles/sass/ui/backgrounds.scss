@@ -1,0 +1,21 @@
+.bg {
+    &-light-blue {
+        background-color: $light-blue;
+    }
+
+    &-medium-blue {
+        background-color: $medium-blue;
+    }
+
+    &-dark-blue {
+        background-color: $dark-blue;
+    }
+
+    &-charcoal {
+        background-color: $charcoal;
+    }
+
+    &-clouds {
+        background-image: url(../images/clouds.jpg);
+    }
+}

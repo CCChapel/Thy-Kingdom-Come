@@ -33,17 +33,17 @@ class Page extends React.Component {
                     {this.state.modalContent}
                 </Modal>
 
-                <Section className="clouds">
+                <Section className="bg-clouds">
                     <Logo />
                 </Section>
 
-                <Section className="light-blue">
+                <Section className="bg-light-blue">
                     <div className="content-wrapper">
                         <h1>Introduction</h1>
                     </div>
                 </Section>
 
-                <Section className="medium-blue">
+                <Section className="bg-medium-blue">
                     <div className="content-wrapper">
                         <h1>Local Spree</h1>
 
@@ -51,13 +51,13 @@ class Page extends React.Component {
                     </div>
                 </Section>
 
-                <Section className="dark-blue">
+                <Section className="bg-dark-blue">
                     <div className="content-wrapper">
                         <h1>Initiatives</h1>
                     </div>
                 </Section>
 
-                <Section className="charcoal align-content-top auto-min-height">
+                <Section className="bg-charcoal align-content-top auto-min-height">
                     <div className="content-wrapper serif">
                         &copy; Copyright 2017
                     </div>

@@ -1,4 +1,3 @@
-'use strict';
 /**
  * Defines the logo for Thy Kingdom Come
  */
@@ -227,12 +226,12 @@ class Page extends React.Component {
             ),
             React.createElement(
                 Section,
-                { className: "clouds" },
+                { className: "bg-clouds" },
                 React.createElement(Logo, null)
             ),
             React.createElement(
                 Section,
-                { className: "light-blue" },
+                { className: "bg-light-blue" },
                 React.createElement(
                     "div",
                     { className: "content-wrapper" },
@@ -245,7 +244,7 @@ class Page extends React.Component {
             ),
             React.createElement(
                 Section,
-                { className: "medium-blue" },
+                { className: "bg-medium-blue" },
                 React.createElement(
                     "div",
                     { className: "content-wrapper" },
@@ -259,7 +258,7 @@ class Page extends React.Component {
             ),
             React.createElement(
                 Section,
-                { className: "dark-blue" },
+                { className: "bg-dark-blue" },
                 React.createElement(
                     "div",
                     { className: "content-wrapper" },
@@ -272,7 +271,7 @@ class Page extends React.Component {
             ),
             React.createElement(
                 Section,
-                { className: "charcoal align-content-top auto-min-height" },
+                { className: "bg-charcoal align-content-top auto-min-height" },
                 React.createElement(
                     "div",
                     { className: "content-wrapper serif" },
@@ -358,3 +357,4 @@ const MINISTRY_PARTNERS = [{
 }];
 
 ReactDOM.render(React.createElement(Page, null), document.getElementById('root'));
+'use strict';
