@@ -254,10 +254,12 @@ body {
 
 h1, h2, h3, h4, h5, h6,
 .header {
-  font-family: "freight-big-pro", "Franklin Gothic Book", serif; }
+  font-family: "freight-big-pro", "Franklin Gothic Book", serif;
+  letter-spacing: 2px; }
 
 .serif {
-  font-family: "freight-big-pro", "Franklin Gothic Book", serif; }
+  font-family: "freight-big-pro", "Franklin Gothic Book", serif;
+  letter-spacing: 2px; }
 
 .sans-serif {
   font-family: "freight-sans-pro", Verdana, Arial, sans-serif; }
