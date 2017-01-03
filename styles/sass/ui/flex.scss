@@ -94,6 +94,11 @@
 
     &.wrap {
         @include flex-wrap(wrap);
+
+        //Remove gutter for wrapping
+        & > * {
+            margin-right: 0;
+        }
     }
 
     &.vertical {

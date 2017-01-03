@@ -391,6 +391,8 @@ h1, h2, h3, h4, h5, h6,
     -moz-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
+    .flex.wrap > * {
+      margin-right: 0; }
   .flex.vertical {
     -webkit-flex-flow: column nowrap;
     -moz-flex-flow: column nowrap;
