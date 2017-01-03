@@ -16,7 +16,7 @@ class Modal extends React.Component {
         if (this.props.show === true) {
             return (
                 <div className="modal content-wrapper">
-                    <div className="modal-close" onClick={this.hide}><i className="fa fa-close" aria-hidden="true"></i></div>
+                    <div className="modal-close text-dark-blue" onClick={this.hide}><i className="fa fa-3x fa-close" aria-hidden="true"></i></div>
 
                     {this.props.children}
                 </div>

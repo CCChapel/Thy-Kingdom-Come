@@ -178,8 +178,8 @@ class Modal extends React.Component {
                 { className: "modal content-wrapper" },
                 React.createElement(
                     "div",
-                    { className: "modal-close", onClick: this.hide },
-                    React.createElement("i", { className: "fa fa-close", "aria-hidden": "true" })
+                    { className: "modal-close text-dark-blue", onClick: this.hide },
+                    React.createElement("i", { className: "fa fa-3x fa-close", "aria-hidden": "true" })
                 ),
                 this.props.children
             );

@@ -15,3 +15,25 @@ h1, h2, h3, h4, h5, h6,
 .sans-serif {
     font-family: $sans-serif;
 }
+
+.text {
+    &-white {
+        color: #FFF;
+    }
+
+    &-light-blue {
+        color: $light-blue;
+    }
+
+    &-medium-blue {
+        color: $medium-blue;
+    }
+
+    &-dark-blue {
+        color: $dark-blue;
+    }
+
+    &-black {
+        color: $black;
+    }
+}
