@@ -76,6 +76,10 @@
         @include align-content(flex-start);
     }
 
+    &.justify-content-center {
+        @include justify-content(center);
+    }
+
     &:not(.vertical) > * {
         margin-right: $gutter;
 

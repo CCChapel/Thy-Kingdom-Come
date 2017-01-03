@@ -362,6 +362,12 @@ h1, h2, h3, h4, h5, h6,
     -moz-align-content: flex-start;
     -ms-flex-line-pack: start;
     align-content: flex-start; }
+  .flex.justify-content-center {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    justify-content: center; }
   .flex:not(.vertical) > * {
     margin-right: 20px; }
     .flex:not(.vertical) > *:last-child {
