@@ -226,7 +226,7 @@ class Page extends React.Component {
             ),
             React.createElement(
                 Section,
-                { className: "bg-clouds" },
+                { className: "bg-clouds bg-cover" },
                 React.createElement(Logo, null)
             ),
             React.createElement(

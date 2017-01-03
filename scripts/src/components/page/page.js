@@ -33,7 +33,7 @@ class Page extends React.Component {
                     {this.state.modalContent}
                 </Modal>
 
-                <Section className="bg-clouds">
+                <Section className="bg-clouds bg-cover">
                     <Logo />
                 </Section>
 
