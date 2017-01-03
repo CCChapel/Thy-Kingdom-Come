@@ -57,7 +57,7 @@ class Page extends React.Component {
                     </div>
                 </Section>
 
-                <Section className="bg-charcoal align-content-top auto-min-height">
+                <Section className="bg-charcoal align-content-top auto-min-height text-white">
                     <div className="content-wrapper serif">
                         &copy; Copyright 2017
                     </div>

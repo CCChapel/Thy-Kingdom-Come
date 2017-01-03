@@ -271,7 +271,7 @@ class Page extends React.Component {
             ),
             React.createElement(
                 Section,
-                { className: "bg-charcoal align-content-top auto-min-height" },
+                { className: "bg-charcoal align-content-top auto-min-height text-white" },
                 React.createElement(
                     "div",
                     { className: "content-wrapper serif" },
@@ -294,7 +294,7 @@ class Section extends React.Component {
             backgroundImage: this.props.backgroundImage
         };
 
-        var className = "section flex ";
+        var className = "section flex fill-screen-height ";
         if (this.props.className !== undefined) {
             className += this.props.className;
         }

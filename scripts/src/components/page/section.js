@@ -11,7 +11,7 @@ class Section extends React.Component {
             backgroundImage: this.props.backgroundImage,
         };
 
-        var className = "section flex ";
+        var className = "section flex fill-screen-height ";
         if (this.props.className !== undefined) {
             className += this.props.className;
         }
