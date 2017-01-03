@@ -3,8 +3,13 @@
  */
 class Logo extends React.Component {
     render() {
+        var styles = {
+            minWidth: '600px',
+            maxWidth: '1080px'
+        };
+
         return (
-            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" style={styles}>
                 <title>Thy Kingdom Come</title>
                 <path className="cls-1" d="M1022,471.28v-2l-7.86,4.28,1.65-.09C1020.93,473.19,1022,472.46,1022,471.28Z"/>
                 <polygon points="1013.02 473.63 1012.66 474.34 1014.05 473.57 1013.02 473.63"/>
