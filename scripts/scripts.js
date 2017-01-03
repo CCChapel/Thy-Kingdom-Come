@@ -158,7 +158,7 @@ class MinistryPartnersTable extends React.Component {
 
         return React.createElement(
             "div",
-            { className: "flex" },
+            { className: "flex wrap" },
             rows
         );
     }
