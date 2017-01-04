@@ -327,6 +327,17 @@ h1, h2, h3, h4, h5, h6,
   stroke: #333;
   stroke-width: 4; }
 
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg); }
+  50% {
+    transform: rotate(180deg); }
+  100% {
+    transform: rotate(360deg); } }
+.fx-rotate {
+  animation: rotate 2s infinite linear;
+  transform-origin: center center; }
+
 .flex {
   display: -webkit-box;
   display: -webkit-flex;
@@ -559,16 +570,5 @@ h1, h2, h3, h4, h5, h6,
     color: #467284; }
   .fx-bottom-border:hover:before, .fx-bottom-border:focus:before, .fx-bottom-border:active:before {
     right: 0; }
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg); }
-  50% {
-    transform: rotate(180deg); }
-  100% {
-    transform: rotate(360deg); } }
-.fx-rotate {
-  animation: rotate 2s infinite linear;
-  transform-origin: center center; }
 
 /*# sourceMappingURL=styles.css.map */
