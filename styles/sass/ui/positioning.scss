@@ -39,7 +39,9 @@
 }
 
 .add-bottom-margin {
-    margin-bottom: 2em;
+    // margin-bottom: 2em;
+    margin-bottom: $typecsset-magic-number;
+    margin-bottom: $typecsset-magic-ratio + rem;
 }
 
 .center-by-margin {

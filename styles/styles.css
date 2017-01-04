@@ -475,7 +475,8 @@ h1, h2, h3, h4, h5, h6,
   padding: 1rem 20px; }
 
 .add-bottom-margin {
-  margin-bottom: 2em; }
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem; }
 
 .center-by-margin {
   margin-left: auto !important;
