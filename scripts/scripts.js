@@ -1,3 +1,4 @@
+'use strict';
 /**
  * Defines the logo for Thy Kingdom Come
  */
@@ -379,4 +380,3 @@ const MINISTRY_PARTNERS = [{
 }];
 
 ReactDOM.render(React.createElement(Page, null), document.getElementById('root'));
-'use strict';
