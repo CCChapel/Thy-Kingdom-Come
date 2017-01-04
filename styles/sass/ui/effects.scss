@@ -1,4 +1,7 @@
 .fx-bottom-border {
+    @include transform(translateZ(0));
+    @include backface-visibility(hidden);
+    
     &:before {
         content: "";
 
@@ -9,16 +12,11 @@
         right: 100%;
         bottom: 0;
         
-        background: #369dd5;
+        background: black;
         
         height: 4px;
         
-        -webkit-transition-property:right;
-        transition-property:right;
-        -webkit-transition-duration:.3s;
-        transition-duration:.3s;
-        -webkit-transition-timing-function:ease-out;
-        transition-timing-function:ease-out;
+        @include transition(right .3s ease-out);
     }
 
     &:hover:before,

@@ -250,7 +250,9 @@ body {
   font-family: "freight-sans-pro", Verdana, Arial, sans-serif;
   font-size: 16px;
   font-size: 1rem;
-  line-height: 1.5; }
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 h1, h2, h3, h4, h5, h6,
 .header {
@@ -500,22 +502,31 @@ h1, h2, h3, h4, h5, h6,
 .auto-min-height {
   min-height: auto; }
 
-.fx-bottom-border:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  left: 0;
-  right: 100%;
-  bottom: 0;
-  background: #369dd5;
-  height: 4px;
-  -webkit-transition-property: right;
-  transition-property: right;
-  -webkit-transition-duration: .3s;
-  transition-duration: .3s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out; }
-.fx-bottom-border:hover:before, .fx-bottom-border:focus:before, .fx-bottom-border:active:before {
-  right: 0; }
+.fx-bottom-border {
+  -webkit-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden; }
+  .fx-bottom-border:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background: black;
+    height: 4px;
+    -webkit-transition: right 0.3s ease-out;
+    -moz-transition: right 0.3s ease-out;
+    -o-transition: right 0.3s ease-out;
+    -ms-transition: right 0.3s ease-out;
+    transition: right 0.3s ease-out; }
+  .fx-bottom-border:hover:before, .fx-bottom-border:focus:before, .fx-bottom-border:active:before {
+    right: 0; }
 
 /*# sourceMappingURL=styles.css.map */
