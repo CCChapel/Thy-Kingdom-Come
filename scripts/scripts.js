@@ -1,27 +1,18 @@
 class Clock extends React.Component {
     render() {
-        var styles = {
-            fill: 'transparent',
-            stroke: 'purple',
-            strokeWidth: 1
-        };
-
         return React.createElement(
-            'svg',
-            { width: '400', height: '400' },
-            React.createElement('circle', {
-                cx: '200',
-                cy: '200',
-                r: '100',
-                stroke: 'black',
-                strokeWidth: '4',
-                fill: 'transparent' }),
-            React.createElement('polyline', { className: 'fx-rotate',
-                points: '200,200 200,110',
-                style: styles }),
-            React.createElement('polyline', {
-                points: '200,200 125,200',
-                style: styles })
+            "svg",
+            { className: "clock", width: "400", height: "400" },
+            React.createElement("circle", { className: "face",
+                cx: "200",
+                cy: "200",
+                r: "100" }),
+            React.createElement("polyline", { className: "second-hand",
+                points: "200,200 200,110" }),
+            React.createElement("polyline", { className: "hour-hand fx-rotate",
+                points: "200,200 200,110" }),
+            React.createElement("polyline", { className: "minute-hand",
+                points: "200,200 125,200" })
         );
     }
 }

@@ -313,6 +313,20 @@ h1, h2, h3, h4, h5, h6,
 #g {
   animation: test 1s infinite; }
 
+.clock .face {
+  stroke: #333;
+  stroke-width: 8;
+  fill: transparent; }
+.clock .second-hand {
+  stroke: red;
+  stroke-width: 1; }
+.clock .minute-hand {
+  stroke: #333;
+  stroke-width: 4; }
+.clock .hour-hand {
+  stroke: #333;
+  stroke-width: 4; }
+
 .flex {
   display: -webkit-box;
   display: -webkit-flex;

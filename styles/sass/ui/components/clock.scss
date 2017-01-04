@@ -1,0 +1,22 @@
+.clock {
+    .face {
+        stroke: $black;
+        stroke-width: 8;
+        fill: transparent;
+    }
+
+    .second-hand {
+        stroke: red;
+        stroke-width: 1;
+    }
+
+    .minute-hand {
+        stroke: $black;
+        stroke-width: 4;
+    }
+
+    .hour-hand {
+        stroke: $black;
+        stroke-width: 4;
+    }
+}
