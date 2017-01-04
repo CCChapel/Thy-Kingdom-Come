@@ -1,0 +1,29 @@
+.fx-bottom-border {
+    &:before {
+        content: "";
+
+        position: absolute;
+        z-index: -1;
+
+        left: 0;
+        right: 100%;
+        bottom: 0;
+        
+        background: #369dd5;
+        
+        height: 4px;
+        
+        -webkit-transition-property:right;
+        transition-property:right;
+        -webkit-transition-duration:.3s;
+        transition-duration:.3s;
+        -webkit-transition-timing-function:ease-out;
+        transition-timing-function:ease-out;
+    }
+
+    &:hover:before,
+    &:focus:before,
+    &:active:before {
+        right: 0;
+    }
+}
