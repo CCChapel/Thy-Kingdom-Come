@@ -26,7 +26,7 @@ class MinistryPartnersTable extends React.Component {
         });
 
         return (
-            <div className="flex wrap">
+            <div className="flex wrap align-items-stretch">
                 {rows}
             </div>
         )

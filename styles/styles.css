@@ -382,6 +382,12 @@ h1, h2, h3, h4, h5, h6,
     -webkit-justify-content: center;
     -moz-justify-content: center;
     justify-content: center; }
+  .flex.align-items-stretch {
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    -webkit-align-items: stretch;
+    -moz-align-items: stretch;
+    align-items: stretch; }
   .flex:not(.vertical) > * {
     margin-right: 20px; }
     .flex:not(.vertical) > *:last-child {
