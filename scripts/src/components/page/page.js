@@ -57,11 +57,11 @@ class Page extends React.Component {
                     </div>
                 </Section>
 
-                <Section className="bg-dark-blue">
+                <Section className="bg-dark-blue text-white">
                     <div className="content-wrapper">
                         <h1 className="center">Assignments</h1>
 
-                        <h1 className="center"><i className="[ fa fa-5x fa-clock-o ]"></i></h1>
+                        <h1 className="center text-light-blue"><i className="[ fa fa-5x fa-clock-o ]"></i></h1>
 
                         <p className="center">
                             Keep checking back! We&rsquo;ll have more assignments for you soon.

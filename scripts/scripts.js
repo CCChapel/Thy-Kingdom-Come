@@ -271,7 +271,7 @@ class Page extends React.Component {
             ),
             React.createElement(
                 Section,
-                { className: "bg-dark-blue" },
+                { className: "bg-dark-blue text-white" },
                 React.createElement(
                     "div",
                     { className: "content-wrapper" },
@@ -282,7 +282,7 @@ class Page extends React.Component {
                     ),
                     React.createElement(
                         "h1",
-                        { className: "center" },
+                        { className: "center text-light-blue" },
                         React.createElement("i", { className: "[ fa fa-5x fa-clock-o ]" })
                     ),
                     React.createElement(
