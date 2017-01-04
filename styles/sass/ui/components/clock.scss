@@ -1,4 +1,6 @@
 .clock {
+    display: block;
+    
     &__face {
         stroke: $black;
         stroke-width: 16;
