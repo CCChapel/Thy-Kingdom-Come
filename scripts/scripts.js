@@ -3,15 +3,19 @@ class Clock extends React.Component {
         return React.createElement(
             "svg",
             { className: "clock", width: "400", height: "400" },
-            React.createElement("circle", { className: "face",
+            React.createElement("circle", { className: "clock__face",
                 cx: "200",
                 cy: "200",
                 r: "100" }),
-            React.createElement("polyline", { className: "second-hand",
+            React.createElement("circle", { className: "clock__center",
+                cx: "200",
+                cy: "200",
+                r: "4" }),
+            React.createElement("polyline", { className: "clock__second-hand",
                 points: "200,200 200,110" }),
-            React.createElement("polyline", { className: "minute-hand",
+            React.createElement("polyline", { className: "clock__minute-hand",
                 points: "200,200 200,110" }),
-            React.createElement("polyline", { className: "hour-hand",
+            React.createElement("polyline", { className: "clock__hour-hand",
                 points: "200,200 125,200" })
         );
     }

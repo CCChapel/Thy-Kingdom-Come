@@ -1,11 +1,16 @@
 .clock {
-    .face {
+    &__face {
         stroke: $black;
-        stroke-width: 8;
+        stroke-width: 16;
         fill: transparent;
     }
 
-    .second-hand {
+    &__center {
+        stroke: transparent;
+        fill: $black;
+    }
+
+    &__second-hand {
         stroke: red;
         stroke-width: 1;
 
@@ -13,17 +18,17 @@
         transform-origin: center center;
     }
 
-    .minute-hand {
+    &__minute-hand {
         stroke: $black;
-        stroke-width: 4;
+        stroke-width: 8;
 
         animation: rotate 3600s infinite ease;
         transform-origin: center center;
     }
 
-    .hour-hand {
+    &__hour-hand {
         stroke: $black;
-        stroke-width: 4;
+        stroke-width: 8;
 
         animation: roatate 86400s infinite ease;
         transform-origin: center center;
