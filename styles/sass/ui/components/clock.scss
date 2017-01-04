@@ -16,7 +16,7 @@
         stroke: red;
         stroke-width: 1;
 
-        animation: rotate 60s infinite linear;
+        //animation: rotate 60s infinite linear;
         transform-origin: center center;
     }
 
@@ -24,7 +24,7 @@
         stroke: $black;
         stroke-width: 8;
 
-        animation: rotate 3600s infinite ease;
+        //animation: rotate 3600s infinite ease;
         transform-origin: center center;
     }
 
@@ -32,7 +32,7 @@
         stroke: $black;
         stroke-width: 8;
 
-        animation: roatate 86400s infinite ease;
+        //animation: roatate 86400s infinite ease;
         transform-origin: center center;
     }
 }

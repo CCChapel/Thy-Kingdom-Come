@@ -1,9 +1,21 @@
 class Clock extends React.Component {
     render() {
+        //Allow classes to be passed in to Component
         var className = "clock ";
         if (this.props.className !== undefined) {
             className += this.props.className;
         }
+
+        //Calculate Clock Positions
+        var date = new Date();
+        var hour = date.getHours() % 12;
+        var minute = date.getMinutes();
+        var second = date.getSeconds();
+
+        //Calculate Hour Hand
+        var hourAngle = hour * Math.PI / 6 + minute * Math.PI / (6 * 60) + second * Math.PI / (360 * 60);
+        console.log(hourAngle);
+        var hourPoints = "200,200 ";
 
         return React.createElement(
             "svg",
@@ -17,7 +29,7 @@ class Clock extends React.Component {
                 cy: "200",
                 r: "4" }),
             React.createElement("polyline", { className: "clock__hour-hand",
-                points: "200,200 125,200" }),
+                points: "200,200 200,300" }),
             React.createElement("polyline", { className: "clock__minute-hand",
                 points: "200,200 200,110" }),
             React.createElement("polyline", { className: "clock__second-hand",

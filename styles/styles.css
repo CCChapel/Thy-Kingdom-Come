@@ -325,17 +325,14 @@ h1, h2, h3, h4, h5, h6,
   .clock__second-hand {
     stroke: red;
     stroke-width: 1;
-    animation: rotate 60s infinite linear;
     transform-origin: center center; }
   .clock__minute-hand {
     stroke: #333;
     stroke-width: 8;
-    animation: rotate 3600s infinite ease;
     transform-origin: center center; }
   .clock__hour-hand {
     stroke: #333;
     stroke-width: 8;
-    animation: roatate 86400s infinite ease;
     transform-origin: center center; }
 
 @keyframes rotate {
