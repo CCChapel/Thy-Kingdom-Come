@@ -126,7 +126,7 @@ class MinistryPartnerRow extends React.Component {
         return React.createElement(
             "div",
             {
-                className: "[ one-third ] [ bg-light-blue ] [ text-bigger cursor-point ] [ add-bottom-margin add-padding ] [ fx-bottom-border ]",
+                className: "[ one-third ] [ bg-light-blue ] [ text-bigger cursor-point ] [ add-bottom-margin add-padding ] [ fx-bottom-border fx-dark-blue ]",
                 onClick: () => this.handleClick(React.createElement(MinsitryPartnerInformation, { information: this.props.partner })) },
             this.props.partner.name
         );
