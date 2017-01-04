@@ -8,10 +8,9 @@
 }
 
 @keyframes test {
-    0%   {top: 0px;}
-    25%  {top: 200px;}
-    75%  {top: 50px}
-    100% {top: 100px;}
+    0%   {transform: translateY(0);}
+    50%  {transform: translateY(10px);}
+    100% {transform: translateY(0);}
 }
 
 .cls-3 {
@@ -20,9 +19,12 @@
 
 .cls-4 {
     stroke-width: 0.5px;
-    animation: test 5s infinite;
 }
 
 .cls-5 {
     stroke-width: 3px;
+}
+
+#g {
+    animation: test 1s infinite;
 }
