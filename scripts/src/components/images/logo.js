@@ -3,15 +3,6 @@
  */
 class Logo extends React.Component {
     render() {
-        var styles = {
-            minWidth: '600px',
-            maxWidth: '1080px'
-        };
-
-        var color = {
-            stroke: 'red'
-        };
-
         return (
             <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" style={styles}>
                 <title>Thy Kingdom Come</title>
