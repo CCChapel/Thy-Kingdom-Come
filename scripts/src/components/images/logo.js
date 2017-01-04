@@ -44,44 +44,54 @@ class Logo extends React.Component {
                 <path d="M1118.26,696.31a71.87,71.87,0,0,1,.44-7.93l41.54.15a13.7,13.7,0,0,0,.29-2.06c0-12-8.81-20.11-23.78-20.11-18.94,0-31.85,15.56-31.85,34.5,0,9.69,3.61,18.12,9.64,23.83l11.91-6.57C1121.41,713.39,1118.26,705.86,1118.26,696.31Zm17.32-28.48c8.66,0,11.6,9.54,11.6,18.94l-28.18.29C1120.76,677.23,1127.51,667.83,1135.58,667.83Z"/>
                 
                 {/* Line in top left */}
-                <line id="line-top-left" className="cls-4" x1="154.18" y1="544.72" x2="994.37" y2="81.4">
-                    <animate attributeName="x1" attributeType="XML" from="154.18" to="164.18" begin="0ms" dur="600ms" repeatCount="indefinite" />
-                    <animate attributeName="y1" attributeType="XML" from="544.72" to="554.72" begin="0ms" dur="600ms" repeatCount="indefinite" />
-                    <animate attributeName="x2" attributeType="XML" from="994.37" to="1004.37" begin="0ms" dur="600ms" repeatCount="indefinite" />
-                    <animate attributeName="y2" attributeType="XML" from="81.4" to="91.4" begin="0ms" dur="600ms" repeatCount="indefinite" />
-
-                    <animate attributeName="x1" attributeType="XML" from="164.18" to="154.18" begin="600ms" dur="1200ms" repeatCount="indefinite" />
-                    <animate attributeName="y1" attributeType="XML" from="554.72" to="544.72" begin="600ms" dur="1200ms" repeatCount="indefinite" />
-                    <animate attributeName="x2" attributeType="XML" from="1004.37" to="994.37" begin="600ms" dur="1200ms" repeatCount="indefinite" />
-                    <animate attributeName="y2" attributeType="XML" from="91.4" to="81.4" begin="600ms" dur="1200ms" repeatCount="indefinite" />
-                </line>
+                <polyline 
+                    className="cls-4"
+                    points="154.18,544.72 994.37,81.4" />
             
                 {/* Long line touching Thy */}
-                <line className="cls-2" x1="606.03" y1="547.87" x2="1270.03" y2="181.72"/>
+                <polyline 
+                    className="cls-2"
+                    points="606.03,547.87 1270.03,181.72" />
                 
                 {/* Thick line touching Thy */}
-                <line className="cls-5" x1="753.18" y1="466.73" x2="1085.18" y2="283.65"/>
+                <polyline
+                    className="cls-5"
+                    points="753.18,466.73 1085.18,283.65" />
                 
                 {/* Line crossing Kingdom and Thy */}
-                <line className="cls-2" x1="444.68" y1="786.5" x2="1447.92" y2="233.28"/>
+                <polyline
+                    className="cls-2"
+                    points="444.68,786.5 1447.92,233.28" />
 
                 {/* Line between Thy and Kingdom */}
-                <line className="cls-2" x1="1123.04" y1="475.4" x2="1486.49" y2="274.98"/>
+                <polyline
+                    className="cls-2"
+                    points="1123.04,475.4 1486.49,274.98" />
                 
                 {/* Long line crossing Come and Kingdom */}
-                <line className="cls-3" x1="624.04" y1="836.32" x2="1627.28" y2="283.1"/>
+                <polyline
+                    className="cls-3"
+                    points="624.04,836.32 1627.28,283.1" />
                 
                 {/* Thick line crossing Come and Kingdom */}
-                <line className="cls-5" x1="771.13" y1="755.21" x2="1249.22" y2="491.58"/>
+                <polyline
+                    className="cls-5"
+                    points="771.13,755.21 1249.22,491.58" />
                 
                 {/* Line below and to left of Come */}
-                <line className="cls-2" x1="614.81" y1="920.4" x2="851.48" y2="789.89"/>
+                <polyline
+                    className="cls-2"
+                    points="614.81,920.4 851.48,789.89" />
                 
                 {/* Line crossing the e in Come */}
-                <line className="cls-2" x1="808.39" y1="893.22" x2="1555.71" y2="481.12"/>
+                <polyline
+                    className="cls-2"
+                    points="808.39,893.22 1555.71,481.12" />
                 
                 {/* Line in bottom right */}
-                <line className="cls-2" x1="1388.15" y1="1001.06" x2="1751.6" y2="800.63"/>
+                <polyline
+                    className="cls-2"
+                    points="1388.15,1001.06 1751.6,800.63" />
             </svg>
         );
     }
