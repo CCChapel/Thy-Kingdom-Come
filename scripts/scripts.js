@@ -1,8 +1,13 @@
 class Clock extends React.Component {
     render() {
+        var className = "clock ";
+        if (this.props.className !== undefined) {
+            className += this.props.className;
+        }
+
         return React.createElement(
             "svg",
-            { className: "clock", width: "400", height: "400" },
+            { className: className, width: "400", height: "400" },
             React.createElement("circle", { className: "clock__face",
                 cx: "200",
                 cy: "200",
@@ -317,12 +322,7 @@ class Page extends React.Component {
                         { className: "center" },
                         "Assignments"
                     ),
-                    React.createElement(
-                        "h1",
-                        { className: "center text-light-blue" },
-                        React.createElement("i", { className: "[ fa fa-5x fa-clock-o ]" })
-                    ),
-                    React.createElement(Clock, null),
+                    React.createElement(Clock, { className: "center-by-margin" }),
                     React.createElement(
                         "p",
                         { className: "center" },

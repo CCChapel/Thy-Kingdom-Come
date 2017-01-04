@@ -1,7 +1,12 @@
 class Clock extends React.Component {
     render() {
+        var className = "clock ";
+        if (this.props.className !== undefined) {
+            className += this.props.className;
+        }
+
         return (
-            <svg className="clock" width="400" height="400">
+            <svg className={className} width="400" height="400">
                 <circle className="clock__face"
                     cx="200"
                     cy="200"
