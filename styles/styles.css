@@ -319,13 +319,19 @@ h1, h2, h3, h4, h5, h6,
   fill: transparent; }
 .clock .second-hand {
   stroke: red;
-  stroke-width: 1; }
+  stroke-width: 1;
+  animation: rotate 60s infinite linear;
+  transform-origin: center center; }
 .clock .minute-hand {
   stroke: #333;
-  stroke-width: 4; }
+  stroke-width: 4;
+  animation: rotate 3600s infinite ease;
+  transform-origin: center center; }
 .clock .hour-hand {
   stroke: #333;
-  stroke-width: 4; }
+  stroke-width: 4;
+  animation: roatate 86400s infinite ease;
+  transform-origin: center center; }
 
 @keyframes rotate {
   0% {
@@ -334,10 +340,6 @@ h1, h2, h3, h4, h5, h6,
     transform: rotate(180deg); }
   100% {
     transform: rotate(360deg); } }
-.fx-rotate {
-  animation: rotate 2s infinite linear;
-  transform-origin: center center; }
-
 .flex {
   display: -webkit-box;
   display: -webkit-flex;

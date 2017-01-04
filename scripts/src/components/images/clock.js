@@ -12,11 +12,11 @@ class Clock extends React.Component {
                     points="200,200 200,110" />
                 
                 {/* Minute Hand */}
-                <polyline className="hour-hand fx-rotate"
+                <polyline className="minute-hand"
                     points="200,200 200,110" />
 
                 {/* Hour Hand */}
-                <polyline className="minute-hand"
+                <polyline className="hour-hand"
                     points="200,200 125,200" />
             </svg>
         );

@@ -8,16 +8,25 @@
     .second-hand {
         stroke: red;
         stroke-width: 1;
+
+        animation: rotate 60s infinite linear;
+        transform-origin: center center;
     }
 
     .minute-hand {
         stroke: $black;
         stroke-width: 4;
+
+        animation: rotate 3600s infinite ease;
+        transform-origin: center center;
     }
 
     .hour-hand {
         stroke: $black;
         stroke-width: 4;
+
+        animation: roatate 86400s infinite ease;
+        transform-origin: center center;
     }
 }
 
@@ -27,7 +36,7 @@
     100% {transform: rotate(360deg);}
 }
 
-.fx-rotate {
-    animation: rotate 2s infinite linear;
-    transform-origin: center center;
-}
+// .fx-rotate {
+//     animation: rotate 2s infinite linear;
+//     transform-origin: center center;
+// }

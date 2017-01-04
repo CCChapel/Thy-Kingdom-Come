@@ -9,9 +9,9 @@ class Clock extends React.Component {
                 r: "100" }),
             React.createElement("polyline", { className: "second-hand",
                 points: "200,200 200,110" }),
-            React.createElement("polyline", { className: "hour-hand fx-rotate",
-                points: "200,200 200,110" }),
             React.createElement("polyline", { className: "minute-hand",
+                points: "200,200 200,110" }),
+            React.createElement("polyline", { className: "hour-hand",
                 points: "200,200 125,200" })
         );
     }
