@@ -489,6 +489,9 @@ h1, h2, h3, h4, h5, h6,
 .half-height {
   height: 50%; }
 
+.overflow-x-hidden {
+  overflow-x: hidden; }
+
 .bg-light-blue {
   background-color: #a2ccdd; }
 .bg-medium-blue {
