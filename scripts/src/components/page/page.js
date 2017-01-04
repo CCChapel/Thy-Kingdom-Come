@@ -63,6 +63,8 @@ class Page extends React.Component {
 
                         <h1 className="center text-light-blue"><i className="[ fa fa-5x fa-clock-o ]"></i></h1>
 
+                        <Clock />
+
                         <p className="center">
                             Keep checking back! We&rsquo;ll have more assignments for you soon.
                         </p>

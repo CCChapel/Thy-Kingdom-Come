@@ -546,4 +546,15 @@ h1, h2, h3, h4, h5, h6,
   .fx-bottom-border:hover:before, .fx-bottom-border:focus:before, .fx-bottom-border:active:before {
     right: 0; }
 
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg); }
+  50% {
+    transform: rotate(180deg); }
+  100% {
+    transform: rotate(360deg); } }
+.fx-rotate {
+  animation: rotate 2s infinite linear;
+  transform-origin: center center; }
+
 /*# sourceMappingURL=styles.css.map */
