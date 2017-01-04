@@ -12,11 +12,20 @@
         right: 100%;
         bottom: 0;
         
-        background: black;
+        background: currentColor;
         
         height: 4px;
         
         @include transition(right .3s ease-out);
+    }
+    &.fx-light-blue:before {
+        color: $light-blue;
+    }
+    &.fx-medium-blue:before {
+        color: $medium-blue;
+    }
+    &.fx-dark-blue:before {
+        color: $dark-blue;
     }
 
     &:hover:before,

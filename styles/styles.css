@@ -519,13 +519,19 @@ h1, h2, h3, h4, h5, h6,
     left: 0;
     right: 100%;
     bottom: 0;
-    background: black;
+    background: currentColor;
     height: 4px;
     -webkit-transition: right 0.3s ease-out;
     -moz-transition: right 0.3s ease-out;
     -o-transition: right 0.3s ease-out;
     -ms-transition: right 0.3s ease-out;
     transition: right 0.3s ease-out; }
+  .fx-bottom-border.fx-light-blue:before {
+    color: #a2ccdd; }
+  .fx-bottom-border.fx-medium-blue:before {
+    color: #69a7c2; }
+  .fx-bottom-border.fx-dark-blue:before {
+    color: #467284; }
   .fx-bottom-border:hover:before, .fx-bottom-border:focus:before, .fx-bottom-border:active:before {
     right: 0; }
 
