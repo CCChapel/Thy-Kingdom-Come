@@ -1,3 +1,4 @@
+'use strict';
 class Clock extends React.Component {
     render() {
         //Allow classes to be passed in to Component
@@ -430,4 +431,3 @@ const MINISTRY_PARTNERS = [{
 }];
 
 ReactDOM.render(React.createElement(Page, null), document.getElementById('root'));
-'use strict';
