@@ -58,21 +58,25 @@ class Page extends React.Component {
 
                 <Section className="bg-medium-blue">
                     <div className="content-wrapper">
-                        <div class="lock-width center-by-margin">
+                        <div className="lock-width center-by-margin">
                             <h1 className="center">Local Outreach Spree</h1>
 
-                            <p>
-                                Complete eight kingdom assignments.
-                            </p>
-                            <p>
-                                Have your assignments initialed by each ministry partner after the assignment is 
-                                completed.
-                            </p>
-                            <p>
-                                Return this form to the bookstore (Hudson) or the Welcome Center 
-                                (Aurora/Highland Square) or to the church office during business hours to 
-                                receive your free Café 6:8 drink vouchers and cup or mug.
-                            </p>
+                            <ol>
+                                <li>
+                                    Complete eight kingdom assignments.
+                                </li>
+
+                                <li>
+                                    Have your assignments initialed by each ministry partner after the assignment 
+                                    is completed.
+                                </li>
+
+                                <li>
+                                    Return this form to the bookstore (Hudson) or the Welcome Center 
+                                    (Aurora/Highland Square) or to the church office during business hours to 
+                                    receive your free Café 6:8 drink vouchers and cup or mug.
+                                </li>
+                            </ol>
                         </div>
 
                         <MinistryPartnersTable showModal={this.showModal} partners={MINISTRY_PARTNERS} />

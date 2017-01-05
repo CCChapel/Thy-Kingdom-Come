@@ -259,6 +259,9 @@ h1, h2, h3, h4, h5, h6,
   font-family: "freight-big-pro", "Franklin Gothic Book", serif;
   letter-spacing: 2px; }
 
+ol {
+  list-style: decimal; }
+
 .serif {
   font-family: "freight-big-pro", "Franklin Gothic Book", serif;
   letter-spacing: 2px; }
@@ -529,7 +532,7 @@ h1, h2, h3, h4, h5, h6,
       padding: 3rem 10px;
       max-width: 100vw;
       overflow-x: hidden; } }
-  .content-wrapper.lock-width {
+  .content-wrapper.lock-width, .content-wrapper .lock-width {
     max-width: 60rem; }
 
 .add-padding {

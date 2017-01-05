@@ -375,26 +375,30 @@ class Page extends React.Component {
                     { className: "content-wrapper" },
                     React.createElement(
                         "div",
-                        { "class": "lock-width center-by-margin" },
+                        { className: "lock-width center-by-margin" },
                         React.createElement(
                             "h1",
                             { className: "center" },
                             "Local Outreach Spree"
                         ),
                         React.createElement(
-                            "p",
+                            "ol",
                             null,
-                            "Complete eight kingdom assignments."
-                        ),
-                        React.createElement(
-                            "p",
-                            null,
-                            "Have your assignments initialed by each ministry partner after the assignment is completed."
-                        ),
-                        React.createElement(
-                            "p",
-                            null,
-                            "Return this form to the bookstore (Hudson) or the Welcome Center (Aurora/Highland Square) or to the church office during business hours to receive your free Caf\xE9 6:8 drink vouchers and cup or mug."
+                            React.createElement(
+                                "li",
+                                null,
+                                "Complete eight kingdom assignments."
+                            ),
+                            React.createElement(
+                                "li",
+                                null,
+                                "Have your assignments initialed by each ministry partner after the assignment is completed."
+                            ),
+                            React.createElement(
+                                "li",
+                                null,
+                                "Return this form to the bookstore (Hudson) or the Welcome Center (Aurora/Highland Square) or to the church office during business hours to receive your free Caf\xE9 6:8 drink vouchers and cup or mug."
+                            )
                         )
                     ),
                     React.createElement(MinistryPartnersTable, { showModal: this.showModal, partners: MINISTRY_PARTNERS })

@@ -29,7 +29,8 @@
         overflow-x: hidden;
     }
 
-    &.lock-width {
+    &.lock-width,
+    & .lock-width {
         max-width: 60rem;
     }
 }
