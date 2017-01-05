@@ -87,7 +87,7 @@ class ContactForm extends React.Component {
                         onChange={this.onMessageChange} />
                 </div>
 
-                <div>
+                <div className="center">
                     <CTA text="Submit" onClick={this.handleSubmit} />
                 </div>
             </form>

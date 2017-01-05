@@ -51,7 +51,7 @@ class Page extends React.Component {
                             to bring our father&rsquo;s will and kingdom here to earth.
                         </p>
 
-                        <p className="center" >
+                        <p className="center">
                             <CTA text="Questions" 
                                 onClick={() => this.showModal(<ContactForm />)} />
                         </p>

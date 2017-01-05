@@ -94,7 +94,7 @@ class ContactForm extends React.Component {
                 ),
                 React.createElement(
                     'div',
-                    null,
+                    { className: 'center' },
                     React.createElement(CTA, { text: 'Submit', onClick: this.handleSubmit })
                 )
             )
