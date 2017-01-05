@@ -2,21 +2,21 @@
  * Returns a Call-to-Action button
  * 
  * @text = text of the button
- * @color = color of the button (default: currentColor)
- * @strokeColor = color of the box (default: currentColor)
+ * @color = color of the button
+ * @strokeColor = color of the box
  */
 class CTA extends React.Component {
     render() {
         //Check defaults
         var color = {
-            color: 'currentColor'
+            color: ''
         };
         if (this.props.color !== undefined) {
             color.color = this.props.color;
         }
 
         var stroke = {
-            stroke: 'currentColor'
+            stroke: ''
         };
         if (this.props.strokeColor !== undefined) {
             stroke.stroke = this.props.strokeColor;

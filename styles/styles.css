@@ -378,13 +378,14 @@ ol {
   100% {
     transform: rotate(360deg); } }
 .cta--wrapper {
+  cursor: pointer;
   position: relative; }
 .cta--shape {
   fill: transparent;
   stroke-dasharray: 140 540;
   stroke-dashoffset: -474;
   stroke-width: 8px;
-  stroke: currentColor; }
+  stroke: #467284; }
 .cta--text {
   color: currentColor;
   font-family: "freight-big-pro", "Franklin Gothic Book", serif;

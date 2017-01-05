@@ -1,5 +1,7 @@
 .cta {
     &--wrapper {
+        cursor: pointer;
+        
         //height: 60px;
         //margin: 0 auto;
         position: relative;
@@ -14,10 +16,12 @@
         stroke-dasharray: 140 540;
         stroke-dashoffset: -474;
         stroke-width: 8px;
-        stroke: currentColor;
+        //stroke: currentColor;
+        stroke: $dark-blue;
     }
 
     &--text {
+        //color: currentColor;
         color: currentColor;
         font-family: $serif;
         font-size: 22px;
