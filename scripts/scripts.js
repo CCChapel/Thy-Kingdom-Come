@@ -1,3 +1,53 @@
+/**
+ * Displays the Contact Form
+ */
+class ContactForm extends React.Component {
+    render() {
+        return React.createElement(
+            "form",
+            { method: "post", action: "https://www.formstack.com/forms/index.php" },
+            React.createElement("input", { type: "hidden", name: "form", value: "2569143" }),
+            React.createElement("input", { type: "hidden", name: "viewkey", value: "jXJg3zwAgW" }),
+            React.createElement(
+                "div",
+                null,
+                React.createElement("input", { name: "name",
+                    type: "text",
+                    placeholder: "Name",
+                    value: "" })
+            ),
+            React.createElement(
+                "div",
+                null,
+                React.createElement("input", { name: "email",
+                    type: "text",
+                    placeholder: "Email",
+                    value: "" })
+            ),
+            React.createElement(
+                "div",
+                null,
+                React.createElement("input", { name: "subject",
+                    type: "text",
+                    placeholder: "Subject",
+                    value: "" })
+            ),
+            React.createElement(
+                "div",
+                null,
+                React.createElement("textarea", { name: "message",
+                    placeholder: "Message",
+                    height: "300px",
+                    value: "" })
+            ),
+            React.createElement(
+                "div",
+                null,
+                React.createElement("input", { type: "submit", value: "Submit" })
+            )
+        );
+    }
+}
 
 class /**
        * Creates a running, analog clock
@@ -411,12 +461,9 @@ class Page extends React.Component {
                         "p",
                         { className: "center" },
                         React.createElement(CTA, { text: "Questions",
-                            onClick: () => this.showModal(React.createElement(
-                                "div",
-                                null,
-                                "Hi!"
-                            )) })
-                    )
+                            onClick: () => this.showModal(React.createElement(ContactForm, null)) })
+                    ),
+                    React.createElement(ContactForm, null)
                 )
             ),
             React.createElement(
