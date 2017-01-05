@@ -16,6 +16,7 @@ class Page extends React.Component {
     }
 
     showModal(modalContent) {
+        console.log("click");
         this.setState({
             showModal : true,
             modalContent : modalContent
@@ -50,8 +51,9 @@ class Page extends React.Component {
                             to bring our father&rsquo;s will and kingdom here to earth.
                         </p>
 
-                        <p className="center">
-                            <CTA text="Questions" />
+                        <p className="center" >
+                            <CTA text="Questions" 
+                                onClick={() => this.showModal(<div>Hi!</div>)} />
                         </p>
                     </div>
                 </Section>

@@ -273,8 +273,18 @@ class MinistryPartnersTable extends React.Component {
  * @text = text of the button
  * @color = color of the button
  * @strokeColor = color of the box
+ * @onClick = function to call when CTA is clicked
  */
 class CTA extends React.Component {
+    constructor(props) {
+        super(props);
+        this.onClick = this.onClick.bind(this);
+    }
+
+    onClick(data) {
+        this.props.onClick(data);
+    }
+
     render() {
         //Check defaults
         var color = {
@@ -293,7 +303,7 @@ class CTA extends React.Component {
 
         return React.createElement(
             'div',
-            { className: 'cta--wrapper' },
+            { className: 'cta--wrapper', onClick: () => this.onClick(this.props.clickAction) },
             React.createElement(
                 'svg',
                 { height: '60', width: '320', xmlns: 'http://www.w3.org/2000/svg' },
@@ -356,6 +366,7 @@ class Page extends React.Component {
     }
 
     showModal(modalContent) {
+        console.log("click");
         this.setState({
             showModal: true,
             modalContent: modalContent
@@ -399,7 +410,12 @@ class Page extends React.Component {
                     React.createElement(
                         "p",
                         { className: "center" },
-                        React.createElement(CTA, { text: "Questions" })
+                        React.createElement(CTA, { text: "Questions",
+                            onClick: () => this.showModal(React.createElement(
+                                "div",
+                                null,
+                                "Hi!"
+                            )) })
                     )
                 )
             ),

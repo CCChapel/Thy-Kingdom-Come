@@ -4,8 +4,18 @@
  * @text = text of the button
  * @color = color of the button
  * @strokeColor = color of the box
+ * @onClick = function to call when CTA is clicked
  */
 class CTA extends React.Component {
+    constructor(props) {
+        super(props);
+        this.onClick = this.onClick.bind(this);
+    }
+
+    onClick(data) {
+        this.props.onClick(data);
+    }
+
     render() {
         //Check defaults
         var color = {
@@ -23,7 +33,7 @@ class CTA extends React.Component {
         }
 
         return (
-            <div className="cta--wrapper">
+            <div className="cta--wrapper" onClick={() => this.onClick(this.props.clickAction)}>
                 <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
                     <rect className="cta--shape" style={stroke} height="60" width="320" />
                 </svg>
