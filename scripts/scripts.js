@@ -1,5 +1,10 @@
 'use strict';
 class Clock extends React.Component {
+
+    formatPoints(x1, y1, x2, y2) {
+        return x1 + "," + y1 + " " + x2 + "," + y2;
+    }
+
     render() {
         //Allow classes to be passed in to Component
         var className = "clock ";
@@ -21,17 +26,17 @@ class Clock extends React.Component {
         //Calculate Hour Hand
         var hourA = Math.radians(hour * 30 - 90);
         var hourPoint = Math.pointOnCircle(cx, cy, r, hourA);
-        var hourPoints = cx + "," + cy + " " + hourPoint.x + "," + (hourPoint.y - 20); //Subtract 20 to reduce hour size
+        var hourPoints = this.formatPoints(cx, cy, hourPoint.x, hourPoint.y); //Subtract 40 to reduce hour size
 
         //Calculate Minutes Hand
         var minuteA = Math.radians(minute * 6 - 90);
         var minutePoint = Math.pointOnCircle(cx, cy, r, minuteA);
-        var minutePoints = cx + "," + cy + " " + minutePoint.x + "," + (minutePoint.y - 10); //Subtract 10 to reduce hour size
+        var minutePoints = this.formatPoints(cx, cy, minutePoint.x, minutePoint.y); //Subtract 20 to reduce hour size
 
         //Calculate Seconds Hand
         var secondA = Math.radians(second * 6 - 90);
         var secondPoint = Math.pointOnCircle(cx, cy, r, secondA);
-        var secondPoints = cx + "," + cy + " " + secondPoint.x + "," + secondPoint.y;
+        var secondPoints = this.formatPoints(cx, cy, secondPoint.x, secondPoint.y); //Subtract 20 to reduce hour size
 
         return React.createElement(
             "svg",
