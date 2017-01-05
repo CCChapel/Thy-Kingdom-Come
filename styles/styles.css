@@ -316,6 +316,10 @@ h1, h2, h3, h4, h5, h6,
 .clock__second-hand, .clock__minute-hand, .clock__hour-hand {
   stroke-width: 8;
   stroke-linecap: round;
+  -ms-transform-origin: center center;
+  /* IE 9 */
+  -webkit-transform-origin: center center;
+  /* Chrome, Safari, Opera */
   transform-origin: center center; }
 
 .clock {
