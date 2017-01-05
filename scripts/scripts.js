@@ -358,7 +358,7 @@ class Page extends React.Component {
                     ),
                     React.createElement(
                         "p",
-                        null,
+                        { className: "center" },
                         React.createElement(
                             "a",
                             { "class": "cta", href: "#" },
@@ -374,14 +374,28 @@ class Page extends React.Component {
                     "div",
                     { className: "content-wrapper" },
                     React.createElement(
-                        "h1",
-                        { className: "center" },
-                        "Local Outreach Spree"
-                    ),
-                    React.createElement(
-                        "p",
-                        { className: "center" },
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt lacus lorem, eget maximus augue mattis sit amet. Aliquam finibus est in varius sollicitudin."
+                        "div",
+                        { "class": "lock-width center-by-margin" },
+                        React.createElement(
+                            "h1",
+                            { className: "center" },
+                            "Local Outreach Spree"
+                        ),
+                        React.createElement(
+                            "p",
+                            null,
+                            "Complete eight kingdom assignments."
+                        ),
+                        React.createElement(
+                            "p",
+                            null,
+                            "Have your assignments initialed by each ministry partner after the assignment is completed."
+                        ),
+                        React.createElement(
+                            "p",
+                            null,
+                            "Return this form to the bookstore (Hudson) or the Welcome Center (Aurora/Highland Square) or to the church office during business hours to receive your free Caf\xE9 6:8 drink vouchers and cup or mug."
+                        )
                     ),
                     React.createElement(MinistryPartnersTable, { showModal: this.showModal, partners: MINISTRY_PARTNERS })
                 )

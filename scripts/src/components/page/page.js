@@ -50,7 +50,7 @@ class Page extends React.Component {
                             to bring our father&rsquo;s will and kingdom here to earth.
                         </p>
 
-                        <p>
+                        <p className="center">
                             <a class="cta" href="#">Questions</a>
                         </p>
                     </div>
@@ -58,13 +58,22 @@ class Page extends React.Component {
 
                 <Section className="bg-medium-blue">
                     <div className="content-wrapper">
-                        <h1 className="center">Local Outreach Spree</h1>
+                        <div class="lock-width center-by-margin">
+                            <h1 className="center">Local Outreach Spree</h1>
 
-                        <p className="center">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt 
-                            lacus lorem, eget maximus augue mattis sit amet. Aliquam finibus est in 
-                            varius sollicitudin.
-                        </p>
+                            <p>
+                                Complete eight kingdom assignments.
+                            </p>
+                            <p>
+                                Have your assignments initialed by each ministry partner after the assignment is 
+                                completed.
+                            </p>
+                            <p>
+                                Return this form to the bookstore (Hudson) or the Welcome Center 
+                                (Aurora/Highland Square) or to the church office during business hours to 
+                                receive your free Café 6:8 drink vouchers and cup or mug.
+                            </p>
+                        </div>
 
                         <MinistryPartnersTable showModal={this.showModal} partners={MINISTRY_PARTNERS} />
                     </div>
