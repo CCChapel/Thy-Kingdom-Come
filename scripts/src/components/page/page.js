@@ -51,7 +51,7 @@ class Page extends React.Component {
                         </p>
 
                         <p className="center">
-                            <a class="cta" href="#">Questions</a>
+                            <CTA text="Questions" />
                         </p>
                     </div>
                 </Section>

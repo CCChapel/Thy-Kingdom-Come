@@ -268,6 +268,18 @@ class MinistryPartnersTable extends React.Component {
     }
 }
 /**
+ * Returns a Call-to-Action button
+ */
+class CTA extends React.Component {
+    render() {
+        return React.createElement(
+            "a",
+            { className: "cta", href: "#" },
+            this.props.text
+        );
+    }
+}
+/**
  * Defines the modal section of the page
  * @show: When true, the modal is shown
  */
@@ -359,11 +371,7 @@ class Page extends React.Component {
                     React.createElement(
                         "p",
                         { className: "center" },
-                        React.createElement(
-                            "a",
-                            { "class": "cta", href: "#" },
-                            "Questions"
-                        )
+                        React.createElement(CTA, { text: "Questions" })
                     )
                 )
             ),
