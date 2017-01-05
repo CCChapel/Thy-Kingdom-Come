@@ -4,8 +4,8 @@ class /**
        * Creates a running, analog clock
        * 
        * @className = class names to add to root SVG element
-       * @height = height of the SVG element
-       * @width = width of the SVG element
+       * @height = height of the SVG element (default = 400)
+       * @width = width of the SVG element (default = 400)
        **/Clock extends React.Component {
     pointToString(point) {
         return point.x + "," + point.y;
