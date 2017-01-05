@@ -20,8 +20,14 @@
 }
 
 @mixin backface-visibility($value: hidden) {
-    -webkit-backface-visibility: hidden;
-	-moz-backface-visibility: hidden;
-	-ms-backface-visibility: hidden;
-	backface-visibility: hidden;
+    -webkit-backface-visibility: $value;
+	-moz-backface-visibility: $value;
+	-ms-backface-visibility: $value;
+	backface-visibility: $value;
+}
+
+@mixin transform-origin($value: 50% 50% 0) {
+    -ms-transform-origin: $value; /* IE 9 */
+    -webkit-transform-origin: $value; /* Chrome, Safari, Opera */
+    transform-origin: $value;
 }
