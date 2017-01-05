@@ -1,8 +1,15 @@
-.cls-1,.cls-2,.cls-3,.cls-4,.cls-5 {
+.cls-1,
+.cls-2,
+.cls-3,
+.cls-4,
+.cls-5 {
     fill: none;
 }
 
-.cls-2,.cls-3,.cls-4,.cls-5 {
+.cls-2,
+.cls-3,
+.cls-4,
+.cls-5 {
     stroke: #000;
     stroke-miterlimit: 10;
 }
@@ -25,16 +32,29 @@
     100% {transform: translateY(0);}
 }
 
+$default-distance-x: 20px;
+$default-distance-y: 11px;
+$default-duration: 10s;
+
 @keyframes down-up {
-    0%   {transform: translate(0 0);}
-    25%  {transform: translate(-10px -10px);}
-    50%  {transform: translate(0 0);}
-    75%  {transform: translate(10px 10px);}
+    0%   {transform: translate(0, 0);}
+    25%  {transform: translate(-$default-distance-x, $default-distance-y);}
+    50%  {transform: translate(0, 0);}
+    75%  {transform: translate($default-distance-x, -$default-distance-y);}
+    100% {transform: translate(0, 0);}
 }
 
 @keyframes up-down {
-    0%   {transform: translate(0 0);}
-    25%  {transform: translate(10px 10px);}
-    50%  {transform: translate(0 0);}
-    75%  {transform: translate(-10px -10px);}
+    0%   {transform: translate(0, 0);}
+    25%  {transform: translate($default-distance-x, -$default-distance-y);}
+    50%  {transform: translate(0, 0);}
+    75%  {transform: translate(-$default-distance-x, $default-distance-y);}
+}
+
+.fx-down-up {
+    animation: down-up $default-duration infinite;
+}
+
+.fx-up-down {
+    animation: up-down $default-duration infinite;
 }

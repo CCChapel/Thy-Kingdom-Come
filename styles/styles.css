@@ -287,10 +287,17 @@ h1, h2, h3, h4, h5, h6,
 .cursor-point {
   cursor: pointer; }
 
-.cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+.cls-1,
+.cls-2,
+.cls-3,
+.cls-4,
+.cls-5 {
   fill: none; }
 
-.cls-2, .cls-3, .cls-4, .cls-5 {
+.cls-2,
+.cls-3,
+.cls-4,
+.cls-5 {
   stroke: #000;
   stroke-miterlimit: 10; }
 
@@ -312,22 +319,30 @@ h1, h2, h3, h4, h5, h6,
     transform: translateY(0); } }
 @keyframes down-up {
   0% {
-    transform: translate(0 0); }
+    transform: translate(0, 0); }
   25% {
-    transform: translate(-10px -10px); }
+    transform: translate(-20px, 11px); }
   50% {
-    transform: translate(0 0); }
+    transform: translate(0, 0); }
   75% {
-    transform: translate(10px 10px); } }
+    transform: translate(20px, -11px); }
+  100% {
+    transform: translate(0, 0); } }
 @keyframes up-down {
   0% {
-    transform: translate(0 0); }
+    transform: translate(0, 0); }
   25% {
-    transform: translate(10px 10px); }
+    transform: translate(20px, -11px); }
   50% {
-    transform: translate(0 0); }
+    transform: translate(0, 0); }
   75% {
-    transform: translate(-10px -10px); } }
+    transform: translate(-20px, 11px); } }
+.fx-down-up {
+  animation: down-up 10s infinite; }
+
+.fx-up-down {
+  animation: up-down 10s infinite; }
+
 .clock__second-hand, .clock__minute-hand, .clock__hour-hand {
   stroke-width: 8;
   stroke-linecap: round;
