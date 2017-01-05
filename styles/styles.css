@@ -316,11 +316,11 @@ h1, h2, h3, h4, h5, h6,
 .clock__second-hand, .clock__minute-hand, .clock__hour-hand {
   stroke-width: 8;
   stroke-linecap: round;
-  -ms-transform-origin: center center;
+  -ms-transform-origin: 125px 125px;
   /* IE 9 */
-  -webkit-transform-origin: center center;
+  -webkit-transform-origin: 125px 125px;
   /* Chrome, Safari, Opera */
-  transform-origin: center center; }
+  transform-origin: 125px 125px; }
 
 .clock {
   display: block; }

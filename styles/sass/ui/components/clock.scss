@@ -2,7 +2,8 @@
     stroke-width: 8;
     stroke-linecap: round;
 
-    @include transform-origin(center center);
+    // @include transform-origin(center center);
+    @include transform-origin(125px 125px);
 }
 
 .clock {
