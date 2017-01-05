@@ -103,7 +103,7 @@ class Page extends React.Component {
 
                 <Section className="bg-charcoal align-content-top auto-min-height text-white">
                     <div className="content-wrapper">
-                        &copy; Copyright 2017
+                        &copy; Copyright 2017 | Christ Community Chapel
                     </div>
                 </Section>
             </div>

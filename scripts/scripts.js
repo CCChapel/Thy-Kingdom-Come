@@ -585,7 +585,7 @@ class Page extends React.Component {
                 React.createElement(
                     "div",
                     { className: "content-wrapper" },
-                    "\xA9 Copyright 2017"
+                    "\xA9 Copyright 2017 | Christ Community Chapel"
                 )
             )
         );
