@@ -70,12 +70,12 @@ class /**
                 cx: cx,
                 cy: cy,
                 r: r }),
+            React.createElement("polyline", { className: "clock__second-hand",
+                points: secondPoints }),
             React.createElement("polyline", { className: "clock__hour-hand",
                 points: hourPoints }),
             React.createElement("polyline", { className: "clock__minute-hand",
-                points: minutePoints }),
-            React.createElement("polyline", { className: "clock__second-hand",
-                points: secondPoints })
+                points: minutePoints })
         );
     }
 }

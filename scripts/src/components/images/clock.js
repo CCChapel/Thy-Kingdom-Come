@@ -69,6 +69,10 @@ class Clock extends React.Component {
                     cy={cy}
                     r={r} />
 
+                {/* Second Hand */}
+                <polyline className="clock__second-hand"
+                    points={secondPoints} />
+
                 {/* Hour Hand */}
                 <polyline className="clock__hour-hand"
                     points={hourPoints} />
@@ -76,10 +80,6 @@ class Clock extends React.Component {
                 {/* Minute Hand */}
                 <polyline className="clock__minute-hand"
                     points={minutePoints} />
-
-                {/* Second Hand */}
-                <polyline className="clock__second-hand"
-                    points={secondPoints} />
             </svg>
         );
     }
