@@ -1,5 +1,12 @@
 'use strict';
-class Clock extends React.Component {
+
+class /**
+       * Creates a running, analog clock
+       * 
+       * @className = class names to add to root SVG element
+       * @height = height of the SVG element
+       * @width = width of the SVG element
+       **/Clock extends React.Component {
     pointToString(point) {
         return point.x + "," + point.y;
     }
@@ -15,10 +22,21 @@ class Clock extends React.Component {
             className += this.props.className;
         }
 
-        //Setup some values
-        var cx = 200;
-        var cy = 200;
-        var r = 100;
+        //Setup Height & Width
+        var height = 400;
+        if (this.props.height !== undefined) {
+            height = this.props.height;
+        }
+
+        var width = 400;
+        if (this.props.width !== undefined) {
+            width = this.props.width;
+        }
+
+        //Setup image values
+        var cx = width / 2;
+        var cy = height / 2;
+        var r = Math.min(cx, cy) * .8;
         var origin = {
             x: cx,
             y: cy
@@ -26,9 +44,9 @@ class Clock extends React.Component {
 
         //Calculate Clock Positions
         var date = new Date();
-        var hour = date.getHours() % 12;
-        var minute = date.getMinutes();
         var second = date.getSeconds();
+        var minute = date.getMinutes() + second / 60;
+        var hour = date.getHours() % 12 + minute / 60;
 
         //Calculate Hour Hand
         var hourA = Math.radians(hour * 30 - 90);
@@ -47,7 +65,7 @@ class Clock extends React.Component {
 
         return React.createElement(
             "svg",
-            { className: className, width: "400", height: "400" },
+            { className: className, width: width, height: height },
             React.createElement("circle", { className: "clock__face",
                 cx: cx,
                 cy: cy,
