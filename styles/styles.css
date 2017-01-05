@@ -377,6 +377,33 @@ ol {
     transform: rotate(0deg); }
   100% {
     transform: rotate(360deg); } }
+.cta--wrapper {
+  position: relative; }
+.cta--shape {
+  fill: transparent;
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -474;
+  stroke-width: 8px;
+  stroke: currentColor; }
+.cta--text {
+  color: currentColor;
+  font-family: "freight-big-pro", "Franklin Gothic Book", serif;
+  font-size: 22px;
+  letter-spacing: 8px;
+  position: relative;
+  top: -2.5em; }
+.cta--wrapper:hover .cta--shape {
+  animation: 0.5s cta--draw linear forwards; }
+
+@keyframes cta--draw {
+  0% {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px; }
+  100% {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+    stroke-width: 8px; } }
 .flex {
   display: -webkit-box;
   display: -webkit-flex;
