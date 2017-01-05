@@ -20,7 +20,7 @@
         stroke: red;
         stroke-width: 1;
 
-        animation: rotate 60s infinite linear;
+        // animation: rotate 60s infinite linear;
     }
 
     &__minute-hand {
@@ -28,7 +28,7 @@
 
         stroke: $black;
 
-        animation: rotate 3600s infinite ease;
+        // animation: rotate 3600s infinite ease;
     }
 
     &__hour-hand {
@@ -36,7 +36,7 @@
 
         stroke: $black;
 
-        animation: roatate 86400s infinite ease;
+        // animation: roatate 86400s infinite ease;
     }
 }
 
@@ -44,8 +44,3 @@
     0%   {transform: rotate(0deg);}
     100% {transform: rotate(360deg);}
 }
-
-// .fx-rotate {
-//     animation: rotate 2s infinite linear;
-//     transform-origin: center center;
-// }

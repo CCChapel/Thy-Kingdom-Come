@@ -1,4 +1,3 @@
-'use strict';
 
 class /**
        * Creates a running, analog clock
@@ -524,3 +523,4 @@ const MINISTRY_PARTNERS = [{
 }];
 
 ReactDOM.render(React.createElement(Page, null), document.getElementById('root'));
+'use strict';
