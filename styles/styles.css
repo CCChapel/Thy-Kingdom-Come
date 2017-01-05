@@ -294,13 +294,6 @@ h1, h2, h3, h4, h5, h6,
   stroke: #000;
   stroke-miterlimit: 10; }
 
-@keyframes test {
-  0% {
-    transform: translateY(0); }
-  50% {
-    transform: translateY(10px); }
-  100% {
-    transform: translateY(0); } }
 .cls-3 {
   stroke-width: 2px; }
 
@@ -310,9 +303,31 @@ h1, h2, h3, h4, h5, h6,
 .cls-5 {
   stroke-width: 3px; }
 
-#g {
-  animation: test 1s infinite; }
-
+@keyframes test {
+  0% {
+    transform: translateY(0); }
+  50% {
+    transform: translateY(10px); }
+  100% {
+    transform: translateY(0); } }
+@keyframes down-up {
+  0% {
+    transform: translate(0 0); }
+  25% {
+    transform: translate(-10px -10px); }
+  50% {
+    transform: translate(0 0); }
+  75% {
+    transform: translate(10px 10px); } }
+@keyframes up-down {
+  0% {
+    transform: translate(0 0); }
+  25% {
+    transform: translate(10px 10px); }
+  50% {
+    transform: translate(0 0); }
+  75% {
+    transform: translate(-10px -10px); } }
 .clock__second-hand, .clock__minute-hand, .clock__hour-hand {
   stroke-width: 8;
   stroke-linecap: round;
