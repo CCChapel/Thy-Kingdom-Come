@@ -34,7 +34,8 @@
 
 $default-distance-x: 20px;
 $default-distance-y: 11px;
-$default-duration: 10s;
+$default-duration: 5s;
+$default-timing-function: linear;
 
 @keyframes down-up {
     0%   {transform: translate(0, 0);}
@@ -52,9 +53,9 @@ $default-duration: 10s;
 }
 
 .fx-down-up {
-    animation: down-up $default-duration infinite;
+    animation: down-up $default-duration infinite $default-timing-function;
 }
 
 .fx-up-down {
-    animation: up-down $default-duration infinite;
+    animation: up-down $default-duration infinite $default-timing-function;
 }
