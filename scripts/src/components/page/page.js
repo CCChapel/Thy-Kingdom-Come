@@ -61,7 +61,9 @@ class Page extends React.Component {
                     <div className="content-wrapper">
                         <h1 className="center">Assignments</h1>
 
-                        <Clock className="center-by-margin" />
+                        <p>
+                            <Clock className="center-by-margin" height="250" width="250" />
+                        </p>
 
                         <p className="center">
                             Keep checking back! We&rsquo;ll have more assignments for you soon.

@@ -376,7 +376,11 @@ class Page extends React.Component {
                         { className: "center" },
                         "Assignments"
                     ),
-                    React.createElement(Clock, { className: "center-by-margin" }),
+                    React.createElement(
+                        "p",
+                        null,
+                        React.createElement(Clock, { className: "center-by-margin", height: "250", width: "250" })
+                    ),
                     React.createElement(
                         "p",
                         { className: "center" },
