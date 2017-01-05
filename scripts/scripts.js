@@ -1,8 +1,11 @@
 'use strict';
 class Clock extends React.Component {
+    pointToString(point) {
+        return point.x + "," + point.y;
+    }
 
-    formatPoints(x1, y1, x2, y2) {
-        return x1 + "," + y1 + " " + x2 + "," + y2;
+    formatPoints(p1, p2) {
+        return this.pointToString(p1) + " " + this.pointToString(p2);
     }
 
     render() {
@@ -16,6 +19,10 @@ class Clock extends React.Component {
         var cx = 200;
         var cy = 200;
         var r = 100;
+        var origin = {
+            x: cx,
+            y: cy
+        };
 
         //Calculate Clock Positions
         var date = new Date();
@@ -25,18 +32,18 @@ class Clock extends React.Component {
 
         //Calculate Hour Hand
         var hourA = Math.radians(hour * 30 - 90);
-        var hourPoint = Math.pointOnCircle(cx, cy, r, hourA);
-        var hourPoints = this.formatPoints(cx, cy, hourPoint.x, hourPoint.y); //Subtract 40 to reduce hour size
+        var hourPoint = Math.pointOnCircle(cx, cy, r - 50, hourA);
+        var hourPoints = this.formatPoints(origin, hourPoint);
 
         //Calculate Minutes Hand
         var minuteA = Math.radians(minute * 6 - 90);
-        var minutePoint = Math.pointOnCircle(cx, cy, r, minuteA);
-        var minutePoints = this.formatPoints(cx, cy, minutePoint.x, minutePoint.y); //Subtract 20 to reduce hour size
+        var minutePoint = Math.pointOnCircle(cx, cy, r - 20, minuteA);
+        var minutePoints = this.formatPoints(origin, minutePoint);
 
         //Calculate Seconds Hand
         var secondA = Math.radians(second * 6 - 90);
-        var secondPoint = Math.pointOnCircle(cx, cy, r, secondA);
-        var secondPoints = this.formatPoints(cx, cy, secondPoint.x, secondPoint.y); //Subtract 20 to reduce hour size
+        var secondPoint = Math.pointOnCircle(cx, cy, r - 10, secondA);
+        var secondPoints = this.formatPoints(origin, secondPoint);
 
         return React.createElement(
             "svg",
@@ -440,8 +447,8 @@ Math.pointOnCircle = function (cx, cy, r, a) {
  **/
 Math.shortenLine = function (point, shortenBy) {
   return {
-    x: point.x - shortenBy,
-    y: point.y - shortenBy
+    x: point.x < 0 ? point.x + shortenBy : point.x - shortenBy,
+    y: point.y < 0 ? point.y + shortenBy : point.y - shortenBy
   };
 };
 const MINISTRY_PARTNERS = [{

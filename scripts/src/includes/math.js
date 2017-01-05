@@ -42,7 +42,7 @@ Math.pointOnCircle = function(cx, cy, r, a) {
  **/
 Math.shortenLine = function(point, shortenBy) {
     return {
-        x: point.x - shortenBy,
-        y: point.y - shortenBy
+        x: point.x < 0 ? point.x + shortenBy : point.x - shortenBy,
+        y: point.y < 0 ? point.y + shortenBy : point.y - shortenBy
     }
 }
