@@ -433,7 +433,7 @@ class Page extends React.Component {
                             React.createElement(
                                 "li",
                                 null,
-                                "Return this form to the bookstore (Hudson) or the Welcome Center (Aurora/Highland Square) or to the church office during business hours to receive your free Caf\xE9 6:8 drink vouchers and cup or mug."
+                                "Return this form to the bookstore (Hudson) or the Welcome Center (Aurora/Highland Square) or to the church office during business hours to receive your free Caf\\u00e9 6:8 drink vouchers and cup or mug."
                             )
                         )
                     ),

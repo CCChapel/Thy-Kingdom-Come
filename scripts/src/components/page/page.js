@@ -74,7 +74,7 @@ class Page extends React.Component {
                                 <li>
                                     Return this form to the bookstore (Hudson) or the Welcome Center 
                                     (Aurora/Highland Square) or to the church office during business hours to 
-                                    receive your free Café 6:8 drink vouchers and cup or mug.
+                                    receive your free Caf\u00e9 6:8 drink vouchers and cup or mug.
                                 </li>
                             </ol>
                         </div>
