@@ -1,4 +1,4 @@
-@mixin transform($value: visible) {
+@mixin transform($value: none) {
     -webkit-transform: $value;
 	-o-transform: $value;
     -moz-transform: $value;
@@ -19,7 +19,7 @@
 	transform-style: $value;
 }
 
-@mixin backface-visibility($value: hidden) {
+@mixin backface-visibility($value: visible) {
     -webkit-backface-visibility: $value;
 	-moz-backface-visibility: $value;
 	-ms-backface-visibility: $value;
