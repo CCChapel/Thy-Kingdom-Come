@@ -7,6 +7,11 @@ class Clock extends React.Component {
             className += this.props.className;
         }
 
+        //Setup some values
+        var cx = 200;
+        var cy = 200;
+        var r = 100;
+
         //Calculate Clock Positions
         var date = new Date();
         var hour = date.getHours() % 12;
@@ -14,27 +19,33 @@ class Clock extends React.Component {
         var second = date.getSeconds();
 
         //Calculate Hour Hand
-        var hourAngle = hour * Math.PI / 6 + minute * Math.PI / (6 * 60) + second * Math.PI / (360 * 60);
-        console.log(hourAngle);
-        var hourPoints = "200,200 ";
+        var hourA = Math.radians(hour * 30 - 90);
+        var hourPoint = Math.pointOnCircle(cx, cy, r, hourA);
+        var hourPoints = cx + "," + cy + " " + hourPoint.x + "," + (hourPoint.y - 20); //Subtract 20 to reduce hour size
+
+        //Calculate Minutes Hand
+        var minuteA = Math.radians(minute * 6 - 90);
+        var minutePoint = Math.pointOnCircle(cx, cy, r, minuteA);
+        var minutePoints = cx + "," + cy + " " + minutePoint.x + "," + (minutePoint.y - 10); //Subtract 10 to reduce hour size
+
+        //Calculate Seconds Hand
+        var secondA = Math.radians(second * 6 - 90);
+        var secondPoint = Math.pointOnCircle(cx, cy, r, secondA);
+        var secondPoints = cx + "," + cy + " " + secondPoint.x + "," + secondPoint.y;
 
         return React.createElement(
             "svg",
             { className: className, width: "400", height: "400" },
             React.createElement("circle", { className: "clock__face",
-                cx: "200",
-                cy: "200",
-                r: "100" }),
-            React.createElement("circle", { className: "clock__center",
-                cx: "200",
-                cy: "200",
-                r: "4" }),
+                cx: cx,
+                cy: cy,
+                r: r }),
             React.createElement("polyline", { className: "clock__hour-hand",
-                points: "200,200 200,300" }),
+                points: hourPoints }),
             React.createElement("polyline", { className: "clock__minute-hand",
-                points: "200,200 200,110" }),
+                points: minutePoints }),
             React.createElement("polyline", { className: "clock__second-hand",
-                points: "200,200 200,110" })
+                points: secondPoints })
         );
     }
 }
@@ -429,5 +440,38 @@ const MINISTRY_PARTNERS = [{
         details: 'Integer imperdiet ullamcorper libero, eget consequat lectus feugiat nec. Cras condimentum, nulla nec convallis interdum, dui nisl iaculis nisl, sed dignissim ligula neque eu turpis. Suspendisse potenti.'
     }]
 }];
+
+/**
+ * Converts from degrees to radians.
+ * 
+ * @degrees = degrees to convert to radians
+ **/
+Math.radians = function (degrees) {
+    return degrees * Math.PI / 180;
+};
+
+/**
+ * Converts from radians to degrees.
+ * 
+ * @radians = radians to convert to degrees
+ **/
+Math.degrees = function (radians) {
+    return radians * 180 / Math.PI;
+};
+
+/**
+ * Finds a point on a circle
+ * 
+ * @cx = x coordinate of center of circle
+ * @cy = y coordinate of the center of the circle
+ * @r = radius of circle
+ * @a = angle to find point at
+ **/
+Math.pointOnCircle = function (cx, cy, r, a) {
+    return {
+        x: cx + r * Math.cos(a),
+        y: cy + r * Math.sin(a)
+    };
+};
 
 ReactDOM.render(React.createElement(Page, null), document.getElementById('root'));

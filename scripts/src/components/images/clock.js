@@ -6,6 +6,11 @@ class Clock extends React.Component {
             className += this.props.className;
         }
 
+        //Setup some values
+        var cx = 200;
+        var cy = 200;
+        var r = 100;
+
         //Calculate Clock Positions
         var date = new Date();
         var hour = date.getHours() % 12;
@@ -13,33 +18,44 @@ class Clock extends React.Component {
         var second = date.getSeconds();
 
         //Calculate Hour Hand
-        var hourAngle = (hour * Math.PI / 6) + (minute * Math.PI / (6 * 60)) + (second * Math.PI / (360 * 60));
-        console.log(hourAngle);
-        var hourPoints = "200,200 ";
+        var hourA = Math.radians(hour * 30 - 90);
+        var hourPoint = Math.pointOnCircle(cx, cy, r, hourA);
+        var hourPoints = cx + "," + cy + " " + hourPoint.x + "," + (hourPoint.y - 20);           //Subtract 20 to reduce hour size
+
+        //Calculate Minutes Hand
+        var minuteA = Math.radians(minute * 6 - 90);
+        var minutePoint = Math.pointOnCircle(cx, cy, r, minuteA);
+        var minutePoints = cx + "," + cy + " " + minutePoint.x + "," + (minutePoint.y - 10);     //Subtract 10 to reduce hour size
+
+        //Calculate Seconds Hand
+        var secondA = Math.radians(second * 6 - 90);
+        var secondPoint = Math.pointOnCircle(cx, cy, r, secondA);
+        var secondPoints = cx + "," + cy + " " + secondPoint.x + "," + secondPoint.y;
 
         return (
             <svg className={className} width="400" height="400">
                 <circle className="clock__face"
-                    cx="200"
-                    cy="200"
-                    r="100" />
+                    cx={cx}
+                    cy={cy}
+                    r={r} />
 
+                {/*
                 <circle className="clock__center"
                     cx="200"
                     cy="200"
-                    r="4" />
+                    r="4" />*/}
 
                 {/* Hour Hand */}
                 <polyline className="clock__hour-hand"
-                    points="200,200 200,300" />
+                    points={hourPoints} />
                 
                 {/* Minute Hand */}
                 <polyline className="clock__minute-hand"
-                    points="200,200 200,110" />
+                    points={minutePoints} />
 
                 {/* Second Hand */}
                 <polyline className="clock__second-hand"
-                    points="200,200 200,110" />
+                    points={secondPoints} />
             </svg>
         );
     }
