@@ -313,39 +313,31 @@ h1, h2, h3, h4, h5, h6,
 #g {
   animation: test 1s infinite; }
 
+.clock__second-hand, .clock__minute-hand, .clock__hour-hand {
+  stroke-width: 8;
+  stroke-linecap: round;
+  transform-origin: center center; }
+
 .clock {
   display: block; }
   .clock__face {
     stroke: #333;
     stroke-width: 16;
     fill: transparent; }
-  .clock__center {
-    stroke: transparent;
-    fill: #333; }
   .clock__second-hand {
     stroke: red;
     stroke-width: 1;
-    stroke-linecap: round;
-    animation: rotate 60s infinite linear;
-    transform-origin: center center; }
+    animation: rotate 60s infinite linear; }
   .clock__minute-hand {
     stroke: #333;
-    stroke-width: 8;
-    stroke-linecap: round;
-    animation: rotate 3600s infinite ease;
-    transform-origin: center center; }
+    animation: rotate 3600s infinite ease; }
   .clock__hour-hand {
     stroke: #333;
-    stroke-width: 8;
-    stroke-linecap: round;
-    animation: roatate 86400s infinite ease;
-    transform-origin: center center; }
+    animation: roatate 86400s infinite ease; }
 
 @keyframes rotate {
   0% {
     transform: rotate(0deg); }
-  50% {
-    transform: rotate(180deg); }
   100% {
     transform: rotate(360deg); } }
 .flex {

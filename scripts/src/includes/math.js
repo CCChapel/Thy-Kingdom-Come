@@ -32,3 +32,17 @@ Math.pointOnCircle = function(cx, cy, r, a) {
         y: cy + r * Math.sin(a)
     }
 };
+
+/**
+ * Shorten line
+ * 
+ * @point = object containing an x and y property
+ * 
+ * RETURNS object with an x and y property
+ **/
+Math.shortenLine = function(point, shortenBy) {
+    return {
+        x: point.x - shortenBy,
+        y: point.y - shortenBy
+    }
+}

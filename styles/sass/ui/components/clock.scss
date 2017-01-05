@@ -1,3 +1,10 @@
+%clock-hand-base {
+    stroke-width: 8;
+    stroke-linecap: round;
+
+    transform-origin: center center;
+}
+
 .clock {
     display: block;
     
@@ -7,42 +14,34 @@
         fill: transparent;
     }
 
-    &__center {
-        stroke: transparent;
-        fill: $black;
-    }
-
     &__second-hand {
+        @extend %clock-hand-base;
+
         stroke: red;
         stroke-width: 1;
-        stroke-linecap: round;
 
         animation: rotate 60s infinite linear;
-        transform-origin: center center;
     }
 
     &__minute-hand {
+        @extend %clock-hand-base;
+
         stroke: $black;
-        stroke-width: 8;
-        stroke-linecap: round;
 
         animation: rotate 3600s infinite ease;
-        transform-origin: center center;
     }
 
     &__hour-hand {
+        @extend %clock-hand-base;
+
         stroke: $black;
-        stroke-width: 8;
-        stroke-linecap: round;
 
         animation: roatate 86400s infinite ease;
-        transform-origin: center center;
     }
 }
 
 @keyframes rotate {
     0%   {transform: rotate(0deg);}
-    50%  {transform: rotate(180deg);}
     100% {transform: rotate(360deg);}
 }
 
