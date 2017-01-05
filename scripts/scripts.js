@@ -52,7 +52,7 @@ class ContactForm extends React.Component {
             // <form method="post" action="https://www.formstack.com/forms/index.php">
             React.createElement(
                 'form',
-                { onSubmit: this.handleSubmit },
+                null,
                 React.createElement('input', { type: 'hidden', name: 'form', value: '2569143' }),
                 React.createElement('input', { type: 'hidden', name: 'viewkey', value: 'jXJg3zwAgW' }),
                 React.createElement(
@@ -95,7 +95,7 @@ class ContactForm extends React.Component {
                 React.createElement(
                     'div',
                     null,
-                    React.createElement('input', { type: 'submit', value: 'Submit' })
+                    React.createElement(CTA, { text: 'Submit', onClick: this.handleSubmit })
                 )
             )
         );

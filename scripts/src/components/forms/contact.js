@@ -50,7 +50,7 @@ class ContactForm extends React.Component {
     render() {
         return (
             // <form method="post" action="https://www.formstack.com/forms/index.php">
-            <form onSubmit={this.handleSubmit}>
+            <form>
                 <input type="hidden" name="form" value="2569143" />
                 <input type="hidden" name="viewkey" value="jXJg3zwAgW" />
 
@@ -88,7 +88,7 @@ class ContactForm extends React.Component {
                 </div>
 
                 <div>
-                    <input type="submit" value="Submit" />
+                    <CTA text="Submit" onClick={this.handleSubmit} />
                 </div>
             </form>
         );
