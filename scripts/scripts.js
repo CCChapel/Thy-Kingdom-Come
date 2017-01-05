@@ -50,17 +50,17 @@ class /**
 
         //Calculate Hour Hand
         var hourA = Math.radians(hour * 30 - 90);
-        var hourPoint = Math.pointOnCircle(cx, cy, r - 50, hourA);
+        var hourPoint = Math.pointOnCircle(cx, cy, r * .6, hourA);
         var hourPoints = this.formatPoints(origin, hourPoint);
 
         //Calculate Minutes Hand
         var minuteA = Math.radians(minute * 6 - 90);
-        var minutePoint = Math.pointOnCircle(cx, cy, r - 20, minuteA);
+        var minutePoint = Math.pointOnCircle(cx, cy, r * .8, minuteA);
         var minutePoints = this.formatPoints(origin, minutePoint);
 
         //Calculate Seconds Hand
         var secondA = Math.radians(second * 6 - 90);
-        var secondPoint = Math.pointOnCircle(cx, cy, r - 10, secondA);
+        var secondPoint = Math.pointOnCircle(cx, cy, r * .85, secondA);
         var secondPoints = this.formatPoints(origin, secondPoint);
 
         return React.createElement(
