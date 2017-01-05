@@ -330,11 +330,14 @@ h1, h2, h3, h4, h5, h6,
     fill: transparent; }
   .clock__second-hand {
     stroke: red;
-    stroke-width: 1; }
+    stroke-width: 1;
+    animation: rotate 60s infinite linear; }
   .clock__minute-hand {
-    stroke: #333; }
+    stroke: #333;
+    animation: rotate 3600s infinite ease; }
   .clock__hour-hand {
-    stroke: #333; }
+    stroke: #333;
+    animation: roatate 86400s infinite ease; }
 
 @keyframes rotate {
   0% {
