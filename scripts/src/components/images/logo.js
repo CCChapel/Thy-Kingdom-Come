@@ -81,52 +81,52 @@ class Logo extends React.Component {
                 {/*** LINES ***/}
                 {/* Line in top left */}
                 <polyline 
-                    className="cls-4"
+                    className="cls-4 fx-shimmer"
                     points="154.18,544.72 994.37,81.4" />
             
                 {/* Long line touching Thy */}
                 <polyline 
-                    className="cls-2"
+                    className="cls-2 fx-shimmer medium-delay"
                     points="606.03,547.87 1270.03,181.72" />
                 
                 {/* Thick line touching Thy */}
                 <polyline
-                    className="cls-5"
+                    className="cls-5 fx-shimmer short-delay"
                     points="753.18,466.73 1085.18,283.65" />
                 
                 {/* Line crossing Kingdom and Thy */}
                 <polyline
-                    className="cls-2"
+                    className="cls-2 fx-shimmer"
                     points="444.68,786.5 1447.92,233.28" />
 
                 {/* Line between Thy and Kingdom */}
                 <polyline
-                    className="cls-2"
+                    className="cls-2 fx-shimmer short-delay"
                     points="1123.04,475.4 1486.49,274.98" />
                 
                 {/* Long line crossing Come and Kingdom */}
                 <polyline
-                    className="cls-3"
+                    className="cls-3 fx-shimmer medium-delay"
                     points="624.04,836.32 1627.28,283.1" />
                 
                 {/* Thick line crossing Come and Kingdom */}
                 <polyline
-                    className="cls-5"
+                    className="cls-5 fx-shimmer"
                     points="771.13,755.21 1249.22,491.58" />
                 
                 {/* Line below and to left of Come */}
                 <polyline
-                    className="cls-2"
+                    className="cls-2 fx-shimmer short-delay"
                     points="614.81,920.4 851.48,789.89" />
                 
                 {/* Line crossing the e in Come */}
                 <polyline
-                    className="cls-2"
+                    className="cls-2 fx-shimmer"
                     points="808.39,893.22 1555.71,481.12" />
                 
                 {/* Line in bottom right */}
                 <polyline
-                    className="cls-2"
+                    className="cls-2 fx-shimmer medium-delay"
                     points="1388.15,1001.06 1751.6,800.63" />
             </svg>
         );

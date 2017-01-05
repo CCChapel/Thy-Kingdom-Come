@@ -346,6 +346,22 @@ ol {
 .fx-up-down {
   animation: up-down 5s infinite linear; }
 
+@keyframes shimmer {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: .25; }
+  100% {
+    opacity: 1; } }
+.fx-shimmer {
+  animation: shimmer 2s infinite ease alternate; }
+  .fx-shimmer.short-delay {
+    animation-delay: .5s; }
+  .fx-shimmer.medium-delay {
+    animation-delay: 1s; }
+  .fx-shimmer.long-delay {
+    animation-delay: 1.5s; }
+
 .clock__second-hand, .clock__minute-hand, .clock__hour-hand {
   stroke-width: 8;
   stroke-linecap: round;

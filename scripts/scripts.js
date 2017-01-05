@@ -226,34 +226,34 @@ class /**
                 React.createElement('path', { d: 'M896.06,626c9,0,16.59,2,20.4,5.09L930.12,655H931l-.44-28.57-8.66,4.36c-4.84-2.64-15.71-6.41-25.39-6.41-32,0-53.29,20.28-53.29,48.47,0,14.54,5.47,26.52,14.71,34.85l9.26-5.1c-5.33-8-8.56-18.58-8.56-30.91C858.63,647.32,871.7,626,896.06,626Z' })
             ),
             React.createElement('polyline', {
-                className: 'cls-4',
+                className: 'cls-4 fx-shimmer',
                 points: '154.18,544.72 994.37,81.4' }),
             React.createElement('polyline', {
-                className: 'cls-2',
+                className: 'cls-2 fx-shimmer medium-delay',
                 points: '606.03,547.87 1270.03,181.72' }),
             React.createElement('polyline', {
-                className: 'cls-5',
+                className: 'cls-5 fx-shimmer short-delay',
                 points: '753.18,466.73 1085.18,283.65' }),
             React.createElement('polyline', {
-                className: 'cls-2',
+                className: 'cls-2 fx-shimmer',
                 points: '444.68,786.5 1447.92,233.28' }),
             React.createElement('polyline', {
-                className: 'cls-2',
+                className: 'cls-2 fx-shimmer short-delay',
                 points: '1123.04,475.4 1486.49,274.98' }),
             React.createElement('polyline', {
-                className: 'cls-3',
+                className: 'cls-3 fx-shimmer medium-delay',
                 points: '624.04,836.32 1627.28,283.1' }),
             React.createElement('polyline', {
-                className: 'cls-5',
+                className: 'cls-5 fx-shimmer',
                 points: '771.13,755.21 1249.22,491.58' }),
             React.createElement('polyline', {
-                className: 'cls-2',
+                className: 'cls-2 fx-shimmer short-delay',
                 points: '614.81,920.4 851.48,789.89' }),
             React.createElement('polyline', {
-                className: 'cls-2',
+                className: 'cls-2 fx-shimmer',
                 points: '808.39,893.22 1555.71,481.12' }),
             React.createElement('polyline', {
-                className: 'cls-2',
+                className: 'cls-2 fx-shimmer medium-delay',
                 points: '1388.15,1001.06 1751.6,800.63' })
         );
     }
