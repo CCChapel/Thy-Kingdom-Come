@@ -38,14 +38,27 @@ class Page extends React.Component {
                 </Section>
 
                 <Section className="bg-light-blue">
-                    <div className="content-wrapper">
-                        <h1 className="center">Introduction</h1>
+                    <div className="content-wrapper lock-width center-by-margin">
+                        <h1 className="center">Thy Will Be Done</h1>
+
+                        <p>
+                            When his original students, the disciples, asked him how to pray, he said &ldquo;Pray 
+                            like this: &lsquo;Our father, who art in Heaven&hellip; thy kingdom come, thy will be done, 
+                            on earth, as it is in Heaven.&rsquo;&rdquo; If you are a student and follower of Jesus, 
+                            God is your father who has a will and a kingdom. This year, our church-wide 
+                            vision is to pray vigilantly and work diligently to bring this prayer to fruition; 
+                            to bring our father&rsquo;s will and kingdom here to earth.
+                        </p>
+
+                        <p>
+                            <a class="cta" href="#">Questions</a>
+                        </p>
                     </div>
                 </Section>
 
                 <Section className="bg-medium-blue">
                     <div className="content-wrapper">
-                        <h1 className="center">Local Spree</h1>
+                        <h1 className="center">Local Outreach Spree</h1>
 
                         <p className="center">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt 

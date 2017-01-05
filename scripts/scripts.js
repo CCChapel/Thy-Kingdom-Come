@@ -345,11 +345,25 @@ class Page extends React.Component {
                 { className: "bg-light-blue" },
                 React.createElement(
                     "div",
-                    { className: "content-wrapper" },
+                    { className: "content-wrapper lock-width center-by-margin" },
                     React.createElement(
                         "h1",
                         { className: "center" },
-                        "Introduction"
+                        "Thy Will Be Done"
+                    ),
+                    React.createElement(
+                        "p",
+                        null,
+                        "When his original students, the disciples, asked him how to pray, he said \u201CPray like this: \u2018Our father, who art in Heaven\u2026 thy kingdom come, thy will be done, on earth, as it is in Heaven.\u2019\u201D If you are a student and follower of Jesus, God is your father who has a will and a kingdom. This year, our church-wide vision is to pray vigilantly and work diligently to bring this prayer to fruition; to bring our father\u2019s will and kingdom here to earth."
+                    ),
+                    React.createElement(
+                        "p",
+                        null,
+                        React.createElement(
+                            "a",
+                            { "class": "cta", href: "#" },
+                            "Questions"
+                        )
                     )
                 )
             ),
@@ -362,7 +376,7 @@ class Page extends React.Component {
                     React.createElement(
                         "h1",
                         { className: "center" },
-                        "Local Spree"
+                        "Local Outreach Spree"
                     ),
                     React.createElement(
                         "p",
