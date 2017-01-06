@@ -615,6 +615,39 @@ ol {
 .bg-cover {
   background-size: cover; }
 
+input[type="text"],
+input[type="email"], textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 4px solid #69a7c2;
+  margin-bottom: 1em;
+  padding: 0 1em;
+  width: 100%;
+  font-family: "freight-sans-pro", Verdana, Arial, sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: white;
+  transition: border .5s; }
+  input[type="text"]:focus,
+  input[type="email"]:focus, textarea:focus {
+    border-bottom-color: #FFF; }
+  input[type="text"]:invalid,
+  input[type="email"]:invalid, textarea:invalid {
+    box-shadow: none; }
+
+input[type="text"],
+input[type="email"] {
+  height: 3rem; }
+  input[type="text"]:not([value=""]):invalid,
+  input[type="email"]:not([value=""]):invalid {
+    border-bottom-color: #cc0000; }
+
+textarea {
+  height: 9rem; }
+  textarea:not(:empty):invalid {
+    border-bottom-color: #cc0000; }
+
 .hidden {
   display: none; }
 

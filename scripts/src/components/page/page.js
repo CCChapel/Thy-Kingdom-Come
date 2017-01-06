@@ -53,7 +53,7 @@ class Page extends React.Component {
 
                         <p className="center">
                             <CTA text="Questions" 
-                                onClick={() => this.showModal(<ContactForm />)} />
+                                onClick={() => this.showModal(<ContactForm className="content-wrapper lock-width center-by-margin" />)} />
                         </p>
                     </div>
                 </Section>

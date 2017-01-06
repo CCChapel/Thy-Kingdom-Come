@@ -1,5 +1,7 @@
 /**
  * Displays the Contact Form
+ * 
+ * @className = Class Names to apply to root form element
  */
 class ContactForm extends React.Component {
     constructor(props) {
@@ -85,7 +87,7 @@ class ContactForm extends React.Component {
         //console.log(serialize());
 
         return (
-            <form>
+            <form className={this.props.className}>
                 <input type="hidden" name="form" value="2569143" />
                 <input type="hidden" name="viewkey" value="jXJg3zwAgW" />
 
@@ -120,7 +122,7 @@ class ContactForm extends React.Component {
                 <div>
                     <textarea name="field_48610323"
                         placeholder="Message"
-                        height="300px"
+                        height="5em"
                         required
                         value={this.state.field_48610323}
                         onChange={this.onMessageChange} />

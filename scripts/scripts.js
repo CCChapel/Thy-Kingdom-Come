@@ -1,6 +1,8 @@
 'use strict';
 /**
  * Displays the Contact Form
+ * 
+ * @className = Class Names to apply to root form element
  */
 class ContactForm extends React.Component {
     constructor(props) {
@@ -85,7 +87,7 @@ class ContactForm extends React.Component {
 
         return React.createElement(
             'form',
-            null,
+            { className: this.props.className },
             React.createElement('input', { type: 'hidden', name: 'form', value: '2569143' }),
             React.createElement('input', { type: 'hidden', name: 'viewkey', value: 'jXJg3zwAgW' }),
             React.createElement(
@@ -124,7 +126,7 @@ class ContactForm extends React.Component {
                 null,
                 React.createElement('textarea', { name: 'field_48610323',
                     placeholder: 'Message',
-                    height: '300px',
+                    height: '5em',
                     required: true,
                     value: this.state.field_48610323,
                     onChange: this.onMessageChange })
@@ -550,7 +552,7 @@ class Page extends React.Component {
                         "p",
                         { className: "center" },
                         React.createElement(CTA, { text: "Questions",
-                            onClick: () => this.showModal(React.createElement(ContactForm, null)) })
+                            onClick: () => this.showModal(React.createElement(ContactForm, { className: "content-wrapper lock-width center-by-margin" })) })
                     )
                 )
             ),
