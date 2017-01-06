@@ -66,25 +66,6 @@ class ContactForm extends React.Component {
         //var token = '68529bb9523b67cff3c735d2e5f9176a';
         //var url = 'package.json';
 
-        // var nameId = 48610311;
-        // var emailId = 48610314;
-        // var subjectId = 48610320;
-        // var messageId = 48610323;
-
-        // var fields = {
-        //     field_48610311: {
-        //         first: 'John',
-        //         last: 'Smith'
-        //     },
-        //     field_48610314: 'test@test.com',
-        //     field_48610320: 'Subject',
-        //     field_48610323: 'Message'
-        // };
-
-        //var query = "field_48610311%5Bfirst%5D=John&field_48610311%5Blast%5D=Smith";
-        //this.serializeData();
-        //console.log(serialize());
-
         return React.createElement(
             'form',
             { className: this.props.className },
