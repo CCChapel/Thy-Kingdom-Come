@@ -6,10 +6,10 @@ class ContactForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            name: '',
-            email: '',
-            subject: '',
-            message: ''
+            field_48610311: '',
+            field_48610314: '',
+            field_48610320: '',
+            field_48610323: ''
         };
 
         this.onNameChange = this.onNameChange.bind(this);
@@ -17,38 +17,86 @@ class ContactForm extends React.Component {
         this.onSubjectChange = this.onSubjectChange.bind(this);
         this.onMessageChange = this.onMessageChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.serializeData = this.serializeData.bind(this);
     }
 
     onNameChange(e) {
         this.setState({
-            name: e.target.value
+            field_48610311: e.target.value
         });
     }
 
     onEmailChange(e) {
         this.setState({
-            email: e.target.value
+            field_48610314: e.target.value
         });
     }
 
     onSubjectChange(e) {
         this.setState({
-            subject: e.target.value
+            field_48610320: e.target.value
         });
     }
 
     onMessageChange(e) {
         this.setState({
-            message: e.target.value
+            field_48610323: e.target.value
         });
     }
 
     handleSubmit(e) {
-        alert('Hello!');
+        //alert('Hello!');
+        var url = 'https://www.formstack.com/api/v2/form/2569143/submission.json?oauth_token=68529bb9523b67cff3c735d2e5f9176a';
+
+        var request = new Request(url, {
+            method: 'post',
+            body: this.serializeData()
+        });
+
+        //fetch(request).then(function(response) { console.log(response) });
+
         e.preventDefault();
     }
 
+    serializeData() {
+        var str = '';
+
+        for (var key in this.state) {
+            if (this.state.hasOwnProperty(key)) {
+                var temp = "{0}={1}&";
+                str += temp.format([key, this.state[key]]);
+            }
+        }
+
+        console.log(str);
+
+        return str;
+    }
+
     render() {
+        //var formId = '2569143';
+        //var token = '68529bb9523b67cff3c735d2e5f9176a';
+        //var url = 'package.json';
+
+        // var nameId = 48610311;
+        // var emailId = 48610314;
+        // var subjectId = 48610320;
+        // var messageId = 48610323;
+
+        // var fields = {
+        //     field_48610311: {
+        //         first: 'John',
+        //         last: 'Smith'
+        //     },
+        //     field_48610314: 'test@test.com',
+        //     field_48610320: 'Subject',
+        //     field_48610323: 'Message'
+        // };
+
+        //var query = "field_48610311%5Bfirst%5D=John&field_48610311%5Blast%5D=Smith";
+        //this.serializeData();
+        //console.log(serialize());
+
         return (
             // <form method="post" action="https://www.formstack.com/forms/index.php">
             React.createElement(
@@ -59,38 +107,42 @@ class ContactForm extends React.Component {
                 React.createElement(
                     'div',
                     null,
-                    React.createElement('input', { name: 'name',
+                    React.createElement('input', { name: 'field_48610311',
                         type: 'text',
                         placeholder: 'Name',
-                        value: this.state.name,
+                        required: true,
+                        value: this.state.field_48610311,
                         onChange: this.onNameChange })
                 ),
                 React.createElement(
                     'div',
                     null,
-                    React.createElement('input', { name: 'email',
+                    React.createElement('input', { name: 'field_48610314',
                         type: 'text',
                         placeholder: 'Email',
+                        required: true,
                         pattern: '[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,3}$',
-                        value: this.state.email,
+                        value: this.state.field_48610314,
                         onChange: this.onEmailChange })
                 ),
                 React.createElement(
                     'div',
                     null,
-                    React.createElement('input', { name: 'subject',
+                    React.createElement('input', { name: 'field_48610320',
                         type: 'text',
                         placeholder: 'Subject',
-                        value: this.state.subject,
+                        required: true,
+                        value: this.state.field_48610320,
                         onChange: this.onSubjectChange })
                 ),
                 React.createElement(
                     'div',
                     null,
-                    React.createElement('textarea', { name: 'message',
+                    React.createElement('textarea', { name: 'field_48610323',
                         placeholder: 'Message',
                         height: '300px',
-                        value: this.state.message,
+                        required: true,
+                        value: this.state.field_48610323,
                         onChange: this.onMessageChange })
                 ),
                 React.createElement(
@@ -665,6 +717,27 @@ Math.shortenLine = function (point, shortenBy) {
     y: point.y < 0 ? point.y + shortenBy : point.y - shortenBy
   };
 };
+/**
+ * Mimics .Net's String.Format feature.
+ */
+String.prototype.format = function (args) {
+    var str = this;
+    return str.replace(String.prototype.format.regex, function (item) {
+        var intVal = parseInt(item.substring(1, item.length - 1));
+        var replace;
+        if (intVal >= 0) {
+            replace = args[intVal];
+        } else if (intVal === -1) {
+            replace = "{";
+        } else if (intVal === -2) {
+            replace = "}";
+        } else {
+            replace = "";
+        }
+        return replace;
+    });
+};
+String.prototype.format.regex = new RegExp("{-?[0-9]+}", "g");
 const MINISTRY_PARTNERS = [{
     name: 'Blessings',
     address: '123 Street Road',

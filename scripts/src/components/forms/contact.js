@@ -5,10 +5,14 @@ class ContactForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            name: '',
-            email: '',
-            subject: '',
-            message: '',
+            field_48610311: '',
+            field_48610314: '',
+            field_48610320: '',
+            field_48610323: '',
+            // field_48610311: 'John Smith',
+            // field_48610314: 'test@test.com',
+            // field_48610320: 'Subject',
+            // field_48610323: 'Message'
         };
 
         this.onNameChange = this.onNameChange.bind(this);
@@ -16,38 +20,86 @@ class ContactForm extends React.Component {
         this.onSubjectChange = this.onSubjectChange.bind(this);
         this.onMessageChange = this.onMessageChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.serializeData = this.serializeData.bind(this);
     }
 
     onNameChange(e) {
         this.setState({
-            name: e.target.value
+            field_48610311: e.target.value
         });
     }
 
     onEmailChange(e) {
         this.setState({
-            email: e.target.value
+            field_48610314: e.target.value
         });
     }
 
     onSubjectChange(e) {
         this.setState({
-            subject: e.target.value
+            field_48610320: e.target.value
         });
     }
 
     onMessageChange(e) {
         this.setState({
-            message: e.target.value
+            field_48610323: e.target.value
         });
     }
 
     handleSubmit(e) {
-        alert('Hello!');
+        //alert('Hello!');
+        var url = 'https://www.formstack.com/api/v2/form/2569143/submission.json?oauth_token=68529bb9523b67cff3c735d2e5f9176a';
+
+        var request = new Request(url, {
+            method: 'post',
+            body: this.serializeData()
+        });
+
+        //fetch(request).then(function(response) { console.log(response) });
+
         e.preventDefault();
     }
 
+    serializeData() {
+        var str = '';
+
+        for (var key in this.state) {
+            if (this.state.hasOwnProperty(key)) {
+                var temp = "{0}={1}&";
+                str += temp.format([key, this.state[key]]);
+            }
+        }
+
+        console.log(str);
+
+        return str;
+    }
+
     render() {
+        //var formId = '2569143';
+        //var token = '68529bb9523b67cff3c735d2e5f9176a';
+        //var url = 'package.json';
+
+        // var nameId = 48610311;
+        // var emailId = 48610314;
+        // var subjectId = 48610320;
+        // var messageId = 48610323;
+
+        // var fields = {
+        //     field_48610311: {
+        //         first: 'John',
+        //         last: 'Smith'
+        //     },
+        //     field_48610314: 'test@test.com',
+        //     field_48610320: 'Subject',
+        //     field_48610323: 'Message'
+        // };
+
+        //var query = "field_48610311%5Bfirst%5D=John&field_48610311%5Blast%5D=Smith";
+        //this.serializeData();
+        //console.log(serialize());
+
         return (
             // <form method="post" action="https://www.formstack.com/forms/index.php">
             <form>
@@ -55,35 +107,39 @@ class ContactForm extends React.Component {
                 <input type="hidden" name="viewkey" value="jXJg3zwAgW" />
 
                 <div>
-                    <input name="name"
+                    <input name="field_48610311"
                         type="text" 
                         placeholder="Name"
-                        value={this.state.name}
+                        required
+                        value={this.state.field_48610311}
                         onChange={this.onNameChange} />
                 </div>
 
                 <div>
-                    <input name="email"
+                    <input name="field_48610314"
                         type="text" 
                         placeholder="Email"
+                        required
                         pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
-                        value={this.state.email}
+                        value={this.state.field_48610314}
                         onChange={this.onEmailChange} />
                 </div>
 
                 <div>
-                    <input name="subject"
+                    <input name="field_48610320"
                         type="text" 
                         placeholder="Subject"
-                        value={this.state.subject}
+                        required
+                        value={this.state.field_48610320}
                         onChange={this.onSubjectChange} />
                 </div>
 
                 <div>
-                    <textarea name="message"
+                    <textarea name="field_48610323"
                         placeholder="Message"
                         height="300px"
-                        value={this.state.message}
+                        required
+                        value={this.state.field_48610323}
                         onChange={this.onMessageChange} />
                 </div>
 
