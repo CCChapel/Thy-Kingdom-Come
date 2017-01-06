@@ -34,9 +34,10 @@ Math.pointOnCircle = function(cx, cy, r, a) {
 };
 
 /**
- * Shorten line
+ * Shorten line be designated length
  * 
  * @point = object containing an x and y property
+ * @shortenBy = the length to shorten the line by
  * 
  * RETURNS object with an x and y property
  **/
