@@ -1,5 +1,10 @@
 /**
  * Mimics .Net's String.Format feature.
+ * 
+ * Adapted from AspDotNetDev's code at
+ * https://www.codeproject.com/tips/201899/string-format-in-javascript
+ * 
+ * @args = Array of strings to insert into the base string.
  */
 String.prototype.format = function (args) {
     var str = this;
@@ -19,3 +24,13 @@ String.prototype.format = function (args) {
     });
 };
 String.prototype.format.regex = new RegExp("{-?[0-9]+}", "g");
+
+/**
+ * Mimics .Net's String.Format feature.
+ * 
+ * @str = String to insert args into
+ * @args = Array of strings to insert into str
+ */
+String.format = function(str, args) {
+    return str.format(args);
+}
