@@ -16,7 +16,6 @@ class Page extends React.Component {
     }
 
     showModal(modalContent) {
-        console.log("click");
         this.setState({
             showModal : true,
             modalContent : modalContent
