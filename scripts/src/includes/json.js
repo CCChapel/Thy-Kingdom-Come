@@ -6,15 +6,19 @@
  * RETURNS a string useful as a query
  */
 JSON.toQueryString = function(obj) {
+    //Start with an empty string
     var str = '';
 
+    //Loop through each property of the object
     for (var key in obj) {
         if (obj.hasOwnProperty(key)) {
-            var temp = "{0}={1}&";
-            str += temp.format([key, obj[key]]);
+            //Add property and value to str
+            //var temp = "{0}={1}&";
+            str += String.format("{0}={1}&", [key, obj[key]]);
         }
     }
 
+    //Remove any trailing &
     if (str.endsWith("&")) {
         var length = str.length;
 
