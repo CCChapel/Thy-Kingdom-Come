@@ -1,3 +1,4 @@
+'use strict';
 /**
  * Displays the Contact Form
  */
@@ -715,4 +716,3 @@ const MINISTRY_PARTNERS = [{
 }];
 
 ReactDOM.render(React.createElement(Page, null), document.getElementById('root'));
-'use strict';
