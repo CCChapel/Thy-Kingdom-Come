@@ -56,7 +56,7 @@ class ContactForm extends React.Component {
             body: JSON.toQueryString(this.state) //this.serializeData()
         });
 
-        //fetch(request).then(function(response) { console.log(response) });
+        fetch(request).then(function(response) { console.log(response) });
 
         e.preventDefault();
     }
