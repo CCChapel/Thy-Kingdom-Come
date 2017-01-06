@@ -20,7 +20,7 @@ class ContactForm extends React.Component {
         this.onSubjectChange = this.onSubjectChange.bind(this);
         this.onMessageChange = this.onMessageChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.serializeData = this.serializeData.bind(this);
+        //this.serializeData = this.serializeData.bind(this);
     }
 
     onNameChange(e) {
@@ -53,7 +53,7 @@ class ContactForm extends React.Component {
 
         var request = new Request(url, {
             method: 'post',
-            body: this.serializeData()
+            body: JSON.toQueryString(this.state) //this.serializeData()
         });
 
         //fetch(request).then(function(response) { console.log(response) });
@@ -61,20 +61,20 @@ class ContactForm extends React.Component {
         e.preventDefault();
     }
 
-    serializeData() {
-        var str = '';
+    // serializeData() {
+    //     var str = '';
 
-        for (var key in this.state) {
-            if (this.state.hasOwnProperty(key)) {
-                var temp = "{0}={1}&";
-                str += temp.format([key, this.state[key]]);
-            }
-        }
+    //     for (var key in this.state) {
+    //         if (this.state.hasOwnProperty(key)) {
+    //             var temp = "{0}={1}&";
+    //             str += temp.format([key, this.state[key]]);
+    //         }
+    //     }
 
-        console.log(str);
+    //     console.log(str);
 
-        return str;
-    }
+    //     return str;
+    // }
 
     render() {
         //var formId = '2569143';
