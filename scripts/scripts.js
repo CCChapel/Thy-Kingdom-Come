@@ -17,7 +17,6 @@ class ContactForm extends React.Component {
         this.onSubjectChange = this.onSubjectChange.bind(this);
         this.onMessageChange = this.onMessageChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        //this.serializeData = this.serializeData.bind(this);
     }
 
     onNameChange(e) {
@@ -60,21 +59,6 @@ class ContactForm extends React.Component {
         e.preventDefault();
     }
 
-    // serializeData() {
-    //     var str = '';
-
-    //     for (var key in this.state) {
-    //         if (this.state.hasOwnProperty(key)) {
-    //             var temp = "{0}={1}&";
-    //             str += temp.format([key, this.state[key]]);
-    //         }
-    //     }
-
-    //     console.log(str);
-
-    //     return str;
-    // }
-
     render() {
         //var formId = '2569143';
         //var token = '68529bb9523b67cff3c735d2e5f9176a';
@@ -99,59 +83,56 @@ class ContactForm extends React.Component {
         //this.serializeData();
         //console.log(serialize());
 
-        return (
-            // <form method="post" action="https://www.formstack.com/forms/index.php">
+        return React.createElement(
+            'form',
+            null,
+            React.createElement('input', { type: 'hidden', name: 'form', value: '2569143' }),
+            React.createElement('input', { type: 'hidden', name: 'viewkey', value: 'jXJg3zwAgW' }),
             React.createElement(
-                'form',
+                'div',
                 null,
-                React.createElement('input', { type: 'hidden', name: 'form', value: '2569143' }),
-                React.createElement('input', { type: 'hidden', name: 'viewkey', value: 'jXJg3zwAgW' }),
-                React.createElement(
-                    'div',
-                    null,
-                    React.createElement('input', { name: 'field_48610311',
-                        type: 'text',
-                        placeholder: 'Name',
-                        required: true,
-                        value: this.state.field_48610311,
-                        onChange: this.onNameChange })
-                ),
-                React.createElement(
-                    'div',
-                    null,
-                    React.createElement('input', { name: 'field_48610314',
-                        type: 'text',
-                        placeholder: 'Email',
-                        required: true,
-                        pattern: '[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,3}$',
-                        value: this.state.field_48610314,
-                        onChange: this.onEmailChange })
-                ),
-                React.createElement(
-                    'div',
-                    null,
-                    React.createElement('input', { name: 'field_48610320',
-                        type: 'text',
-                        placeholder: 'Subject',
-                        required: true,
-                        value: this.state.field_48610320,
-                        onChange: this.onSubjectChange })
-                ),
-                React.createElement(
-                    'div',
-                    null,
-                    React.createElement('textarea', { name: 'field_48610323',
-                        placeholder: 'Message',
-                        height: '300px',
-                        required: true,
-                        value: this.state.field_48610323,
-                        onChange: this.onMessageChange })
-                ),
-                React.createElement(
-                    'div',
-                    { className: 'center' },
-                    React.createElement(CTA, { text: 'Submit', onClick: this.handleSubmit })
-                )
+                React.createElement('input', { name: 'field_48610311',
+                    type: 'text',
+                    placeholder: 'Name',
+                    required: true,
+                    value: this.state.field_48610311,
+                    onChange: this.onNameChange })
+            ),
+            React.createElement(
+                'div',
+                null,
+                React.createElement('input', { name: 'field_48610314',
+                    type: 'text',
+                    placeholder: 'Email',
+                    required: true,
+                    pattern: '[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,3}$',
+                    value: this.state.field_48610314,
+                    onChange: this.onEmailChange })
+            ),
+            React.createElement(
+                'div',
+                null,
+                React.createElement('input', { name: 'field_48610320',
+                    type: 'text',
+                    placeholder: 'Subject',
+                    required: true,
+                    value: this.state.field_48610320,
+                    onChange: this.onSubjectChange })
+            ),
+            React.createElement(
+                'div',
+                null,
+                React.createElement('textarea', { name: 'field_48610323',
+                    placeholder: 'Message',
+                    height: '300px',
+                    required: true,
+                    value: this.state.field_48610323,
+                    onChange: this.onMessageChange })
+            ),
+            React.createElement(
+                'div',
+                { className: 'center' },
+                React.createElement(CTA, { text: 'Submit', onClick: this.handleSubmit })
             )
         );
     }

@@ -20,7 +20,6 @@ class ContactForm extends React.Component {
         this.onSubjectChange = this.onSubjectChange.bind(this);
         this.onMessageChange = this.onMessageChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        //this.serializeData = this.serializeData.bind(this);
     }
 
     onNameChange(e) {
@@ -61,21 +60,6 @@ class ContactForm extends React.Component {
         e.preventDefault();
     }
 
-    // serializeData() {
-    //     var str = '';
-
-    //     for (var key in this.state) {
-    //         if (this.state.hasOwnProperty(key)) {
-    //             var temp = "{0}={1}&";
-    //             str += temp.format([key, this.state[key]]);
-    //         }
-    //     }
-
-    //     console.log(str);
-
-    //     return str;
-    // }
-
     render() {
         //var formId = '2569143';
         //var token = '68529bb9523b67cff3c735d2e5f9176a';
@@ -101,7 +85,6 @@ class ContactForm extends React.Component {
         //console.log(serialize());
 
         return (
-            // <form method="post" action="https://www.formstack.com/forms/index.php">
             <form>
                 <input type="hidden" name="form" value="2569143" />
                 <input type="hidden" name="viewkey" value="jXJg3zwAgW" />
