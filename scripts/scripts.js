@@ -670,6 +670,31 @@ class Section extends React.Component {
     }
 }
 /**
+ * Turns a JSON object into a query string
+ * 
+ * @obj = the object to turn into a query string
+ * 
+ * RETURNS a string useful as a query
+ */
+JSON.toQueryString = function (obj) {
+    var str = '';
+
+    for (var key in obj) {
+        if (obj.hasOwnProperty(key)) {
+            var temp = "{0}={1}&";
+            str += temp.format([key, obj[key]]);
+        }
+    }
+
+    if (str.endsWith("&")) {
+        var length = str.length;
+
+        str = str.substring(0, length - 1);
+    }
+
+    return str;
+};
+/**
  * Converts from degrees to radians.
  * 
  * @degrees = degrees to convert to radians
@@ -705,9 +730,10 @@ Math.pointOnCircle = function (cx, cy, r, a) {
 };
 
 /**
- * Shorten line
+ * Shorten line be designated length
  * 
  * @point = object containing an x and y property
+ * @shortenBy = the length to shorten the line by
  * 
  * RETURNS object with an x and y property
  **/
