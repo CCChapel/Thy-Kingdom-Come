@@ -55,8 +55,6 @@ class Page extends React.Component {
                             <CTA text="Questions" 
                                 onClick={() => this.showModal(<ContactForm />)} />
                         </p>
-
-                        <ContactForm />
                     </div>
                 </Section>
 

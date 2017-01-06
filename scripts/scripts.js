@@ -551,8 +551,7 @@ class Page extends React.Component {
                         { className: "center" },
                         React.createElement(CTA, { text: "Questions",
                             onClick: () => this.showModal(React.createElement(ContactForm, null)) })
-                    ),
-                    React.createElement(ContactForm, null)
+                    )
                 )
             ),
             React.createElement(
