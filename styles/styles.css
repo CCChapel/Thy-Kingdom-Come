@@ -639,8 +639,8 @@ input[type="email"], textarea {
 input[type="text"],
 input[type="email"] {
   height: 3rem; }
-  input[type="text"]:not([value=""]):invalid,
-  input[type="email"]:not([value=""]):invalid {
+  input[type="text"]:not([value=""]):not(:focus):invalid,
+  input[type="email"]:not([value=""]):not(:focus):invalid {
     border-bottom-color: #cc0000; }
 
 textarea {

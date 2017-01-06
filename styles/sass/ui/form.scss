@@ -30,7 +30,7 @@ input[type="email"] {
 
     height: 3rem;
 
-    &:not([value=""]):invalid {
+    &:not([value=""]):not(:focus):invalid {
         border-bottom-color: $red;
     }
 }
