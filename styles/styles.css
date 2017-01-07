@@ -540,7 +540,7 @@ ol {
         margin-right: 0; } }
 
 .modal {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.85);
   color: #FFF;
   position: fixed;
   z-index: 1000;
