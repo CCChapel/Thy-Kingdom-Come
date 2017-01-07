@@ -4,7 +4,7 @@
 class Logo extends React.Component {
     render() {
         var styles = {
-            minWidth: '600px',
+            minWidth: '800px',
             maxWidth: '1080px'
         };
 
