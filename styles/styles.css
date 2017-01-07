@@ -248,9 +248,9 @@ csswizardry.com
 */
 body {
   font-family: "freight-sans-pro", Verdana, Arial, sans-serif;
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.33333;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
