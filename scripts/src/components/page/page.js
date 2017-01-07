@@ -52,7 +52,11 @@ class Page extends React.Component {
 
                         <p className="center">
                             <CTA text="Questions" 
-                                onClick={() => this.showModal(<ContactForm className="content-wrapper lock-width center-by-margin" />)} />
+                                onClick={() => 
+                                    this.showModal(
+                                        <ContactForm className="content-wrapper lock-width center-by-margin"
+                                            onComplete={this.hideModal} />
+                                    )} />
                         </p>
                     </div>
                 </Section>
