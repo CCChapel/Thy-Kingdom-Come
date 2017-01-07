@@ -627,6 +627,7 @@ input[type="email"], textarea {
   background: transparent;
   border: none;
   border-bottom: 4px solid #69a7c2;
+  border-radius: 0;
   margin-bottom: 1em;
   padding: 0 1em;
   width: 100%;
