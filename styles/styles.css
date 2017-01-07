@@ -639,7 +639,8 @@ input[type="email"], textarea {
   transition: border .5s; }
   input[type="text"]:focus,
   input[type="email"]:focus, textarea:focus {
-    border-bottom-color: #FFF; }
+    border-bottom-color: #FFF;
+    outline: none; }
   input[type="text"]:invalid,
   input[type="email"]:invalid, textarea:invalid {
     box-shadow: none; }
@@ -652,7 +653,8 @@ input[type="email"] {
     border-bottom-color: #cc0000; }
 
 textarea {
-  height: 9rem; }
+  height: 9rem;
+  resize: none; }
   textarea:not(:empty):invalid {
     border-bottom-color: #cc0000; }
 

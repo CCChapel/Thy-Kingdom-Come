@@ -18,6 +18,9 @@
 
     &:focus {
         border-bottom-color: #FFF;
+        
+        //Hide default blue glow
+        outline: none;
     }
 
     //Hide Firefox Initial Red Border
@@ -41,6 +44,8 @@ textarea {
     @extend %base-form-styles;
 
     height: 9rem;
+
+    resize: none;
 
     &:not(:empty):invalid {
         border-bottom-color: $red;
