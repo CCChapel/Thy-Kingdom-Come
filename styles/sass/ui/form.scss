@@ -9,7 +9,7 @@
     width: 100%;
 
     font-family: $sans-serif;
-    @include typecsset-font-size($typecsset-base-font-size);
+    @include typecsset-font-size(18px);
     color: white;
 
     transition: border .5s;

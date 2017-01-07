@@ -631,9 +631,9 @@ input[type="email"], textarea {
   padding: 0 1em;
   width: 100%;
   font-family: "freight-sans-pro", Verdana, Arial, sans-serif;
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.33333;
   color: white;
   transition: border .5s; }
   input[type="text"]:focus,
