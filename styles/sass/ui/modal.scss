@@ -7,6 +7,8 @@
 
     height: 100vh;
     width: 100vw;
+
+    animation: modal-open .5s 1;
 }
 
 .modal-close {
@@ -15,4 +17,9 @@
     position: absolute;
     top: $gutter;
     right: $gutter;
+}
+
+@keyframes modal-open {
+    from { opacity: 0 };
+    to { opacity: 1 };
 }

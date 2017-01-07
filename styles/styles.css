@@ -544,7 +544,8 @@ ol {
   position: fixed;
   z-index: 1000;
   height: 100vh;
-  width: 100vw; }
+  width: 100vw;
+  animation: modal-open .5s 1; }
 
 .modal-close {
   cursor: pointer;
@@ -552,6 +553,11 @@ ol {
   top: 20px;
   right: 20px; }
 
+@keyframes modal-open {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 .background-cover {
   background-position: top center;
   background-repeat: no-repeat;

@@ -7,8 +7,8 @@ class Page extends React.Component {
         super(props);
 
         this.state = {
-            showModal : false,
-            modalContent : 'Initial Modal Content'
+            showModal: false,
+            modalContent: 'Initial Modal Content'
         };
 
         this.showModal = this.showModal.bind(this);
@@ -17,13 +17,13 @@ class Page extends React.Component {
 
     showModal(modalContent) {
         this.setState({
-            showModal : true,
-            modalContent : modalContent
+            showModal: true,
+            modalContent: modalContent
         });
     }
 
     hideModal(e) {
-        this.setState({showModal : false});
+        this.setState({showModal: false});
     }
 
     render() {
