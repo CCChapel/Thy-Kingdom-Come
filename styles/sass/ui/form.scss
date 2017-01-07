@@ -44,3 +44,11 @@ textarea {
         border-bottom-color: $red;
     }
 }
+
+.form--error {
+    background: $red;
+
+    padding: 1em;
+
+    color: #FFF;
+}

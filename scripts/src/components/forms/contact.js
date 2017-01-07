@@ -8,6 +8,8 @@ class ContactForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            showError: false,
+            errorMessage: '',
             showForm: true,
             showConfirmation: false,
             data: {
@@ -18,10 +20,12 @@ class ContactForm extends React.Component {
             }
         };
 
-        this.onShowForm = this.onShowForm.bind(this);
-        this.onHideForm = this.onHideForm.bind(this);
-        this.onShowConfirmation = this.onShowConfirmation.bind(this);
-        this.onHideConfirmation = this.onHideConfirmation.bind(this);
+        this.showError = this.showError.bind(this);
+        this.hideError = this.hideError.bind(this);
+        this.showForm = this.showForm.bind(this);
+        this.hideForm = this.hideForm.bind(this);
+        this.showConfirmation = this.showConfirmation.bind(this);
+        this.hideConfirmation = this.hideConfirmation.bind(this);
         this.onNameChange = this.onNameChange.bind(this);
         this.onEmailChange = this.onEmailChange.bind(this);
         this.onSubjectChange = this.onSubjectChange.bind(this);
@@ -29,23 +33,36 @@ class ContactForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    onShowForm(e) {
+    showError(message) {
+        this.setState({
+            showError: true,
+            errorMessage: message
+        });
+    }
+    hideError() {
+        this.setState({
+            showError: false,
+            errorMessage: ''
+        });
+    }
+
+    showForm(e) {
         this.setState({
             showForm: true
         });
     }
-    onHideForm(e) {
+    hideForm(e) {
         this.setState({
             showForm: false
         });
     }
 
-    onShowConfirmation(e) {
+    showConfirmation(e) {
         this.setState({
             showConfirmation: true
         });
     }
-    onHideConfirmation(e) {
+    hideConfirmation(e) {
         this.setState({
             showConfirmation: false
         });
@@ -95,38 +112,57 @@ class ContactForm extends React.Component {
         });
     }
 
+    isFormValid() {
+        var form = document.getElementById("contactForm");
+
+        return form.checkValidity();
+    }
+
     handleSubmit(e) {
-        var url = 'https://www.formstack.com/api/v2/form/2569143/submission.json?oauth_token=68529bb9523b67cff3c735d2e5f9176a';
+        //Hide error
+        this.hideError();
 
-        var request = new Request(url, {
-            method: 'post',
-            mode: "no-cors",
-            body: JSON.toQueryString(this.state.data) //this.serializeData()
-        });
+        //Check Form Validity
+        if (this.isFormValid()) {
+            //Valid Form -> Submit
+            var url = 'https://www.formstack.com/api/v2/form/2569143/submission.json?oauth_token=68529bb9523b67cff3c735d2e5f9176a';
 
-        //Store onHideForm, onShowConfirmation, onComplete locally because .then won't be able to access `this`
-        var onHideForm = this.onHideForm;
-        var onShowConfirmation = this.onShowConfirmation;
-        var onComplete = this.props.onComplete;
-
-        fetch(request)
-            .then(function(response) {
-                //Hide the form
-                onHideForm();
-
-                //Show Confirmation Message
-                onShowConfirmation();
-
-                //Delay 5 seconds, then call onComplete
-                setTimeout(onComplete, 5000);
-            })
-            .catch(function(err) {
-                //Log the error
-                console.log(err);
+            var request = new Request(url, {
+                method: 'post',
+                mode: "no-cors",
+                body: JSON.toQueryString(this.state.data) //this.serializeData()
             });
-        
-        //TO DO: Figure out why we're not getting event
-        //e.preventDefault();
+
+            //Store hideForm, showConfirmation, onComplete locally because .then won't be able to access `this`
+            var hideForm = this.hideForm;
+            var showConfirmation = this.showConfirmation;
+            var onComplete = this.props.onComplete;
+            var showError = this.showError;
+
+            fetch(request)
+                .then(function(response) {
+                    //Hide the form
+                    hideForm();
+
+                    //Show Confirmation Message
+                    showConfirmation();
+
+                    //Delay 5 seconds, then call onComplete
+                    setTimeout(onComplete, 5000);
+                })
+                .catch(function(err) {
+                    //Log the error
+                    console.log(err);
+                    showError("Hmm\u2026 Something didn\u2019t go quite as planned. Please try again.");
+                });
+
+            //TO DO: Figure out why we're not getting event
+            //e.preventDefault();
+        }
+        else {
+            //Invalid form -> Show error
+            this.showError("Oops\u2026 Something\u2019s not quite right. Take another look.");
+        }
     }
 
     render() {
@@ -134,12 +170,14 @@ class ContactForm extends React.Component {
         //var token = '68529bb9523b67cff3c735d2e5f9176a';
         //var url = 'package.json';
 
+        var error = '';
+        if (this.state.showError === true) {
+            error = <div className="form--error add-bottom-margin">{this.state.errorMessage}</div>
+        }
+
         if (this.state.showForm === true) {
             return (
-                <form className={this.props.className}>
-                    <input type="hidden" name="form" value="2569143" />
-                    <input type="hidden" name="viewkey" value="jXJg3zwAgW" />
-
+                <form id="contactForm" className={this.props.className}>
                     <div>
                         <input name="field_48610311"
                             type="text" 
@@ -177,8 +215,10 @@ class ContactForm extends React.Component {
                             onChange={this.onMessageChange} />
                     </div>
 
+                    {error}
+                    
                     <div className="center">
-                        <CTA text="Submit" onClick={this.handleSubmit} />
+                        <CTA text="Submit" onClick={(e) => this.handleSubmit(e)} />
                     </div>
                 </form>
             );

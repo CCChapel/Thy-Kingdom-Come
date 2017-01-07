@@ -654,6 +654,11 @@ textarea {
   textarea:not(:empty):invalid {
     border-bottom-color: #cc0000; }
 
+.form--error {
+  background: #cc0000;
+  padding: 1em;
+  color: #FFF; }
+
 .hidden {
   display: none; }
 
