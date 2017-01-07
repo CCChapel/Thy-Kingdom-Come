@@ -260,7 +260,8 @@ h1, h2, h3, h4, h5, h6,
   letter-spacing: 2px; }
 
 ol {
-  list-style: decimal; }
+  list-style: decimal;
+  margin-left: 1rem; }
 
 .serif {
   font-family: "freight-big-pro", "Franklin Gothic Book", serif;
