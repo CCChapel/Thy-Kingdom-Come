@@ -1,4 +1,3 @@
-'use strict';
 /**
  * Displays the Contact Form
  * 
@@ -333,7 +332,8 @@ class /**
     render() {
         var styles = {
             minWidth: '800px',
-            maxWidth: '1080px'
+            maxWidth: '1080px',
+            marginLeft: '-3%'
         };
 
         return React.createElement(
@@ -652,7 +652,7 @@ class Page extends React.Component {
                     React.createElement(
                         "p",
                         null,
-                        "When his original students, the disciples, asked him how to pray, he said \u201CPray like this: \u2018Our father, who art in Heaven\u2026 thy kingdom come, thy will be done, on earth, as it is in Heaven.\u2019\u201D If you are a student and follower of Jesus, God is your father who has a will and a kingdom. This year, our church-wide vision is to pray vigilantly and work diligently to bring this prayer to fruition; to bring our father\u2019s will and kingdom here to earth."
+                        "When his original students, the disciples, asked him how to pray, he said \u201CPray like this: \u2018Our father, who art in Heaven\u2026 thy kingdom come, thy will be done, on earth, as it is in Heaven.\u2019 \u201D If you are a student and follower of Jesus, God is your father who has a will and a kingdom. This year, our church-wide vision is to pray vigilantly and work diligently to bring this prayer to fruition; to bring our father\u2019s will and kingdom here to earth."
                     ),
                     React.createElement(
                         "p",
@@ -729,7 +729,12 @@ class Page extends React.Component {
                 React.createElement(
                     "div",
                     { className: "content-wrapper" },
-                    "\xA9 Copyright 2017 | Christ Community Chapel"
+                    "\xA9 Copyright 2017 | ",
+                    React.createElement(
+                        "a",
+                        { href: "https://ccchapel.com", target: "_blank" },
+                        "Christ Community Chapel"
+                    )
                 )
             )
         );
@@ -1385,3 +1390,4 @@ const MINISTRY_PARTNERS = [{
 }];
 
 ReactDOM.render(React.createElement(Page, null), document.getElementById('root'));
+'use strict';
