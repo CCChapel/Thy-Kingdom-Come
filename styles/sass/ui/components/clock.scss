@@ -18,7 +18,7 @@
     &__second-hand {
         @extend %clock-hand-base;
 
-        stroke: red;
+        stroke: $red;
         stroke-width: 1;
 
         animation: rotate 60s infinite linear;
