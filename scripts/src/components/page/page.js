@@ -44,7 +44,7 @@ class Page extends React.Component {
                         <p>
                             When his original students, the disciples, asked him how to pray, he said &ldquo;Pray 
                             like this: &lsquo;Our father, who art in Heaven&hellip; thy kingdom come, thy will be done, 
-                            on earth, as it is in Heaven.&rsquo; &rdquo; If you are a student and follower of Jesus, 
+                            on earth, as it is in Heaven.&rsquo;&nbsp;&rdquo; If you are a student and follower of Jesus, 
                             God is your father who has a will and a kingdom. This year, our church-wide 
                             vision is to pray vigilantly and work diligently to bring this prayer to fruition; 
                             to bring our father&rsquo;s will and kingdom here to earth.
