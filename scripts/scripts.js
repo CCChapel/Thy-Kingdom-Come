@@ -11,7 +11,6 @@ class VimeoVideo extends React.Component {
         var src = String.format("https://player.vimeo.com/video/{0}?color=28708a&title=0&byline=0&portrait=0", [this.props.vimeoId]);
 
         return React.createElement("iframe", { src: src,
-            style: styles,
             className: this.props.className,
             width: this.props.width,
             height: this.props.height,
@@ -679,7 +678,7 @@ class Page extends React.Component {
                     ),
                     React.createElement(
                         "p",
-                        { className: "center" },
+                        { className: "center " },
                         React.createElement(VimeoVideo, { vimeoId: "198552260" })
                     ),
                     React.createElement(
