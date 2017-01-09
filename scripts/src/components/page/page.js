@@ -50,8 +50,10 @@ class Page extends React.Component {
                             to bring our father&rsquo;s will and kingdom here to earth.
                         </p>
 
-                        <p className="center ">
-                            <VimeoVideo vimeoId="198552260" />
+                        <p className="center">
+                            <VimeoVideo vimeoId="198552260"
+                                width="640px"
+                                height="360px" />
                         </p>
 
                         <p className="center">

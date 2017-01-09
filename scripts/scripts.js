@@ -10,14 +10,18 @@ class VimeoVideo extends React.Component {
     render() {
         var src = String.format("https://player.vimeo.com/video/{0}?color=28708a&title=0&byline=0&portrait=0", [this.props.vimeoId]);
 
-        return React.createElement("iframe", { src: src,
-            className: this.props.className,
-            width: this.props.width,
-            height: this.props.height,
-            frameborder: "0",
-            webkitallowfullscreen: true,
-            mozallowfullscreen: true,
-            allowfullscreen: true });
+        return React.createElement(
+            "div",
+            { "class": "js-video [ vimeo, widescreen ]" },
+            React.createElement("iframe", { src: src,
+                className: this.props.className,
+                width: this.props.width,
+                height: this.props.height,
+                frameborder: "0",
+                webkitallowfullscreen: true,
+                mozallowfullscreen: true,
+                allowfullscreen: true })
+        );
     }
 }
 /**
@@ -678,8 +682,10 @@ class Page extends React.Component {
                     ),
                     React.createElement(
                         "p",
-                        { className: "center " },
-                        React.createElement(VimeoVideo, { vimeoId: "198552260" })
+                        { className: "center" },
+                        React.createElement(VimeoVideo, { vimeoId: "198552260",
+                            width: "640px",
+                            height: "360px" })
                     ),
                     React.createElement(
                         "p",
