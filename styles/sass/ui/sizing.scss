@@ -1,3 +1,4 @@
+//Heights
 .fill-screen-height {
     min-height: 100vh;
 }
@@ -10,6 +11,75 @@
     height: 50%;
 }
 
+//Widths
+.one-whole {
+    width: 100%;
+}
+
+.two-thirds {
+    width: 66%;
+}
+
+.one-half {
+    width: 50%;
+}
+
+.one-third {
+    width: 33%;
+}
+
+.one-quarter {
+    width: 25%;
+}
+
+
+
+    @include media-query("portable") {
+        .portable--one-whole {
+            width: 100%;
+        }
+
+        .portable--two-thirds {
+            width: 66%;
+        }
+
+        .portable--one-half {
+            width: 50%;
+        }
+
+        .portable--one-third {
+            width: 33%;
+        }
+
+        .portable--one-quarter {
+            width: 25%;
+        }
+    }
+
+    @include media-query("palm") {
+        .palm--one-whole {
+            width: 100%;
+        }
+
+        .palm--two-thirds {
+            width: 66%;
+        }
+
+        .palm--one-half {
+            width: 50%;
+        }
+
+        .palm--one-third {
+            width: 33%;
+        }
+
+        .palm--one-quarter {
+            width: 25%;
+        }
+    }
+
+
+//Overflow
 .overflow-x-hidden {
     overflow-x: hidden;
 }

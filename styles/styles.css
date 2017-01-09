@@ -454,38 +454,6 @@ a {
   align-content: stretch;
   height: 100%;
   width: 100%; }
-  .flex .one-whole {
-    width: 100%; }
-  .flex .two-thirds {
-    width: 66%; }
-  .flex .one-half {
-    width: 50%; }
-  .flex .one-third {
-    width: 33%; }
-  .flex .one-quarter {
-    width: 25%; }
-  @media only screen and (max-width: 1023px) {
-    .flex .portable--one-whole {
-      width: 100%; }
-    .flex .portable--two-thirds {
-      width: 66%; }
-    .flex .portable--one-half {
-      width: 50%; }
-    .flex .portable--one-third {
-      width: 33%; }
-    .flex .portable--one-quarter {
-      width: 25%; } }
-  @media only screen and (max-width: 480px) {
-    .flex .palm--one-whole {
-      width: 100%; }
-    .flex .palm--two-thirds {
-      width: 66%; }
-    .flex .palm--one-half {
-      width: 50%; }
-    .flex .palm--one-third {
-      width: 33%; }
-    .flex .palm--one-quarter {
-      width: 25%; } }
   .flex.align-content-top {
     -webkit-align-content: flex-start;
     -moz-align-content: flex-start;
@@ -612,6 +580,51 @@ a {
 .half-height {
   height: 50%; }
 
+.one-whole {
+  width: 100%; }
+
+.two-thirds {
+  width: 66%; }
+
+.one-half {
+  width: 50%; }
+
+.one-third {
+  width: 33%; }
+
+.one-quarter {
+  width: 25%; }
+
+@media only screen and (max-width: 1023px) {
+  .portable--one-whole {
+    width: 100%; }
+
+  .portable--two-thirds {
+    width: 66%; }
+
+  .portable--one-half {
+    width: 50%; }
+
+  .portable--one-third {
+    width: 33%; }
+
+  .portable--one-quarter {
+    width: 25%; } }
+@media only screen and (max-width: 480px) {
+  .palm--one-whole {
+    width: 100%; }
+
+  .palm--two-thirds {
+    width: 66%; }
+
+  .palm--one-half {
+    width: 50%; }
+
+  .palm--one-third {
+    width: 33%; }
+
+  .palm--one-quarter {
+    width: 25%; } }
 .overflow-x-hidden {
   overflow-x: hidden; }
 
