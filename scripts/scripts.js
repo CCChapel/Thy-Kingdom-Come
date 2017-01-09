@@ -8,7 +8,8 @@
  */
 class VimeoVideo extends React.Component {
     render() {
-        var src = String.format("https://player.vimeo.com/video/{0}?color=28708a&title=0&byline=0&portrait=0", [this.props.vimeoID]);
+        var src = String.format("https://player.vimeo.com/video/{0}?color=28708a&title=0&byline=0&portrait=0", [this.props.vimeoId]);
+
         return React.createElement("iframe", { src: src,
             className: this.props.className,
             width: this.props.width,
@@ -674,6 +675,11 @@ class Page extends React.Component {
                         "p",
                         null,
                         "When his original students, the disciples, asked him how to pray, he said \u201CPray like this: \u2018Our father, who art in Heaven\u2026 thy kingdom come, thy will be done, on earth, as it is in Heaven.\u2019 \u201D If you are a student and follower of Jesus, God is your father who has a will and a kingdom. This year, our church-wide vision is to pray vigilantly and work diligently to bring this prayer to fruition; to bring our father\u2019s will and kingdom here to earth."
+                    ),
+                    React.createElement(
+                        "p",
+                        { className: "center" },
+                        React.createElement(VimeoVideo, { vimeoId: "198552260" })
                     ),
                     React.createElement(
                         "p",

@@ -51,6 +51,10 @@ class Page extends React.Component {
                         </p>
 
                         <p className="center">
+                            <VimeoVideo vimeoId="198552260" />
+                        </p>
+
+                        <p className="center">
                             <CTA text="Questions" 
                                 onClick={() => 
                                     this.showModal(
