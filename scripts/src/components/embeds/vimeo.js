@@ -13,7 +13,7 @@ class VimeoVideo extends React.Component {
             [ this.props.vimeoId ]);
 
         return (
-            <div class="js-video [ vimeo, widescreen ]">
+            <div className="js-video [ vimeo, widescreen ]">
                 <iframe src={src} 
                     className={this.props.className}
                     width={this.props.width} 
