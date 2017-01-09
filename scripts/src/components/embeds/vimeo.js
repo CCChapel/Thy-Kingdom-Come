@@ -14,6 +14,7 @@ class VimeoVideo extends React.Component {
 
         return (
             <iframe src={src} 
+                style={styles}
                 className={this.props.className}
                 width={this.props.width} 
                 height={this.props.height}
