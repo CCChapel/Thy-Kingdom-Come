@@ -622,10 +622,10 @@ class Modal extends React.Component {
         }
     }
 }
-/**
- * Defines the base page
- */
-class Page extends React.Component {
+
+class /**
+       * Defines the base page
+       */Page extends React.Component {
     constructor(props) {
         super(props);
 
@@ -650,6 +650,19 @@ class Page extends React.Component {
     }
 
     render() {
+        //Get Ministry Partner Data
+        var ministryPartners = {};
+        var url = "http://sandbox.ccchapel.com/Thy-Kingdom-Come/data/outreach-spree.json";
+
+        fetch(url).then(function (response) {
+            console.log(response.json());
+            ministryPartners = response.json();
+        }).catch(function (err) {
+            //Log the error
+            console.log(err);
+            //showError("Hmm\u2026 Something didn\u2019t go quite as planned. Please try again.");
+        });
+
         return React.createElement(
             "div",
             null,
@@ -728,8 +741,7 @@ class Page extends React.Component {
                                 "Return this form to the bookstore (Hudson) or the Welcome Center (Aurora/Highland Square) or to the church office during business hours to receive your free Caf\xE9 6:8 drink vouchers and cup or mug."
                             )
                         )
-                    ),
-                    React.createElement(MinistryPartnersTable, { showModal: this.showModal, partners: MINISTRY_PARTNERS })
+                    )
                 )
             ),
             React.createElement(
@@ -1371,55 +1383,7 @@ String.prototype.format.regex = new RegExp("{-?[0-9]+}", "g");
 String.format = function (str, args) {
     return str.format(args);
 };
-const MINISTRY_PARTNERS = [{
-    name: 'Blessings',
-    address: '123 Street Road',
-    city: 'Hudson',
-    state: 'Ohio',
-    zipCode: '44236',
-    website: 'http://ccchapel.com',
-    options: [{
-        name: 'Graduation',
-        details: 'Integer imperdiet ullamcorper libero, eget consequat lectus feugiat nec. Cras condimentum, nulla nec convallis interdum, dui nisl iaculis nisl, sed dignissim ligula neque eu turpis. Suspendisse potenti.'
-    }, {
-        name: 'Annual Walk/Bike Event',
-        details: 'Integer imperdiet ullamcorper libero, eget consequat lectus feugiat nec. Cras condimentum, nulla nec convallis interdum, dui nisl iaculis nisl, sed dignissim ligula neque eu turpis. Suspendisse potenti.'
-    }, {
-        name: 'Other',
-        details: 'Integer imperdiet ullamcorper libero, eget consequat lectus feugiat nec. Cras condimentum, nulla nec convallis interdum, dui nisl iaculis nisl, sed dignissim ligula neque eu turpis. Suspendisse potenti.'
-    }]
-}, {
-    name: 'Broken Chains',
-    address: '123 Street Road',
-    city: 'Hudson',
-    state: 'Ohio',
-    zipCode: '44236',
-    website: 'http://ccchapel.com',
-    options: [{
-        name: 'Visit Urbean Caf\u00e9',
-        details: 'Integer imperdiet ullamcorper libero, eget consequat lectus feugiat nec. Cras condimentum, nulla nec convallis interdum, dui nisl iaculis nisl, sed dignissim ligula neque eu turpis. Suspendisse potenti.'
-    }, {
-        name: 'Annual Walk/Bike Event',
-        details: 'Integer imperdiet ullamcorper libero, eget consequat lectus feugiat nec. Cras condimentum, nulla nec convallis interdum, dui nisl iaculis nisl, sed dignissim ligula neque eu turpis. Suspendisse potenti.'
-    }, {
-        name: 'Other',
-        details: 'Integer imperdiet ullamcorper libero, eget consequat lectus feugiat nec. Cras condimentum, nulla nec convallis interdum, dui nisl iaculis nisl, sed dignissim ligula neque eu turpis. Suspendisse potenti.'
-    }]
-}, {
-    name: 'Faithful Servants',
-    address: '123 Street Road',
-    city: 'Hudson',
-    state: 'Ohio',
-    zipCode: '44236',
-    website: 'http://ccchapel.com',
-    options: [{
-        name: 'Visit a Faithful Servants Clinic',
-        details: 'Integer imperdiet ullamcorper libero, eget consequat lectus feugiat nec. Cras condimentum, nulla nec convallis interdum, dui nisl iaculis nisl, sed dignissim ligula neque eu turpis. Suspendisse potenti.'
-    }, {
-        name: 'Other',
-        details: 'Integer imperdiet ullamcorper libero, eget consequat lectus feugiat nec. Cras condimentum, nulla nec convallis interdum, dui nisl iaculis nisl, sed dignissim ligula neque eu turpis. Suspendisse potenti.'
-    }]
-}];
+//const MINISTRY_PARTNERS = ;
 
 ReactDOM.render(React.createElement(Page, null), document.getElementById('root'));
 'use strict';

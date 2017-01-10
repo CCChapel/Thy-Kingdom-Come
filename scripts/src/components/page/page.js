@@ -26,6 +26,21 @@ class Page extends React.Component {
     }
 
     render() {
+        //Get Ministry Partner Data
+        var ministryPartners = {};
+        var url = "http://sandbox.ccchapel.com/Thy-Kingdom-Come/data/outreach-spree.json";
+
+        fetch(url)
+        .then(function(response) {
+            console.log(response.json());
+            ministryPartners = response.json();
+        })
+        .catch(function(err) {
+            //Log the error
+            console.log(err);
+            //showError("Hmm\u2026 Something didn\u2019t go quite as planned. Please try again.");
+        });
+
         return (
             <div>
                 <Modal show={this.state.showModal} hide={this.hideModal}>
@@ -89,7 +104,7 @@ class Page extends React.Component {
                             </ol>
                         </div>
 
-                        <MinistryPartnersTable showModal={this.showModal} partners={MINISTRY_PARTNERS} />
+                        {/*<MinistryPartnersTable showModal={this.showModal} partners={ministryPartners} />*/}
                     </div>
                 </Section>
 
