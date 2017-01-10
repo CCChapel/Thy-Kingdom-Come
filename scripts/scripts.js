@@ -1,3 +1,4 @@
+'use strict';
 /**
  * Embeds a Vimeo video
  * 
@@ -670,13 +671,15 @@ class /**
             mode: 'no-cors'
         });
 
-        fetch(request).then(function status(response) {
-            if (response.status >= 200 && response.status < 300) {
-                return Promise.resolve(response);
-            } else {
-                return Promise.reject(new Error(response.statusText));
-            }
-        }).then(function json(response) {
+        fetch(request)
+        // .then(function status(response) {  
+        //     if (response.status >= 200 && response.status < 300) {  
+        //         return Promise.resolve(response)  
+        //     } else {  
+        //         return Promise.reject(new Error(response.statusText))  
+        //     }  
+        // })
+        .then(function json(response) {
             return response.json();
         }).then(function (data) {
             console.log('Reqest succeeded with JSON response', data);
@@ -1432,4 +1435,3 @@ String.format = function (str, args) {
 //const MINISTRY_PARTNERS = ;
 
 ReactDOM.render(React.createElement(Page, null), document.getElementById('root'));
-'use strict';
