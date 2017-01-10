@@ -649,6 +649,18 @@ class /**
         this.setState({ showModal: false });
     }
 
+    // status(response) {  
+    //     if (response.status >= 200 && response.status < 300) {  
+    //         return Promise.resolve(response)  
+    //     } else {  
+    //         return Promise.reject(new Error(response.statusText))  
+    //     }  
+    // }
+
+    // json(response) {  
+    //     return response.json()  
+    // }
+
     render() {
         //Get Ministry Partner Data
         var ministryPartners = {};
@@ -658,12 +670,27 @@ class /**
             mode: 'no-cors'
         });
 
-        fetch(request).then(function (response) {
-            console.log(response);
+        fetch(request).then(function status(response) {
+            if (response.status >= 200 && response.status < 300) {
+                return Promise.resolve(response);
+            } else {
+                return Promise.reject(new Error(response.statusText));
+            }
+        }).then(function json(response) {
             return response.json();
-        }).then(function (j) {
-            console.log(j);
+        }).then(function (data) {
+            console.log('Reqest succeeded with JSON response', data);
+        }).catch(function (error) {
+            console.log('Request failed', error);
         });
+
+        // fetch(request).then(function(response) { 
+        //     console.log(response);
+        //     return response.json();
+        // }).then(function(j) {
+        //     console.log(j);    
+        // });
+
 
         // fetch(request).then(function(response) {
         //         response.json().then(function(data) {  
