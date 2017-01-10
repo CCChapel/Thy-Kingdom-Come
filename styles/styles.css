@@ -601,6 +601,9 @@ a {
 .one-whole {
   width: 100%; }
 
+.nine-tenths {
+  width: 90%; }
+
 .two-thirds {
   width: 66%; }
 
@@ -616,31 +619,27 @@ a {
 @media only screen and (max-width: 1023px) {
   .portable--one-whole {
     width: 100%; }
-
+  .portable-nine-tenths {
+    width: 90%; }
   .portable--two-thirds {
     width: 66%; }
-
   .portable--one-half {
     width: 50%; }
-
   .portable--one-third {
     width: 33%; }
-
   .portable--one-quarter {
     width: 25%; } }
 @media only screen and (max-width: 480px) {
   .palm--one-whole {
     width: 100%; }
-
+  .palm--nine-tenths {
+    width: 90%; }
   .palm--two-thirds {
     width: 66%; }
-
   .palm--one-half {
     width: 50%; }
-
   .palm--one-third {
     width: 33%; }
-
   .palm--one-quarter {
     width: 25%; } }
 .overflow-x-hidden {

@@ -1,6 +1,5 @@
 /**
  * Defines the base page
- * @showModal: When true, shows the modal
  */
 class Page extends React.Component {
     constructor(props) {
@@ -50,7 +49,7 @@ class Page extends React.Component {
                             to bring our father&rsquo;s will and kingdom here to earth.
                         </p>
 
-                        <p className="center">
+                        <p className="center-by-margin nine-tenths">
                             <VimeoVideo vimeoId="198552260"
                                 width="640px"
                                 height="360px" />
@@ -67,7 +66,6 @@ class Page extends React.Component {
                     </div>
                 </Section>
 
-                {/*
                 <Section className="bg-medium-blue">
                     <div className="content-wrapper">
                         <div className="lock-width center-by-margin">
@@ -93,7 +91,7 @@ class Page extends React.Component {
 
                         <MinistryPartnersTable showModal={this.showModal} partners={MINISTRY_PARTNERS} />
                     </div>
-                </Section>*/}
+                </Section>
 
                 <Section className="bg-dark-blue text-white">
                     <div className="content-wrapper">
