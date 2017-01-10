@@ -7,7 +7,8 @@ class Page extends React.Component {
 
         this.state = {
             showModal: false,
-            modalContent: 'Initial Modal Content'
+            modalContent: 'Initial Modal Content',
+            ministryPartners: []
         };
 
         this.showModal = this.showModal.bind(this);
@@ -22,12 +23,16 @@ class Page extends React.Component {
     }
 
     hideModal(e) {
-        this.setState({showModal: false});
+        this.setState({ showModal: false });
+    }
+
+    loadMinsitryPartners(data) {
+        this.setState({ minsitryPartners: data });
     }
 
     render() {
         //Get Ministry Partner Data
-        var ministryPartners = new Array();
+        // var ministryPartners = new Array();
         var url = "http://sandbox.ccchapel.com/Thy-Kingdom-Come/data/outreach-spree.json";
         var request = new Request(url, {
                 method: 'get',
@@ -46,13 +51,13 @@ class Page extends React.Component {
                 return response.json()  
             })
             .then(function(data) {
-                ministryPartners = data;
+                loadMinistryPartners(data);
                 console.log('Request succeeded with JSON response', ministryPartners);
             }).catch(function(error) {
                 console.log('Request failed', error);
             });
 
-        console.log(ministryPartners);
+        console.log(this.state.ministryPartners);
 
         return (
             <div>
@@ -117,7 +122,7 @@ class Page extends React.Component {
                             </ol>
                         </div>
 
-                        <MinistryPartnersTable showModal={this.showModal} partners={ministryPartners} />
+                        <MinistryPartnersTable showModal={this.showModal} partners={this.state.ministryPartners} />
                     </div>
                 </Section>
 
