@@ -683,7 +683,7 @@ class Page extends React.Component {
                     ),
                     React.createElement(
                         "p",
-                        { className: "center" },
+                        { className: "center-by-margin nine-tenths" },
                         React.createElement(VimeoVideo, { vimeoId: "198552260",
                             width: "640px",
                             height: "360px" })
