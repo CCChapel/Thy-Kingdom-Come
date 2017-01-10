@@ -67,7 +67,6 @@ class Page extends React.Component {
                     </div>
                 </Section>
 
-                {/*
                 <Section className="bg-medium-blue">
                     <div className="content-wrapper">
                         <div className="lock-width center-by-margin">
@@ -93,7 +92,7 @@ class Page extends React.Component {
 
                         <MinistryPartnersTable showModal={this.showModal} partners={MINISTRY_PARTNERS} />
                     </div>
-                </Section>*/}
+                </Section>
 
                 <Section className="bg-dark-blue text-white">
                     <div className="content-wrapper">
