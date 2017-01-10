@@ -25,18 +25,6 @@ class Page extends React.Component {
         this.setState({showModal: false});
     }
 
-    // status(response) {  
-    //     if (response.status >= 200 && response.status < 300) {  
-    //         return Promise.resolve(response)  
-    //     } else {  
-    //         return Promise.reject(new Error(response.statusText))  
-    //     }  
-    // }
-
-    // json(response) {  
-    //     return response.json()  
-    // }
-
     render() {
         //Get Ministry Partner Data
         var ministryPartners = {};
@@ -63,31 +51,6 @@ class Page extends React.Component {
             }).catch(function(error) {
                 console.log('Request failed', error);
             });
-
-        // fetch(request).then(function(response) { 
-        //     console.log(response);
-        //     return response.json();
-        // }).then(function(j) {
-        //     console.log(j);    
-        // });
-
-
-        // fetch(request).then(function(response) {
-        //         response.json().then(function(data) {  
-        //         console.log(data);  
-        //     });
-        //         // ministryPartners = response.json();
-        //         // console.log(ministryPartners);
-        //     })
-        //     .then((j) => {
-        //         // Yay `j` is a JavaScript object
-        //         console.log(j);
-        //     })
-        //     .catch((err) => {
-        //         //Log the error
-        //         console.log(err);
-        //         //showError("Hmm\u2026 Something didn\u2019t go quite as planned. Please try again.");
-        //     });
 
         return (
             <div>
@@ -152,7 +115,7 @@ class Page extends React.Component {
                             </ol>
                         </div>
 
-                        {/*<MinistryPartnersTable showModal={this.showModal} partners={ministryPartners} />*/}
+                        <MinistryPartnersTable showModal={this.showModal} partners={ministryPartners} />
                     </div>
                 </Section>
 

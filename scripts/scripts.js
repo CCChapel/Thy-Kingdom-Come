@@ -623,10 +623,10 @@ class Modal extends React.Component {
         }
     }
 }
-
-class /**
-       * Defines the base page
-       */Page extends React.Component {
+/**
+ * Defines the base page
+ */
+class Page extends React.Component {
     constructor(props) {
         super(props);
 
@@ -649,18 +649,6 @@ class /**
     hideModal(e) {
         this.setState({ showModal: false });
     }
-
-    // status(response) {  
-    //     if (response.status >= 200 && response.status < 300) {  
-    //         return Promise.resolve(response)  
-    //     } else {  
-    //         return Promise.reject(new Error(response.statusText))  
-    //     }  
-    // }
-
-    // json(response) {  
-    //     return response.json()  
-    // }
 
     render() {
         //Get Ministry Partner Data
@@ -687,31 +675,6 @@ class /**
         }).catch(function (error) {
             console.log('Request failed', error);
         });
-
-        // fetch(request).then(function(response) { 
-        //     console.log(response);
-        //     return response.json();
-        // }).then(function(j) {
-        //     console.log(j);    
-        // });
-
-
-        // fetch(request).then(function(response) {
-        //         response.json().then(function(data) {  
-        //         console.log(data);  
-        //     });
-        //         // ministryPartners = response.json();
-        //         // console.log(ministryPartners);
-        //     })
-        //     .then((j) => {
-        //         // Yay `j` is a JavaScript object
-        //         console.log(j);
-        //     })
-        //     .catch((err) => {
-        //         //Log the error
-        //         console.log(err);
-        //         //showError("Hmm\u2026 Something didn\u2019t go quite as planned. Please try again.");
-        //     });
 
         return React.createElement(
             'div',
@@ -791,7 +754,8 @@ class /**
                                 'Return this form to the bookstore (Hudson) or the Welcome Center (Aurora/Highland Square) or to the church office during business hours to receive your free Caf\xE9 6:8 drink vouchers and cup or mug.'
                             )
                         )
-                    )
+                    ),
+                    React.createElement(MinistryPartnersTable, { showModal: this.showModal, partners: ministryPartners })
                 )
             ),
             React.createElement(
