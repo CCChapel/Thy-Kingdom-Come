@@ -1,3 +1,4 @@
+'use strict';
 /**
  * Embeds a Vimeo video
  * 
@@ -503,7 +504,7 @@ class MinistryPartnerRow extends React.Component {
         return React.createElement(
             "div",
             {
-                className: "[ one-third palm--one-whole ] [ bg-light-blue ] [ text-bigger cursor-point ] [ add-bottom-margin add-padding ] [ fx-bottom-border fx-dark-blue ]",
+                className: "[ one-third portable--one-whole ] [ bg-light-blue ] [ text-bigger cursor-point ] [ add-bottom-margin add-padding ] [ fx-bottom-border fx-dark-blue ]",
                 onClick: () => this.handleClick(React.createElement(MinsitryPartnerInformation, { information: this.props.partner })) },
             this.props.partner.name
         );
@@ -622,11 +623,11 @@ class Modal extends React.Component {
         }
     }
 }
-/**
- * Defines the base page
- * @showModal: When true, shows the modal
- */
-class Page extends React.Component {
+
+class /**
+       * Defines the base page
+       * @showModal: When true, shows the modal
+       */Page extends React.Component {
     constructor(props) {
         super(props);
 
@@ -694,43 +695,6 @@ class Page extends React.Component {
                             onClick: () => this.showModal(React.createElement(ContactForm, { className: "content-wrapper lock-width center-by-margin",
                                 onComplete: this.hideModal })) })
                     )
-                )
-            ),
-            React.createElement(
-                Section,
-                { className: "bg-medium-blue" },
-                React.createElement(
-                    "div",
-                    { className: "content-wrapper" },
-                    React.createElement(
-                        "div",
-                        { className: "lock-width center-by-margin" },
-                        React.createElement(
-                            "h1",
-                            { className: "center" },
-                            "Local Outreach Spree"
-                        ),
-                        React.createElement(
-                            "ol",
-                            null,
-                            React.createElement(
-                                "li",
-                                null,
-                                "Complete eight kingdom assignments."
-                            ),
-                            React.createElement(
-                                "li",
-                                null,
-                                "Have your assignments initialed by each ministry partner after the assignment is completed."
-                            ),
-                            React.createElement(
-                                "li",
-                                null,
-                                "Return this form to the bookstore (Hudson) or the Welcome Center (Aurora/Highland Square) or to the church office during business hours to receive your free Caf\xE9 6:8 drink vouchers and cup or mug."
-                            )
-                        )
-                    ),
-                    React.createElement(MinistryPartnersTable, { showModal: this.showModal, partners: MINISTRY_PARTNERS })
                 )
             ),
             React.createElement(
@@ -1423,4 +1387,3 @@ const MINISTRY_PARTNERS = [{
 }];
 
 ReactDOM.render(React.createElement(Page, null), document.getElementById('root'));
-'use strict';
