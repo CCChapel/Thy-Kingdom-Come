@@ -682,7 +682,8 @@ class /**
         .then(function json(response) {
             return response.json();
         }).then(function (data) {
-            console.log('Reqest succeeded with JSON response', data);
+            ministryPartners = data;
+            console.log('Reqest succeeded with JSON response', ministryPartners);
         }).catch(function (error) {
             console.log('Request failed', error);
         });
