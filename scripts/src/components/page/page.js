@@ -27,7 +27,7 @@ class Page extends React.Component {
 
     render() {
         //Get Ministry Partner Data
-        var ministryPartners = {};
+        var ministryPartners = new Array();
         var url = "http://sandbox.ccchapel.com/Thy-Kingdom-Come/data/outreach-spree.json";
         var request = new Request(url, {
                 method: 'get',
@@ -47,10 +47,12 @@ class Page extends React.Component {
             })
             .then(function(data) {
                 ministryPartners = data;
-                console.log('Reqest succeeded with JSON response', ministryPartners);
+                console.log('Request succeeded with JSON response', ministryPartners);
             }).catch(function(error) {
                 console.log('Request failed', error);
             });
+
+        console.log(ministryPartners);
 
         return (
             <div>
