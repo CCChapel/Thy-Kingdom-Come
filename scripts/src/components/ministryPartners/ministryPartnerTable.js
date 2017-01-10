@@ -18,7 +18,7 @@ class MinistryPartnersTable extends React.Component {
 
         //Loop through each partner to create row
         console.log(this.props.partners);
-        console.log(Array.isArray(this.props.partners);
+        console.log(Array.isArray(this.props.partners));
         for (var partner in this.props.partners) {
             rows.push(
                 <MinistryPartnerRow
