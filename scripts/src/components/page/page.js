@@ -29,17 +29,35 @@ class Page extends React.Component {
         //Get Ministry Partner Data
         var ministryPartners = {};
         var url = "http://sandbox.ccchapel.com/Thy-Kingdom-Come/data/outreach-spree.json";
+        var request = new Request(url, {
+                method: 'get',
+                mode: 'no-cors'
+            });
 
-        fetch(url)
-        .then(function(response) {
-            console.log(response.json());
-            ministryPartners = response.json();
-        })
-        .catch(function(err) {
-            //Log the error
-            console.log(err);
-            //showError("Hmm\u2026 Something didn\u2019t go quite as planned. Please try again.");
+        fetch(request).then(function(response) { 
+            console.log(response);
+            return response.json();
+        }).then(function(j) {
+            console.log(j);    
         });
+
+
+        // fetch(request).then(function(response) {
+        //         response.json().then(function(data) {  
+        //         console.log(data);  
+        //     });
+        //         // ministryPartners = response.json();
+        //         // console.log(ministryPartners);
+        //     })
+        //     .then((j) => {
+        //         // Yay `j` is a JavaScript object
+        //         console.log(j);
+        //     })
+        //     .catch((err) => {
+        //         //Log the error
+        //         console.log(err);
+        //         //showError("Hmm\u2026 Something didn\u2019t go quite as planned. Please try again.");
+        //     });
 
         return (
             <div>

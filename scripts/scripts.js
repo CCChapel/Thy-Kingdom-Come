@@ -653,18 +653,37 @@ class /**
         //Get Ministry Partner Data
         var ministryPartners = {};
         var url = "http://sandbox.ccchapel.com/Thy-Kingdom-Come/data/outreach-spree.json";
-
-        fetch(url).then(function (response) {
-            console.log(response.json());
-            ministryPartners = response.json();
-        }).catch(function (err) {
-            //Log the error
-            console.log(err);
-            //showError("Hmm\u2026 Something didn\u2019t go quite as planned. Please try again.");
+        var request = new Request(url, {
+            method: 'get',
+            mode: 'no-cors'
         });
 
+        fetch(request).then(function (response) {
+            console.log(response);
+            return response.json();
+        }).then(function (j) {
+            console.log(j);
+        });
+
+        // fetch(request).then(function(response) {
+        //         response.json().then(function(data) {  
+        //         console.log(data);  
+        //     });
+        //         // ministryPartners = response.json();
+        //         // console.log(ministryPartners);
+        //     })
+        //     .then((j) => {
+        //         // Yay `j` is a JavaScript object
+        //         console.log(j);
+        //     })
+        //     .catch((err) => {
+        //         //Log the error
+        //         console.log(err);
+        //         //showError("Hmm\u2026 Something didn\u2019t go quite as planned. Please try again.");
+        //     });
+
         return React.createElement(
-            "div",
+            'div',
             null,
             React.createElement(
                 Modal,
@@ -673,72 +692,72 @@ class /**
             ),
             React.createElement(
                 Section,
-                { className: "[ bg-clouds bg-cover ] [ justify-content-center ] [ overflow-x-hidden ]" },
+                { className: '[ bg-clouds bg-cover ] [ justify-content-center ] [ overflow-x-hidden ]' },
                 React.createElement(Logo, null)
             ),
             React.createElement(
                 Section,
-                { className: "bg-light-blue" },
+                { className: 'bg-light-blue' },
                 React.createElement(
-                    "div",
-                    { className: "content-wrapper lock-width center-by-margin" },
+                    'div',
+                    { className: 'content-wrapper lock-width center-by-margin' },
                     React.createElement(
-                        "h1",
-                        { className: "center" },
-                        "Thy Will Be Done"
+                        'h1',
+                        { className: 'center' },
+                        'Thy Will Be Done'
                     ),
                     React.createElement(
-                        "p",
+                        'p',
                         null,
-                        "When his original students, the disciples, asked him how to pray, he said \u201CPray like this: \u2018Our father, who art in Heaven\u2026 thy kingdom come, thy will be done, on earth, as it is in Heaven.\u2019\xA0\u201D If you are a student and follower of Jesus, God is your father who has a will and a kingdom. This year, our church-wide vision is to pray vigilantly and work diligently to bring this prayer to fruition; to bring our father\u2019s will and kingdom here to earth."
+                        'When his original students, the disciples, asked him how to pray, he said \u201CPray like this: \u2018Our father, who art in Heaven\u2026 thy kingdom come, thy will be done, on earth, as it is in Heaven.\u2019\xA0\u201D If you are a student and follower of Jesus, God is your father who has a will and a kingdom. This year, our church-wide vision is to pray vigilantly and work diligently to bring this prayer to fruition; to bring our father\u2019s will and kingdom here to earth.'
                     ),
                     React.createElement(
-                        "p",
-                        { className: "center-by-margin nine-tenths" },
-                        React.createElement(VimeoVideo, { vimeoId: "198552260",
-                            width: "640px",
-                            height: "360px" })
+                        'p',
+                        { className: 'center-by-margin nine-tenths' },
+                        React.createElement(VimeoVideo, { vimeoId: '198552260',
+                            width: '640px',
+                            height: '360px' })
                     ),
                     React.createElement(
-                        "p",
-                        { className: "center" },
-                        React.createElement(CTA, { text: "Questions",
-                            onClick: () => this.showModal(React.createElement(ContactForm, { className: "content-wrapper lock-width center-by-margin",
+                        'p',
+                        { className: 'center' },
+                        React.createElement(CTA, { text: 'Questions',
+                            onClick: () => this.showModal(React.createElement(ContactForm, { className: 'content-wrapper lock-width center-by-margin',
                                 onComplete: this.hideModal })) })
                     )
                 )
             ),
             React.createElement(
                 Section,
-                { className: "bg-medium-blue" },
+                { className: 'bg-medium-blue' },
                 React.createElement(
-                    "div",
-                    { className: "content-wrapper" },
+                    'div',
+                    { className: 'content-wrapper' },
                     React.createElement(
-                        "div",
-                        { className: "lock-width center-by-margin" },
+                        'div',
+                        { className: 'lock-width center-by-margin' },
                         React.createElement(
-                            "h1",
-                            { className: "center" },
-                            "Local Outreach Spree"
+                            'h1',
+                            { className: 'center' },
+                            'Local Outreach Spree'
                         ),
                         React.createElement(
-                            "ol",
+                            'ol',
                             null,
                             React.createElement(
-                                "li",
+                                'li',
                                 null,
-                                "Complete eight kingdom assignments."
+                                'Complete eight kingdom assignments.'
                             ),
                             React.createElement(
-                                "li",
+                                'li',
                                 null,
-                                "Have your assignments initialed by each ministry partner after the assignment is completed."
+                                'Have your assignments initialed by each ministry partner after the assignment is completed.'
                             ),
                             React.createElement(
-                                "li",
+                                'li',
                                 null,
-                                "Return this form to the bookstore (Hudson) or the Welcome Center (Aurora/Highland Square) or to the church office during business hours to receive your free Caf\xE9 6:8 drink vouchers and cup or mug."
+                                'Return this form to the bookstore (Hudson) or the Welcome Center (Aurora/Highland Square) or to the church office during business hours to receive your free Caf\xE9 6:8 drink vouchers and cup or mug.'
                             )
                         )
                     )
@@ -746,38 +765,38 @@ class /**
             ),
             React.createElement(
                 Section,
-                { className: "bg-dark-blue text-white" },
+                { className: 'bg-dark-blue text-white' },
                 React.createElement(
-                    "div",
-                    { className: "content-wrapper" },
+                    'div',
+                    { className: 'content-wrapper' },
                     React.createElement(
-                        "h1",
-                        { className: "center" },
-                        "Assignments"
+                        'h1',
+                        { className: 'center' },
+                        'Assignments'
                     ),
                     React.createElement(
-                        "p",
+                        'p',
                         null,
-                        React.createElement(Clock, { className: "center-by-margin", height: "250", width: "250" })
+                        React.createElement(Clock, { className: 'center-by-margin', height: '250', width: '250' })
                     ),
                     React.createElement(
-                        "p",
-                        { className: "center" },
-                        "Keep checking back! We\u2019ll have more assignments for you soon."
+                        'p',
+                        { className: 'center' },
+                        'Keep checking back! We\u2019ll have more assignments for you soon.'
                     )
                 )
             ),
             React.createElement(
                 Section,
-                { className: "bg-charcoal align-content-top auto-min-height text-white" },
+                { className: 'bg-charcoal align-content-top auto-min-height text-white' },
                 React.createElement(
-                    "div",
-                    { className: "content-wrapper" },
-                    "\xA9 Copyright 2017 | ",
+                    'div',
+                    { className: 'content-wrapper' },
+                    '\xA9 Copyright 2017 | ',
                     React.createElement(
-                        "a",
-                        { href: "https://ccchapel.com", target: "_blank" },
-                        "Christ Community Chapel"
+                        'a',
+                        { href: 'https://ccchapel.com', target: '_blank' },
+                        'Christ Community Chapel'
                     )
                 )
             )
