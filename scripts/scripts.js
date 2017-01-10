@@ -511,47 +511,6 @@ class MinistryPartnerRow extends React.Component {
     }
 }
 /**
- * Defines a Ministry Table of Ministry Partners
- * @partners = Array of ministry partners
- */
-class MinistryPartnersTable extends React.Component {
-    constructor(props) {
-        super(props);
-        this.handleClick = this.handleClick.bind(this);
-    }
-
-    handleClick(content) {
-        this.props.showModal(content);
-    }
-
-    render() {
-        //Create container for rows
-        var rows = [];
-
-        //Loop through each partner to create row
-        for (var partner in this.props.partners) {
-            rows.push(React.createElement(MinistryPartnerRow, {
-                partner: partner,
-                handleClick: this.handleClick }));
-
-            console.log(partner);
-        }
-        // this.props.partners.forEach((partner, index) => {
-        //     rows.push(
-        //         <MinistryPartnerRow
-        //             partner={partner} 
-        //             handleClick={this.handleClick} />
-        //     );
-        // });
-
-        return React.createElement(
-            "div",
-            { className: "flex wrap align-items-stretch" },
-            rows
-        );
-    }
-}
-/**
  * Returns a Call-to-Action button
  * 
  * @text = text of the button
