@@ -533,6 +533,8 @@ class MinistryPartnersTable extends React.Component {
             rows.push(React.createElement(MinistryPartnerRow, {
                 partner: partner,
                 handleClick: this.handleClick }));
+
+            console.log(partner);
         }
         // this.props.partners.forEach((partner, index) => {
         //     rows.push(
