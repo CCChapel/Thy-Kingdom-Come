@@ -1,4 +1,3 @@
-'use strict';
 /**
  * Embeds a Vimeo video
  * 
@@ -1424,3 +1423,4 @@ const MINISTRY_PARTNERS = [{
 }];
 
 ReactDOM.render(React.createElement(Page, null), document.getElementById('root'));
+'use strict';
