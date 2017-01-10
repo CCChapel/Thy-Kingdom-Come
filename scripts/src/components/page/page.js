@@ -1,6 +1,5 @@
 /**
  * Defines the base page
- * @showModal: When true, shows the modal
  */
 class Page extends React.Component {
     constructor(props) {
