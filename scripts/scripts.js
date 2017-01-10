@@ -1,3 +1,4 @@
+'use strict';
 /**
  * Embeds a Vimeo video
  * 
@@ -503,7 +504,7 @@ class MinistryPartnerRow extends React.Component {
         return React.createElement(
             "div",
             {
-                className: "[ one-third palm--one-whole ] [ bg-light-blue ] [ text-bigger cursor-point ] [ add-bottom-margin add-padding ] [ fx-bottom-border fx-dark-blue ]",
+                className: "[ one-third portable--one-whole ] [ bg-light-blue ] [ text-bigger cursor-point ] [ add-bottom-margin add-padding ] [ fx-bottom-border fx-dark-blue ]",
                 onClick: () => this.handleClick(React.createElement(MinsitryPartnerInformation, { information: this.props.partner })) },
             this.props.partner.name
         );
@@ -1423,4 +1424,3 @@ const MINISTRY_PARTNERS = [{
 }];
 
 ReactDOM.render(React.createElement(Page, null), document.getElementById('root'));
-'use strict';
