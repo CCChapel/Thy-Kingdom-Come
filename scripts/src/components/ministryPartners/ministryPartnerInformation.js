@@ -7,14 +7,10 @@ class MinsitryPartnerInformation extends React.Component {
         var options = [];
 
         this.props.information.options.forEach((option, index) => {
-            var details = option.details.split("\\n").map(function(line, n) {
-                retun (n === 0) ? [line] : [<br />], line];
-            });
-
             options.push(
                 <div className="add-bottom-margin">
                     <h3 className="no-bottom-margin">{option.name}</h3>
-                    <div>{details}</div>
+                    <div>{breakLine(option.details)}</div>
                 </div>
             );
         });
