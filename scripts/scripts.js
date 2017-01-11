@@ -189,6 +189,8 @@ class ContactForm extends React.Component {
     }
 
     render() {
+        var _this = this;
+
         //var formId = '2569143';
         //var token = '68529bb9523b67cff3c735d2e5f9176a';
         //var url = 'package.json';
@@ -251,7 +253,9 @@ class ContactForm extends React.Component {
                 React.createElement(
                     'div',
                     { className: 'center' },
-                    React.createElement(CTA, { text: 'Submit', onClick: e => this.handleSubmit(e) })
+                    React.createElement(CTA, { text: 'Submit', onClick: function (e) {
+                            return _this.handleSubmit(e);
+                        } })
                 )
             );
         }
@@ -437,7 +441,7 @@ class MinsitryPartnerInformation extends React.Component {
     render() {
         var options = [];
 
-        this.props.information.options.forEach((option, index) => {
+        this.props.information.options.forEach(function (option, index) {
             options.push(React.createElement(
                 "div",
                 { className: "add-bottom-margin" },
@@ -502,11 +506,15 @@ class MinistryPartnerRow extends React.Component {
     }
 
     render() {
+        var _this = this;
+
         return React.createElement(
             "div",
             {
                 className: "[ one-third portable--one-whole ] [ bg-light-blue ] [ text-bigger cursor-point ] [ add-bottom-margin add-padding ] [ fx-bottom-border fx-dark-blue ]",
-                onClick: () => this.handleClick(React.createElement(MinsitryPartnerInformation, { information: this.props.partner })) },
+                onClick: function () {
+                    return _this.handleClick(React.createElement(MinsitryPartnerInformation, { information: _this.props.partner }));
+                } },
             this.props.partner.name
         );
     }
@@ -600,6 +608,8 @@ class CTA extends React.Component {
     }
 
     render() {
+        var _this = this;
+
         //Check defaults
         var color = {
             color: ''
@@ -617,7 +627,9 @@ class CTA extends React.Component {
 
         return React.createElement(
             'div',
-            { className: 'cta--wrapper', onClick: () => this.onClick(this.props.clickAction) },
+            { className: 'cta--wrapper', onClick: function () {
+                    return _this.onClick(_this.props.clickAction);
+                } },
             React.createElement(
                 'svg',
                 { height: '60', width: '320', xmlns: 'http://www.w3.org/2000/svg' },
@@ -690,6 +702,8 @@ class Page extends React.Component {
     }
 
     render() {
+        var _this = this;
+
         return React.createElement(
             "div",
             null,
@@ -730,8 +744,10 @@ class Page extends React.Component {
                         "p",
                         { className: "center" },
                         React.createElement(CTA, { text: "Questions",
-                            onClick: () => this.showModal(React.createElement(ContactForm, { className: "content-wrapper lock-width center-by-margin",
-                                onComplete: this.hideModal })) })
+                            onClick: function () {
+                                return _this.showModal(React.createElement(ContactForm, { className: "content-wrapper lock-width center-by-margin",
+                                    onComplete: _this.hideModal }));
+                            } })
                     )
                 )
             ),
