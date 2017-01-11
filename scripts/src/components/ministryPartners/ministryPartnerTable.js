@@ -15,6 +15,7 @@ class MinistryPartnersTable extends React.Component {
 
     componentDidMount() {
         //Load Ministry Partners
+        var _this = this;
         var url = "http://sandbox.ccchapel.com/Thy-Kingdom-Come/data/outreach-spree.json";
         var request = new Request(url, {
                 method: 'get',
@@ -28,7 +29,7 @@ class MinistryPartnersTable extends React.Component {
             })
             .then(function(data) {
                 //loadMinistryPartners(data);
-                this.setState({ ministryPartners: data });
+                _this.setState({ ministryPartners: data });
                 console.log('Request succeeded with JSON response', data);
             }).catch(function(error) {
                 console.log('Request failed', error);
