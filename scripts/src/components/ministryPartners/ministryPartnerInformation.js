@@ -5,7 +5,7 @@
 class MinsitryPartnerInformation extends React.Component {
     render() {
         var options = [];
-        var htmlToReactParcer = new htmlToReactParcer();
+        var htmlToReactParcer = new HtmlToReactParcer();
 
         this.props.information.options.forEach((option, index) => {
             options.push(
