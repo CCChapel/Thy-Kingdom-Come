@@ -6,6 +6,8 @@ function breakLine(text) {
     });
 }
 
+var HtmlToReactParser = require('html-to-react').Parser;
+
 ReactDOM.render(
     <Page />,
     document.getElementById('root')

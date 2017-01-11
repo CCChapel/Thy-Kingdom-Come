@@ -1420,5 +1420,7 @@ function breakLine(text) {
     });
 }
 
+var HtmlToReactParser = require('html-to-react').Parser;
+
 ReactDOM.render(React.createElement(Page, null), document.getElementById('root'));
 'use strict';
