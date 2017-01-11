@@ -87,10 +87,10 @@ class MinistryPartnersTable extends React.Component {
         //Loop through each partner to create row
         // console.log(this.state.ministryPartners);
         // console.log(Array.isArray(this.state.ministryPartners));
-        for (var partner in this.state.ministryPartners) {
+        for (var partner in ministryPartners) {
             rows.push(
                 <MinistryPartnerRow
-                    partner={this.state.ministryPartners[partner]} 
+                    partner={ministryPartners[partner]} 
                     handleClick={this.handleClick} />
             );
 
