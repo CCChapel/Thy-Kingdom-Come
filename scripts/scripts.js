@@ -675,6 +675,7 @@ class Page extends React.Component {
             method: 'get',
             mode: 'no-cors'
         });
+        var loadMinistryPartners = this.loadMinistryPartners;
 
         fetch(request)
         // .then(function status(response) {  
@@ -687,7 +688,7 @@ class Page extends React.Component {
         .then(function json(response) {
             return response.json();
         }).then(function (data) {
-            this.loadMinistryPartners(data);
+            loadMinistryPartners(data);
             console.log('Request succeeded with JSON response', ministryPartners);
         }).catch(function (error) {
             console.log('Request failed', error);
