@@ -517,44 +517,35 @@ class MinistryPartnersTable extends React.Component {
     constructor(props) {
         super(props);
 
-        // this.state = {
-        //     ministryPartners: []
-        // };
+        this.state = {
+            ministryPartners: []
+        };
 
         this.handleClick = this.handleClick.bind(this);
         // this.loadMinistryPartners = this.loadMinistryPartners.bind(this);
     }
 
-    // componentDidMount() {
-    //     //Load Ministry Partners
-    //     // var ministryPartners = new Array();
-    //     var url = "http://sandbox.ccchapel.com/Thy-Kingdom-Come/data/outreach-spree.json";
-    //     var request = new Request(url, {
-    //             method: 'get',
-    //             mode: 'no-cors'
-    //         });
-    //     var loadMinistryPartners = this.loadMinistryPartners;
+    componentDidMount() {
+        //Load Ministry Partners
+        var url = "http://sandbox.ccchapel.com/Thy-Kingdom-Come/data/outreach-spree.json";
+        var request = new Request(url, {
+            method: 'get',
+            mode: 'no-cors'
+        });
+        var loadMinistryPartners = this.loadMinistryPartners;
 
-    //     fetch(request)
-    //         // .then(function status(response) {  
-    //         //     if (response.status >= 200 && response.status < 300) {  
-    //         //         return Promise.resolve(response)  
-    //         //     } else {  
-    //         //         return Promise.reject(new Error(response.statusText))  
-    //         //     }  
-    //         // })
-    //         .then(function json(response) {  
-    //             return response.json()  
-    //         })
-    //         .then(function(data) {
-    //             loadMinistryPartners(data);
-    //             console.log('Request succeeded with JSON response', data);
-    //         }).catch(function(error) {
-    //             console.log('Request failed', error);
-    //         });
+        fetch(request).then(function json(response) {
+            return response.json();
+        }).then(function (data) {
+            //loadMinistryPartners(data);
+            this.setState({ ministryPartners: data });
+            console.log('Request succeeded with JSON response', data);
+        }).catch(function (error) {
+            console.log('Request failed', error);
+        });
 
-    //     console.log(this.state.ministryPartners);
-    // }
+        console.log(this.state.ministryPartners);
+    }
 
     handleClick(content) {
         this.props.showModal(content);
@@ -565,33 +556,6 @@ class MinistryPartnersTable extends React.Component {
     // }
 
     render() {
-        //Load Ministry Partners
-        var ministryPartners = new Array();
-        var url = "http://sandbox.ccchapel.com/Thy-Kingdom-Come/data/outreach-spree.json";
-        var request = new Request(url, {
-            method: 'get',
-            mode: 'no-cors'
-        });
-
-        fetch(request)
-        // .then(function status(response) {  
-        //     if (response.status >= 200 && response.status < 300) {  
-        //         return Promise.resolve(response)  
-        //     } else {  
-        //         return Promise.reject(new Error(response.statusText))  
-        //     }  
-        // })
-        .then(function json(response) {
-            return response.json();
-        }).then(function (data) {
-            ministryPartners = data;
-            console.log('Request succeeded with JSON response', ministryPartners);
-        }).catch(function (error) {
-            console.log('Request failed', error);
-        });
-
-        console.log(ministryPartners);
-
         //Create container for rows
         var rows = [];
 
