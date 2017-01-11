@@ -5,12 +5,13 @@
 class MinsitryPartnerInformation extends React.Component {
     render() {
         var options = [];
+        var htmlToReactParcer = new htmlToReactParcer();
 
         this.props.information.options.forEach((option, index) => {
             options.push(
                 <div className="add-bottom-margin">
                     <h3 className="no-bottom-margin">{option.name}</h3>
-                    <div>{breakLine(option.details)}</div>
+                    <div>{ htmlToReactParcer(option.details) }</div>
                 </div>
             );
         });
