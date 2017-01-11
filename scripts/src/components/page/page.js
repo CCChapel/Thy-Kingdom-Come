@@ -27,7 +27,7 @@ class Page extends React.Component {
         this.setState({ showModal: false });
     }
 
-    loadMinsitryPartners(data) {
+    loadMinistryPartners(data) {
         this.setState({ minsitryPartners: data });
     }
 
