@@ -17,7 +17,11 @@ class MinsitryPartnerInformation extends React.Component {
                     <h3 className="no-bottom-margin">{option.name}</h3>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <div>{ htmlToReactParcer(option.details) }</div>
+=======
+                    <div>{details}</div>
+>>>>>>> parent of be16400... Test BreakLine function
 =======
                     <div>{details}</div>
 >>>>>>> parent of be16400... Test BreakLine function
