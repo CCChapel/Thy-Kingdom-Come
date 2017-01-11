@@ -54,7 +54,7 @@ class Page extends React.Component {
             })
             .then(function(data) {
                 loadMinistryPartners(data);
-                console.log('Request succeeded with JSON response', ministryPartners);
+                console.log('Request succeeded with JSON response', this.state.ministryPartners);
             }).catch(function(error) {
                 console.log('Request failed', error);
             });
