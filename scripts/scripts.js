@@ -649,6 +649,7 @@ class Page extends React.Component {
 
         this.showModal = this.showModal.bind(this);
         this.hideModal = this.hideModal.bind(this);
+        this.loadMinistryPartners = this.loadMinistryPartners.bind(this);
     }
 
     showModal(modalContent) {
