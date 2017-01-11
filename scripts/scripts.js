@@ -564,7 +564,7 @@ class MinistryPartnersTable extends React.Component {
         // console.log(Array.isArray(this.state.ministryPartners));
         for (var partner in ministryPartners) {
             rows.push(React.createElement(MinistryPartnerRow, {
-                partner: ministryPartners[partner],
+                partner: this.state.ministryPartners[partner],
                 handleClick: this.handleClick }));
 
             console.log(partner);

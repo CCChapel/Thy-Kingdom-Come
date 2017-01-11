@@ -55,7 +55,7 @@ class MinistryPartnersTable extends React.Component {
         for (var partner in ministryPartners) {
             rows.push(
                 <MinistryPartnerRow
-                    partner={ministryPartners[partner]} 
+                    partner={this.state.ministryPartners[partner]} 
                     handleClick={this.handleClick} />
             );
 
