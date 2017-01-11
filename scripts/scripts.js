@@ -461,7 +461,6 @@ class MinsitryPartnerInformation extends React.Component {
                 "h1",
                 null,
                 this.props.information.name,
-                " ",
                 React.createElement(
                     "span",
                     { className: "sans-serif text-medium-blue text-smaller" },
@@ -469,7 +468,8 @@ class MinsitryPartnerInformation extends React.Component {
                         "a",
                         { href: this.props.information.website },
                         "Visit their site"
-                    )
+                    ),
+                    React.createElement("i", { className: "fa fa-angle-right" })
                 )
             ),
             React.createElement(
