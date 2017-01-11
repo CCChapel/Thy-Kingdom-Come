@@ -512,12 +512,46 @@ class MinistryPartnerRow extends React.Component {
 }
 /**
  * Defines a Ministry Table of Ministry Partners
- * @partners = Array of ministry partners
  */
 class MinistryPartnersTable extends React.Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            ministryPartners: []
+        };
+
         this.handleClick = this.handleClick.bind(this);
+    }
+
+    componentDidMount() {
+        //Load Ministry Partners
+        // var ministryPartners = new Array();
+        var url = "http://sandbox.ccchapel.com/Thy-Kingdom-Come/data/outreach-spree.json";
+        var request = new Request(url, {
+            method: 'get',
+            mode: 'no-cors'
+        });
+        var loadMinistryPartners = this.loadMinistryPartners;
+
+        fetch(request)
+        // .then(function status(response) {  
+        //     if (response.status >= 200 && response.status < 300) {  
+        //         return Promise.resolve(response)  
+        //     } else {  
+        //         return Promise.reject(new Error(response.statusText))  
+        //     }  
+        // })
+        .then(function json(response) {
+            return response.json();
+        }).then(function (data) {
+            loadMinistryPartners(data);
+            console.log('Request succeeded with JSON response', this.state.ministryPartners);
+        }).catch(function (error) {
+            console.log('Request failed', error);
+        });
+
+        console.log(this.state.ministryPartners);
     }
 
     handleClick(content) {
@@ -529,11 +563,11 @@ class MinistryPartnersTable extends React.Component {
         var rows = [];
 
         //Loop through each partner to create row
-        console.log(this.props.partners);
-        console.log(Array.isArray(this.props.partners));
-        for (var partner in this.props.partners) {
+        // console.log(this.state.ministryPartners);
+        // console.log(Array.isArray(this.state.ministryPartners));
+        for (var partner in this.state.ministryPartners) {
             rows.push(React.createElement(MinistryPartnerRow, {
-                partner: this.props.partners[partner],
+                partner: this.state.ministryPartners[partner],
                 handleClick: this.handleClick }));
 
             console.log(partner);
@@ -547,8 +581,8 @@ class MinistryPartnersTable extends React.Component {
         // });
 
         return React.createElement(
-            "div",
-            { className: "flex wrap align-items-stretch" },
+            'div',
+            { className: 'flex wrap align-items-stretch' },
             rows
         );
     }
@@ -643,13 +677,12 @@ class Page extends React.Component {
 
         this.state = {
             showModal: false,
-            modalContent: 'Initial Modal Content',
-            ministryPartners: []
+            modalContent: 'Initial Modal Content'
         };
 
         this.showModal = this.showModal.bind(this);
         this.hideModal = this.hideModal.bind(this);
-        this.loadMinistryPartners = this.loadMinistryPartners.bind(this);
+        //this.loadMinistryPartners = this.loadMinistryPartners.bind(this);
     }
 
     showModal(modalContent) {
@@ -663,41 +696,13 @@ class Page extends React.Component {
         this.setState({ showModal: false });
     }
 
-    loadMinistryPartners(data) {
-        this.setState({ minsitryPartners: data });
-    }
+    // loadMinistryPartners(data) {
+    //     this.setState({ minsitryPartners: data });
+    // }
 
     render() {
-        //Get Ministry Partner Data
-        // var ministryPartners = new Array();
-        var url = "http://sandbox.ccchapel.com/Thy-Kingdom-Come/data/outreach-spree.json";
-        var request = new Request(url, {
-            method: 'get',
-            mode: 'no-cors'
-        });
-        var loadMinistryPartners = this.loadMinistryPartners;
-
-        fetch(request)
-        // .then(function status(response) {  
-        //     if (response.status >= 200 && response.status < 300) {  
-        //         return Promise.resolve(response)  
-        //     } else {  
-        //         return Promise.reject(new Error(response.statusText))  
-        //     }  
-        // })
-        .then(function json(response) {
-            return response.json();
-        }).then(function (data) {
-            loadMinistryPartners(data);
-            console.log('Request succeeded with JSON response', this.state.ministryPartners);
-        }).catch(function (error) {
-            console.log('Request failed', error);
-        });
-
-        console.log(this.state.ministryPartners);
-
         return React.createElement(
-            'div',
+            "div",
             null,
             React.createElement(
                 Modal,
@@ -706,112 +711,112 @@ class Page extends React.Component {
             ),
             React.createElement(
                 Section,
-                { className: '[ bg-clouds bg-cover ] [ justify-content-center ] [ overflow-x-hidden ]' },
+                { className: "[ bg-clouds bg-cover ] [ justify-content-center ] [ overflow-x-hidden ]" },
                 React.createElement(Logo, null)
             ),
             React.createElement(
                 Section,
-                { className: 'bg-light-blue' },
+                { className: "bg-light-blue" },
                 React.createElement(
-                    'div',
-                    { className: 'content-wrapper lock-width center-by-margin' },
+                    "div",
+                    { className: "content-wrapper lock-width center-by-margin" },
                     React.createElement(
-                        'h1',
-                        { className: 'center' },
-                        'Thy Will Be Done'
+                        "h1",
+                        { className: "center" },
+                        "Thy Will Be Done"
                     ),
                     React.createElement(
-                        'p',
+                        "p",
                         null,
-                        'When his original students, the disciples, asked him how to pray, he said \u201CPray like this: \u2018Our father, who art in Heaven\u2026 thy kingdom come, thy will be done, on earth, as it is in Heaven.\u2019\xA0\u201D If you are a student and follower of Jesus, God is your father who has a will and a kingdom. This year, our church-wide vision is to pray vigilantly and work diligently to bring this prayer to fruition; to bring our father\u2019s will and kingdom here to earth.'
+                        "When his original students, the disciples, asked him how to pray, he said \u201CPray like this: \u2018Our father, who art in Heaven\u2026 thy kingdom come, thy will be done, on earth, as it is in Heaven.\u2019\xA0\u201D If you are a student and follower of Jesus, God is your father who has a will and a kingdom. This year, our church-wide vision is to pray vigilantly and work diligently to bring this prayer to fruition; to bring our father\u2019s will and kingdom here to earth."
                     ),
                     React.createElement(
-                        'p',
-                        { className: 'center-by-margin nine-tenths' },
-                        React.createElement(VimeoVideo, { vimeoId: '198552260',
-                            width: '640px',
-                            height: '360px' })
+                        "p",
+                        { className: "center-by-margin nine-tenths" },
+                        React.createElement(VimeoVideo, { vimeoId: "198552260",
+                            width: "640px",
+                            height: "360px" })
                     ),
                     React.createElement(
-                        'p',
-                        { className: 'center' },
-                        React.createElement(CTA, { text: 'Questions',
-                            onClick: () => this.showModal(React.createElement(ContactForm, { className: 'content-wrapper lock-width center-by-margin',
+                        "p",
+                        { className: "center" },
+                        React.createElement(CTA, { text: "Questions",
+                            onClick: () => this.showModal(React.createElement(ContactForm, { className: "content-wrapper lock-width center-by-margin",
                                 onComplete: this.hideModal })) })
                     )
                 )
             ),
             React.createElement(
                 Section,
-                { className: 'bg-medium-blue' },
+                { className: "bg-medium-blue" },
                 React.createElement(
-                    'div',
-                    { className: 'content-wrapper' },
+                    "div",
+                    { className: "content-wrapper" },
                     React.createElement(
-                        'div',
-                        { className: 'lock-width center-by-margin' },
+                        "div",
+                        { className: "lock-width center-by-margin" },
                         React.createElement(
-                            'h1',
-                            { className: 'center' },
-                            'Local Outreach Spree'
+                            "h1",
+                            { className: "center" },
+                            "Local Outreach Spree"
                         ),
                         React.createElement(
-                            'ol',
+                            "ol",
                             null,
                             React.createElement(
-                                'li',
+                                "li",
                                 null,
-                                'Complete eight kingdom assignments.'
+                                "Complete eight kingdom assignments."
                             ),
                             React.createElement(
-                                'li',
+                                "li",
                                 null,
-                                'Have your assignments initialed by each ministry partner after the assignment is completed.'
+                                "Have your assignments initialed by each ministry partner after the assignment is completed."
                             ),
                             React.createElement(
-                                'li',
+                                "li",
                                 null,
-                                'Return this form to the bookstore (Hudson) or the Welcome Center (Aurora/Highland Square) or to the church office during business hours to receive your free Caf\xE9 6:8 drink vouchers and cup or mug.'
+                                "Return this form to the bookstore (Hudson) or the Welcome Center (Aurora/Highland Square) or to the church office during business hours to receive your free Caf\xE9 6:8 drink vouchers and cup or mug."
                             )
                         )
                     ),
-                    React.createElement(MinistryPartnersTable, { showModal: this.showModal, partners: this.state.ministryPartners })
+                    React.createElement(MinistryPartnersTable, { showModal: this.showModal })
                 )
             ),
             React.createElement(
                 Section,
-                { className: 'bg-dark-blue text-white' },
+                { className: "bg-dark-blue text-white" },
                 React.createElement(
-                    'div',
-                    { className: 'content-wrapper' },
+                    "div",
+                    { className: "content-wrapper" },
                     React.createElement(
-                        'h1',
-                        { className: 'center' },
-                        'Assignments'
+                        "h1",
+                        { className: "center" },
+                        "Assignments"
                     ),
                     React.createElement(
-                        'p',
+                        "p",
                         null,
-                        React.createElement(Clock, { className: 'center-by-margin', height: '250', width: '250' })
+                        React.createElement(Clock, { className: "center-by-margin", height: "250", width: "250" })
                     ),
                     React.createElement(
-                        'p',
-                        { className: 'center' },
-                        'Keep checking back! We\u2019ll have more assignments for you soon.'
+                        "p",
+                        { className: "center" },
+                        "Keep checking back! We\u2019ll have more assignments for you soon."
                     )
                 )
             ),
             React.createElement(
                 Section,
-                { className: 'bg-charcoal align-content-top auto-min-height text-white' },
+                { className: "bg-charcoal align-content-top auto-min-height text-white" },
                 React.createElement(
-                    'div',
-                    { className: 'content-wrapper' },
-                    '\xA9 Copyright 2017 | ',
+                    "div",
+                    { className: "content-wrapper" },
+                    "\xA9 Copyright 2017 | ",
                     React.createElement(
-                        'a',
-                        { href: 'https://ccchapel.com', target: '_blank' },
-                        'Christ Community Chapel'
+                        "a",
+                        { href: "https://ccchapel.com", target: "_blank" },
+                        "Christ Community Chapel"
                     )
                 )
             )

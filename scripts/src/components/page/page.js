@@ -7,13 +7,12 @@ class Page extends React.Component {
 
         this.state = {
             showModal: false,
-            modalContent: 'Initial Modal Content',
-            ministryPartners: []
+            modalContent: 'Initial Modal Content'
         };
 
         this.showModal = this.showModal.bind(this);
         this.hideModal = this.hideModal.bind(this);
-        this.loadMinistryPartners = this.loadMinistryPartners.bind(this);
+        //this.loadMinistryPartners = this.loadMinistryPartners.bind(this);
     }
 
     showModal(modalContent) {
@@ -27,40 +26,11 @@ class Page extends React.Component {
         this.setState({ showModal: false });
     }
 
-    loadMinistryPartners(data) {
-        this.setState({ minsitryPartners: data });
-    }
+    // loadMinistryPartners(data) {
+    //     this.setState({ minsitryPartners: data });
+    // }
 
     render() {
-        //Get Ministry Partner Data
-        // var ministryPartners = new Array();
-        var url = "http://sandbox.ccchapel.com/Thy-Kingdom-Come/data/outreach-spree.json";
-        var request = new Request(url, {
-                method: 'get',
-                mode: 'no-cors'
-            });
-        var loadMinistryPartners = this.loadMinistryPartners;
-        
-        fetch(request)
-            // .then(function status(response) {  
-            //     if (response.status >= 200 && response.status < 300) {  
-            //         return Promise.resolve(response)  
-            //     } else {  
-            //         return Promise.reject(new Error(response.statusText))  
-            //     }  
-            // })
-            .then(function json(response) {  
-                return response.json()  
-            })
-            .then(function(data) {
-                loadMinistryPartners(data);
-                console.log('Request succeeded with JSON response', this.state.ministryPartners);
-            }).catch(function(error) {
-                console.log('Request failed', error);
-            });
-
-        console.log(this.state.ministryPartners);
-
         return (
             <div>
                 <Modal show={this.state.showModal} hide={this.hideModal}>
@@ -124,7 +94,7 @@ class Page extends React.Component {
                             </ol>
                         </div>
 
-                        <MinistryPartnersTable showModal={this.showModal} partners={this.state.ministryPartners} />
+                        <MinistryPartnersTable showModal={this.showModal} />
                     </div>
                 </Section>
 

@@ -1,11 +1,46 @@
 /**
  * Defines a Ministry Table of Ministry Partners
- * @partners = Array of ministry partners
  */
 class MinistryPartnersTable extends React.Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            ministryPartners: []
+        };
+
         this.handleClick = this.handleClick.bind(this);
+    }
+
+    componentDidMount() {
+        //Load Ministry Partners
+        // var ministryPartners = new Array();
+        var url = "http://sandbox.ccchapel.com/Thy-Kingdom-Come/data/outreach-spree.json";
+        var request = new Request(url, {
+                method: 'get',
+                mode: 'no-cors'
+            });
+        var loadMinistryPartners = this.loadMinistryPartners;
+        
+        fetch(request)
+            // .then(function status(response) {  
+            //     if (response.status >= 200 && response.status < 300) {  
+            //         return Promise.resolve(response)  
+            //     } else {  
+            //         return Promise.reject(new Error(response.statusText))  
+            //     }  
+            // })
+            .then(function json(response) {  
+                return response.json()  
+            })
+            .then(function(data) {
+                loadMinistryPartners(data);
+                console.log('Request succeeded with JSON response', this.state.ministryPartners);
+            }).catch(function(error) {
+                console.log('Request failed', error);
+            });
+
+        console.log(this.state.ministryPartners);
     }
 
     handleClick(content) {
@@ -17,12 +52,12 @@ class MinistryPartnersTable extends React.Component {
         var rows = [];
 
         //Loop through each partner to create row
-        console.log(this.props.partners);
-        console.log(Array.isArray(this.props.partners));
-        for (var partner in this.props.partners) {
+        // console.log(this.state.ministryPartners);
+        // console.log(Array.isArray(this.state.ministryPartners));
+        for (var partner in this.state.ministryPartners) {
             rows.push(
                 <MinistryPartnerRow
-                    partner={this.props.partners[partner]} 
+                    partner={this.state.ministryPartners[partner]} 
                     handleClick={this.handleClick} />
             );
 
