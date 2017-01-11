@@ -436,6 +436,7 @@ class /**
 class MinsitryPartnerInformation extends React.Component {
     render() {
         var options = [];
+        var htmlToReactParcer = new HtmlToReactParcer();
 
         this.props.information.options.forEach((option, index) => {
             options.push(React.createElement(
@@ -449,7 +450,7 @@ class MinsitryPartnerInformation extends React.Component {
                 React.createElement(
                     "div",
                     null,
-                    breakLine(option.details)
+                    htmlToReactParcer(option.details)
                 )
             ));
         });
