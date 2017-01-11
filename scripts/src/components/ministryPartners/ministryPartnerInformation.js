@@ -8,10 +8,18 @@ class MinsitryPartnerInformation extends React.Component {
         var htmlToReactParcer = new HtmlToReactParcer();
 
         this.props.information.options.forEach((option, index) => {
+            var details = option.details.split("\\n").map(function(line, n) {
+                retun (n === 0) ? [line] : [<br />], line];
+            });
+
             options.push(
                 <div className="add-bottom-margin">
                     <h3 className="no-bottom-margin">{option.name}</h3>
+<<<<<<< HEAD
                     <div>{ htmlToReactParcer(option.details) }</div>
+=======
+                    <div>{details}</div>
+>>>>>>> parent of be16400... Test BreakLine function
                 </div>
             );
         });

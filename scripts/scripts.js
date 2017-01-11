@@ -430,6 +430,7 @@ class /**
     }
 }
 /**
+<<<<<<< HEAD
  * Displays the ministry partner information
  * @information = Partner Information to display
  */
@@ -488,6 +489,8 @@ class MinsitryPartnerInformation extends React.Component {
     }
 }
 /**
+=======
+>>>>>>> parent of be16400... Test BreakLine function
  * Defines a row representing a ministry partner
  * @partner = The partner to display
  * @handleClick = Method to handle the click event
@@ -1413,12 +1416,6 @@ String.format = function (str, args) {
     return str.format(args);
 };
 //const MINISTRY_PARTNERS = ;
-function breakLine(text) {
-    var regex = /(<br \/>)/g;
-    return text.split(regex).map(function (line) {
-        return line.match(regex) ? React.createElement('br') : line;
-    });
-}
 
 var HtmlToReactParser = require('html-to-react').Parser;
 
