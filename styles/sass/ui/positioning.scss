@@ -45,6 +45,10 @@
     margin-bottom: $typecsset-magic-ratio + rem;
 }
 
+.no-bottom-margin {
+    margin-bottom: 0;
+}
+
 .center-by-margin {
     margin-left: auto !important;
     margin-right: auto !important;

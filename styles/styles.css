@@ -588,6 +588,9 @@ a {
   margin-bottom: 24px;
   margin-bottom: 1.5rem; }
 
+.no-bottom-margin {
+  margin-bottom: 0; }
+
 .center-by-margin {
   margin-left: auto !important;
   margin-right: auto !important; }
