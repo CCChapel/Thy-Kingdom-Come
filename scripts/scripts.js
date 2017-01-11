@@ -460,20 +460,22 @@ class MinsitryPartnerInformation extends React.Component {
             React.createElement(
                 "h1",
                 null,
-                this.props.information.name
+                this.props.information.name,
+                " ",
+                React.createElement(
+                    "span",
+                    null,
+                    React.createElement(
+                        "a",
+                        { href: this.props.information.website },
+                        "Visit their site"
+                    )
+                )
             ),
             React.createElement(
                 "div",
                 { "class": "add-bottom-margin" },
-                this.props.information.address,
-                React.createElement("br", null),
-                this.props.information.city,
-                ", ",
-                this.props.information.state,
-                " ",
-                this.props.information.zipCode,
-                React.createElement("br", null),
-                this.props.information.website
+                this.props.information.description
             ),
             React.createElement(
                 "h2",
