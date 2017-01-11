@@ -687,7 +687,7 @@ class Page extends React.Component {
         .then(function json(response) {
             return response.json();
         }).then(function (data) {
-            loadMinistryPartners(data);
+            this.loadMinistryPartners(data);
             console.log('Request succeeded with JSON response', ministryPartners);
         }).catch(function (error) {
             console.log('Request failed', error);
