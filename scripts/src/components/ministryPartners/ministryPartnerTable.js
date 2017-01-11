@@ -10,12 +10,11 @@ class MinistryPartnersTable extends React.Component {
         };
 
         this.handleClick = this.handleClick.bind(this);
-        // this.loadMinistryPartners = this.loadMinistryPartners.bind(this);
     }
 
     componentDidMount() {
         //Load Ministry Partners
-        var _this = this;
+        var _this = this;       //Make this available in fetch
         var url = "http://sandbox.ccchapel.com/Thy-Kingdom-Come/data/outreach-spree.json";
         var request = new Request(url, {
                 method: 'get',
@@ -28,40 +27,36 @@ class MinistryPartnersTable extends React.Component {
                 return response.json()  
             })
             .then(function(data) {
-                //loadMinistryPartners(data);
                 _this.setState({ ministryPartners: data });
-                console.log('Request succeeded with JSON response', data);
+                //console.log('Request succeeded with JSON response', data);
             }).catch(function(error) {
-                console.log('Request failed', error);
+                //console.log('Request failed', error);
             });
-
-        console.log(this.state.ministryPartners);
     }
 
     handleClick(content) {
         this.props.showModal(content);
     }
 
-    // loadMinistryPartners(data) {
-    //     this.setState({ minsitryPartners: data });
-    // }
-
     render() {
         //Create container for rows
         var rows = [];
 
         //Loop through each partner to create row
-        // console.log(this.state.ministryPartners);
-        // console.log(Array.isArray(this.state.ministryPartners));
-        for (var partner in this.state.ministryPartners) {
+        this.state.ministryPartners.map(function(partner) {
             rows.push(
                 <MinistryPartnerRow
-                    partner={this.state.ministryPartners[partner]} 
+                    partner={partner}
                     handleClick={this.handleClick} />
-            );
-
-            console.log(partner);
-        }
+            )
+        });
+        // for (var partner in this.state.ministryPartners) {
+        //     rows.push(
+        //         <MinistryPartnerRow
+        //             partner={this.state.ministryPartners[partner]} 
+        //             handleClick={this.handleClick} />
+        //     );
+        // }
         // this.props.partners.forEach((partner, index) => {
         //     rows.push(
         //         <MinistryPartnerRow
