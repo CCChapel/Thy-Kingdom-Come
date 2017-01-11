@@ -20,7 +20,7 @@ class MinistryPartnersTable extends React.Component {
                 method: 'get',
                 mode: 'no-cors'
             });
-        var loadMinistryPartners = this.loadMinistryPartners;
+        //var loadMinistryPartners = this.loadMinistryPartners;
         
         fetch(request)
             // .then(function status(response) {  
@@ -34,7 +34,8 @@ class MinistryPartnersTable extends React.Component {
                 return response.json()  
             })
             .then(function(data) {
-                loadMinistryPartners(data);
+                //loadMinistryPartners(data);
+                this.setState({ ministryPartners: data });
                 console.log('Request succeeded with JSON response', this.state.ministryPartners);
             }).catch(function(error) {
                 console.log('Request failed', error);
