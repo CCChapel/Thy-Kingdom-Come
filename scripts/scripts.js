@@ -430,63 +430,6 @@ class /**
     }
 }
 /**
- * Displays the ministry partner information
- * @information = Partner Information to display
- */
-class MinsitryPartnerInformation extends React.Component {
-    render() {
-        var options = [];
-
-        this.props.information.options.forEach((option, index) => {
-            options.push(React.createElement(
-                "div",
-                { className: "add-bottom-margin" },
-                React.createElement(
-                    "h3",
-                    { className: "no-bottom-margin" },
-                    option.name
-                ),
-                React.createElement(
-                    "div",
-                    null,
-                    option.details
-                )
-            ));
-        });
-
-        return React.createElement(
-            "div",
-            null,
-            React.createElement(
-                "h1",
-                null,
-                this.props.information.name,
-                React.createElement(
-                    "span",
-                    { className: "sans-serif text-medium-blue text-smaller" },
-                    React.createElement(
-                        "a",
-                        { href: this.props.information.website },
-                        "Visit their site"
-                    ),
-                    React.createElement("i", { className: "fa fa-angle-right" })
-                )
-            ),
-            React.createElement(
-                "div",
-                { className: "add-bottom-margin" },
-                this.props.information.description
-            ),
-            React.createElement(
-                "h2",
-                { className: "no-bottom-margin" },
-                "Options"
-            ),
-            options
-        );
-    }
-}
-/**
  * Defines a row representing a ministry partner
  * @partner = The partner to display
  * @handleClick = Method to handle the click event
