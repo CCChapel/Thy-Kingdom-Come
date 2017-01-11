@@ -1,5 +1,10 @@
 //const MINISTRY_PARTNERS = ;
-var HtmlToReactParser = require('html-to-react').Parser;
+function breakLine(text) {
+    var regex = /(<br \/>)/g;
+    return text.split(regex).map(function(line) {
+        return line.match(regex) ? React.createElement('br') : line;
+    });
+}
 
 ReactDOM.render(
     <Page />,

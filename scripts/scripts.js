@@ -436,13 +436,8 @@ class /**
 class MinsitryPartnerInformation extends React.Component {
     render() {
         var options = [];
-        var htmlToReactParcer = new HtmlToReactParcer();
 
         this.props.information.options.forEach((option, index) => {
-            var details = option.details.split("\\n").map(function (line, n) {
-                retun(n === 0) ? [line] : [React.createElement("br", null)], line;
-            });
-
             options.push(React.createElement(
                 "div",
                 { className: "add-bottom-margin" },
@@ -454,7 +449,7 @@ class MinsitryPartnerInformation extends React.Component {
                 React.createElement(
                     "div",
                     null,
-                    htmlToReactParcer(option.details)
+                    breakLine(option.details)
                 )
             ));
         });
@@ -1417,7 +1412,12 @@ String.format = function (str, args) {
     return str.format(args);
 };
 //const MINISTRY_PARTNERS = ;
-var HtmlToReactParser = require('html-to-react').Parser;
+function breakLine(text) {
+    var regex = /(<br \/>)/g;
+    return text.split(regex).map(function (line) {
+        return line.match(regex) ? React.createElement('br') : line;
+    });
+}
 
 ReactDOM.render(React.createElement(Page, null), document.getElementById('root'));
 'use strict';
