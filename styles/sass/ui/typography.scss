@@ -61,6 +61,10 @@ a {
         color: $black;
     }
 
+    &-smaller {
+        @include typecsset-font-size(14px);
+    }
+
     &-bigger {
         @include typecsset-font-size(24px);
     }

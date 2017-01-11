@@ -440,7 +440,7 @@ class MinsitryPartnerInformation extends React.Component {
         this.props.information.options.forEach((option, index) => {
             options.push(React.createElement(
                 "div",
-                null,
+                { className: "add-bottom-margin" },
                 React.createElement(
                     "h3",
                     null,
@@ -464,7 +464,7 @@ class MinsitryPartnerInformation extends React.Component {
                 " ",
                 React.createElement(
                     "span",
-                    null,
+                    { className: "text-medium-blue text-smaller" },
                     React.createElement(
                         "a",
                         { href: this.props.information.website },
@@ -474,12 +474,12 @@ class MinsitryPartnerInformation extends React.Component {
             ),
             React.createElement(
                 "div",
-                { "class": "add-bottom-margin" },
+                { className: "add-bottom-margin" },
                 this.props.information.description
             ),
             React.createElement(
                 "h2",
-                null,
+                { className: "no-bottom-margin" },
                 "Options"
             ),
             options
