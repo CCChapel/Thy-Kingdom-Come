@@ -43,20 +43,20 @@ class MinistryPartnersTable extends React.Component {
         var rows = [];
 
         //Loop through each partner to create row
-        this.state.ministryPartners.map(function(partner) {
-            rows.push(
-                <MinistryPartnerRow
-                    partner={partner}
-                    handleClick={this.handleClick} />
-            )
-        });
-        // for (var partner in this.state.ministryPartners) {
+        // this.state.ministryPartners.map(function(partner) {
         //     rows.push(
         //         <MinistryPartnerRow
-        //             partner={this.state.ministryPartners[partner]} 
+        //             partner={partner}
         //             handleClick={this.handleClick} />
-        //     );
-        // }
+        //     )
+        // });
+        for (var partner in this.state.ministryPartners) {
+            rows.push(
+                <MinistryPartnerRow
+                    partner={this.state.ministryPartners[partner]} 
+                    handleClick={this.handleClick} />
+            );
+        }
         // this.props.partners.forEach((partner, index) => {
         //     rows.push(
         //         <MinistryPartnerRow
