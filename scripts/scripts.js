@@ -431,6 +431,7 @@ class /**
 }
 /**
 <<<<<<< HEAD
+<<<<<<< HEAD
  * Displays the ministry partner information
  * @information = Partner Information to display
  */
@@ -489,6 +490,8 @@ class MinsitryPartnerInformation extends React.Component {
     }
 }
 /**
+=======
+>>>>>>> parent of be16400... Test BreakLine function
 =======
 >>>>>>> parent of be16400... Test BreakLine function
  * Defines a row representing a ministry partner
@@ -1416,8 +1419,11 @@ String.format = function (str, args) {
     return str.format(args);
 };
 //const MINISTRY_PARTNERS = ;
+<<<<<<< HEAD
 
 var HtmlToReactParser = require('html-to-react').Parser;
+=======
+>>>>>>> parent of be16400... Test BreakLine function
 
 ReactDOM.render(React.createElement(Page, null), document.getElementById('root'));
 'use strict';
