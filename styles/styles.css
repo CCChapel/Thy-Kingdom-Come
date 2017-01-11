@@ -88,10 +88,10 @@ h1, h2, h3, h4, h5, h6, ul, ol, dd, p, address, pre, blockquote, table {
     #BASE
 \*------------------------------------*/
 /**
- * 1. Set the base element’s `font-size` to the value of your choosing. Set in
+ * 1. Set the base elementΓÇÖs `font-size` to the value of your choosing. Set in
  *    ems, assuming a browser default of 16px.
  * 2. Work out the unitless `line-height` for your project based around your
- *    desired `line-height` (defined previously in pixels), and your project’s
+ *    desired `line-height` (defined previously in pixels), and your projectΓÇÖs
  *    base font size.
  */
 html {
@@ -151,7 +151,7 @@ li > ol {
     #PARAGRAPHS
 \*------------------------------------*/
 /**
- * Not strictly a paragraph, but probably doesn’t need its own section.
+ * Not strictly a paragraph, but probably doesnΓÇÖt need its own section.
  */
 /*------------------------------------*\
     #CODE
@@ -179,38 +179,38 @@ blockquote {
 
 /**
  * Set up quote marks on quoting elements. This is very English-based, so we are
- * using “, ”, ‘, and ’ quotes.
+ * using ΓÇ£, ΓÇ¥, ΓÇÿ, and ΓÇÖ quotes.
  */
 blockquote {
-  quotes: "“" "”";
+  quotes: "ΓÇ£" "ΓÇ¥";
   margin-left: 48px;
   margin-left: 3rem; }
   blockquote p:before {
-    content: "“";
+    content: "ΓÇ£";
     content: open-quote; }
   blockquote p:after {
     content: "";
     content: no-close-quote; }
   blockquote p:last-of-type:after {
-    content: "”";
+    content: "ΓÇ¥";
     content: close-quote; }
 
 q {
-  quotes: "‘" "’" "“" "”";
+  quotes: "ΓÇÿ" "ΓÇÖ" "ΓÇ£" "ΓÇ¥";
   /**
-   * If an element opens with an inline quote, let’s hang that.
+   * If an element opens with an inline quote, letΓÇÖs hang that.
    */ }
   q:before {
-    content: "‘";
+    content: "ΓÇÿ";
     content: open-quote; }
   q:after {
-    content: "’";
+    content: "ΓÇÖ";
     content: close-quote; }
   q q:before {
-    content: "“";
+    content: "ΓÇ£";
     content: open-quote; }
   q q:after {
-    content: "”";
+    content: "ΓÇ¥";
     content: close-quote; }
   q:first-child {
     display: inline-block;
@@ -247,7 +247,7 @@ csswizardry.com
 * Enclose a block of code with a media query as named in `$breakpoints`.
 */
 body {
-  font-family: "freight-sans-pro", Verdana, Arial, sans-serif;
+  font-family: "proxima-nova", "freight-sans-pro", Verdana, Arial, sans-serif;
   font-size: 18px;
   font-size: 1.125rem;
   line-height: 1.33333;
@@ -258,6 +258,9 @@ h1, h2, h3, h4, h5, h6,
 .header {
   font-family: "freight-big-pro", "Franklin Gothic Book", serif;
   letter-spacing: 2px; }
+
+p {
+  font-weight: 300; }
 
 ol {
   list-style: decimal;
@@ -274,7 +277,7 @@ a {
   letter-spacing: 2px; }
 
 .sans-serif {
-  font-family: "freight-sans-pro", Verdana, Arial, sans-serif; }
+  font-family: "proxima-nova", "freight-sans-pro", Verdana, Arial, sans-serif; }
 
 .text-white {
   color: #FFF; }
@@ -667,7 +670,7 @@ input[type="email"], textarea {
   margin-bottom: 1em;
   padding: 0 1em;
   width: 100%;
-  font-family: "freight-sans-pro", Verdana, Arial, sans-serif;
+  font-family: "proxima-nova", "freight-sans-pro", Verdana, Arial, sans-serif;
   font-size: 18px;
   font-size: 1.125rem;
   line-height: 1.33333;
