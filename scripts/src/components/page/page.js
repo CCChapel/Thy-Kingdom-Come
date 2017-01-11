@@ -12,7 +12,6 @@ class Page extends React.Component {
 
         this.showModal = this.showModal.bind(this);
         this.hideModal = this.hideModal.bind(this);
-        //this.loadMinistryPartners = this.loadMinistryPartners.bind(this);
     }
 
     showModal(modalContent) {
@@ -25,10 +24,6 @@ class Page extends React.Component {
     hideModal(e) {
         this.setState({ showModal: false });
     }
-
-    // loadMinistryPartners(data) {
-    //     this.setState({ minsitryPartners: data });
-    // }
 
     render() {
         return (
