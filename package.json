@@ -5,8 +5,5 @@
   },
   "scripts": {
     "build": "babel react.js -o compiled-react.js"
-  },
-  "dependencies": {
-    "html-to-react": "^1.2.2"
   }
 }
