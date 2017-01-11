@@ -443,7 +443,7 @@ class MinsitryPartnerInformation extends React.Component {
                 { className: "add-bottom-margin" },
                 React.createElement(
                     "h3",
-                    null,
+                    { className: "no-bottom-margin" },
                     option.name
                 ),
                 React.createElement(
@@ -464,7 +464,7 @@ class MinsitryPartnerInformation extends React.Component {
                 " ",
                 React.createElement(
                     "span",
-                    { className: "text-medium-blue text-smaller" },
+                    { className: "sans-serif text-medium-blue text-smaller" },
                     React.createElement(
                         "a",
                         { href: this.props.information.website },

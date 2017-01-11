@@ -9,7 +9,7 @@ class MinsitryPartnerInformation extends React.Component {
         this.props.information.options.forEach((option, index) => {
             options.push(
                 <div className="add-bottom-margin">
-                    <h3>{option.name}</h3>
+                    <h3 className="no-bottom-margin">{option.name}</h3>
                     <div>{option.details}</div>
                 </div>
             );
@@ -18,7 +18,7 @@ class MinsitryPartnerInformation extends React.Component {
         return (
             <div>
                 <h1>
-                    {this.props.information.name} <span className="text-medium-blue text-smaller"><a href={this.props.information.website}>Visit their site</a></span>
+                    {this.props.information.name} <span className="sans-serif text-medium-blue text-smaller"><a href={this.props.information.website}>Visit their site</a></span>
                 </h1>
                 <div className="add-bottom-margin">
                     {this.props.information.description}
