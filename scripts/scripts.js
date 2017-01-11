@@ -430,9 +430,6 @@ class /**
     }
 }
 /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
  * Displays the ministry partner information
  * @information = Partner Information to display
  */
@@ -442,6 +439,10 @@ class MinsitryPartnerInformation extends React.Component {
         var htmlToReactParcer = new HtmlToReactParcer();
 
         this.props.information.options.forEach((option, index) => {
+            var details = option.details.split("\\n").map(function (line, n) {
+                retun(n === 0) ? [line] : [React.createElement("br", null)], line;
+            });
+
             options.push(React.createElement(
                 "div",
                 { className: "add-bottom-margin" },
@@ -491,12 +492,6 @@ class MinsitryPartnerInformation extends React.Component {
     }
 }
 /**
-=======
->>>>>>> parent of be16400... Test BreakLine function
-=======
->>>>>>> parent of be16400... Test BreakLine function
-=======
->>>>>>> parent of be16400... Test BreakLine function
  * Defines a row representing a ministry partner
  * @partner = The partner to display
  * @handleClick = Method to handle the click event
@@ -1422,14 +1417,7 @@ String.format = function (str, args) {
     return str.format(args);
 };
 //const MINISTRY_PARTNERS = ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 var HtmlToReactParser = require('html-to-react').Parser;
-=======
->>>>>>> parent of be16400... Test BreakLine function
-=======
->>>>>>> parent of be16400... Test BreakLine function
 
 ReactDOM.render(React.createElement(Page, null), document.getElementById('root'));
 'use strict';
