@@ -1,4 +1,6 @@
 'use strict';
+
+import HtmlParser from 'html-react-parser';
 /**
  * Embeds a Vimeo video
  * 
