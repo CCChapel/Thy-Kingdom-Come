@@ -1,3 +1,4 @@
+'use strict';
 /**
  * Embeds a Vimeo video
  * 
@@ -1436,4 +1437,3 @@ function breakLine(text) {
 }
 
 ReactDOM.render(React.createElement(Page, null), document.getElementById('root'));
-'use strict';
