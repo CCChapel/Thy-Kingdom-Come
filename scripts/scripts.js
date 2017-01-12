@@ -1,5 +1,3 @@
-var HtmlParser = require('html-react-parser');
-
 'use strict';
 /**
  * Embeds a Vimeo video
