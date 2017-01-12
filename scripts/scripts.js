@@ -1,4 +1,4 @@
-import HtmlParser from 'html-react-parser';
+var HtmlParser = require('html-react-parser');
 
 'use strict';
 /**
