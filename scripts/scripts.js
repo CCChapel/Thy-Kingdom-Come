@@ -491,12 +491,12 @@ class MinsitryPartnerInformation extends React.Component {
         );
     }
 }
-/**
- * Defines a row representing a ministry partner
- * @partner = The partner to display
- * @handleClick = Method to handle the click event
- */
-class MinistryPartnerRow extends React.Component {
+
+class /**
+       * Defines a row representing a ministry partner
+       * @partner = The partner to display
+       * @handleClick = Method to handle the click event
+       */MinistryPartnerRow extends React.Component {
     constructor(props) {
         super(props);
         this.handleClick = this.handleClick.bind(this);
@@ -509,15 +509,12 @@ class MinistryPartnerRow extends React.Component {
     render() {
         var _this = this;
 
-        return React.createElement(
-            "div",
-            {
-                className: "[ one-third portable--one-whole ] [ bg-light-blue ] [ text-bigger cursor-point ] [ add-bottom-margin add-padding ] [ fx-bottom-border fx-dark-blue ]",
-                onClick: function () {
-                    return _this.handleClick(React.createElement(MinsitryPartnerInformation, { information: _this.props.partner }));
-                } },
-            HtmlParser(this.props.partner.name)
-        );
+        return React.createElement("div", {
+            className: "[ one-third portable--one-whole ] [ bg-light-blue ] [ text-bigger cursor-point ] [ add-bottom-margin add-padding ] [ fx-bottom-border fx-dark-blue ]",
+            onClick: function () {
+                return _this.handleClick(React.createElement(MinsitryPartnerInformation, { information: _this.props.partner }));
+            },
+            dangerouslySetInnerHTML: this.props.partner.name });
     }
 }
 /**
