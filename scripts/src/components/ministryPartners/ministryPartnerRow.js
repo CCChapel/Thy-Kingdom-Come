@@ -18,7 +18,7 @@ class MinistryPartnerRow extends React.Component {
             <div 
                 className="[ one-third portable--one-whole ] [ bg-light-blue ] [ text-bigger cursor-point ] [ add-bottom-margin add-padding ] [ fx-bottom-border fx-dark-blue ]"  
                 onClick={() => this.handleClick(<MinsitryPartnerInformation information={this.props.partner} />)}>
-                {this.props.partner.name}
+                { HtmlParser(this.props.partner.name) }
             </div>
         );
     }

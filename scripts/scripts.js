@@ -518,7 +518,7 @@ class MinistryPartnerRow extends React.Component {
                 onClick: function () {
                     return _this.handleClick(React.createElement(MinsitryPartnerInformation, { information: _this.props.partner }));
                 } },
-            this.props.partner.name
+            HtmlParser(this.props.partner.name)
         );
     }
 }
